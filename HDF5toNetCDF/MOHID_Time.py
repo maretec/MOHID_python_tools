@@ -24,11 +24,13 @@ mkdir_safe(dataDumpDir)
 dataDumpDir = dataDumpDir + '\\'
 
 ###############################################################################
-    
+
 #hydrodynamic files
-basedir = 'C:\\Users\\administrator\\Desktop\\Hydro'
+basedir = 'D:\\PV_data\\Atlantic_Lagrangian\\Hydrodynamic'
 subdirs = get_immediate_subdirectories(basedir)
 #print subdirs
+
+time_stride = 1
 
 t=0
 for subdir in subdirs:
@@ -37,14 +39,15 @@ for subdir in subdirs:
     hdf5files = get_contained_files(fullpath,'.hdf5')
     print 'found files ', hdf5files
     for dayfiles in hdf5files:
+        print 'processing ', dayfiles, ', Time ', t
         fullfilename = fullpath + '\\' + dayfiles
-        t = MOHIDHdf5toNetcdf(fullfilename,t,dataDumpDir)
-        t=t-1 #dayly mohid files sequence account 2 times for 0.00h, so we rewrite the last one
-
+        t = MOHIDHdf5toNetcdf(fullfilename,t,time_stride,dataDumpDir)
+        t=t-2 #dayly mohid files sequence account 2 times for 0.00h, so we rewrite the last one
+            
 ###############################################################################
 
 #Lagrangian files
-basedir = 'C:\\Users\\administrator\\Desktop\\Lagrangian'
+basedir = 'D:\\PV_data\\PCOMS_Lagrangian\\Lagrangian'
 subdirs = get_immediate_subdirectories(basedir)
 #print subdirs
 
@@ -55,6 +58,7 @@ for subdir in subdirs:
     hdf5files = get_contained_files(fullpath,'.hdf5')
     print 'found files ', hdf5files
     for dayfiles in hdf5files:
+        print 'processing ', dayfiles, ', Time ', t
         fullfilename = fullpath + '\\' + dayfiles
         t = MOHIDLagHdf5toNetcdf(fullfilename,t,dataDumpDir)
         t=t-1 #dayly mohid files sequence account 2 times for 0.00h, so we rewrite the last one
