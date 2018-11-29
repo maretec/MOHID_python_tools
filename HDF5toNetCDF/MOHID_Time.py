@@ -25,33 +25,34 @@ dataDumpDir = dataDumpDir + '\\'
 
 ###############################################################################
 
-#hydrodynamic files
-basedir = 'D:\\PV_data\\Atlantic_Lagrangian\\Hydrodynamic'
-subdirs = get_immediate_subdirectories(basedir)
-#print subdirs
-
-time_stride = 1
-
-t=0
-for subdir in subdirs:
-    fullpath = basedir + '\\' + subdir
-    print 'searching in ', fullpath
-    hdf5files = get_contained_files(fullpath,'.hdf5')
-    print 'found files ', hdf5files
-    for dayfiles in hdf5files:
-        print 'processing ', dayfiles, ', Time ', t
-        fullfilename = fullpath + '\\' + dayfiles
-        t = MOHIDHdf5toNetcdf(fullfilename,t,time_stride,dataDumpDir)
-        t=t-2 #dayly mohid files sequence account 2 times for 0.00h, so we rewrite the last one
+##hydrodynamic files
+#basedir = 'D:\PV_data\Atlantic_Lagrangian\Hydrodynamic2'
+#subdirs = get_immediate_subdirectories(basedir)
+##print subdirs
+#
+#time_stride = 1
+#
+#t=0
+#dates = [['0']]
+#for subdir in subdirs:
+#    fullpath = basedir + '\\' + subdir
+#    print 'searching in ', fullpath
+#    hdf5files = get_contained_files(fullpath,'.hdf5')
+#    print 'found files ', hdf5files
+#    for dayfiles in hdf5files:
+#        print 'processing ', dayfiles, ', Time ', t
+#        fullfilename = fullpath + '\\' + dayfiles
+#        t, dates = MOHIDHdf5toNetcdf(fullfilename,dates,t,time_stride,dataDumpDir)
             
 ###############################################################################
 
 #Lagrangian files
-basedir = 'D:\\PV_data\\PCOMS_Lagrangian\\Lagrangian'
+basedir = 'D:\PV_data\Atlantic_Lagrangian\Lagrangian2'
 subdirs = get_immediate_subdirectories(basedir)
 #print subdirs
 
 t=0
+dates = [['0']]
 for subdir in subdirs:
     fullpath = basedir + '\\' + subdir
     print 'searching in ', fullpath
@@ -60,6 +61,4 @@ for subdir in subdirs:
     for dayfiles in hdf5files:
         print 'processing ', dayfiles, ', Time ', t
         fullfilename = fullpath + '\\' + dayfiles
-        t = MOHIDLagHdf5toNetcdf(fullfilename,t,dataDumpDir)
-        t=t-1 #dayly mohid files sequence account 2 times for 0.00h, so we rewrite the last one
-        
+        t, dates = MOHIDLagHdf5toNetcdf(fullfilename,dates,t,dataDumpDir)
