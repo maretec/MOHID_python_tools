@@ -25,24 +25,24 @@ dataDumpDir = dataDumpDir + '\\'
 
 ###############################################################################
 
-##hydrodynamic files
-#basedir = 'D:\PV_data\Atlantic_Lagrangian\Hydrodynamic2'
-#subdirs = get_immediate_subdirectories(basedir)
-##print subdirs
-#
-#time_stride = 1
-#
-#t=0
-#dates = [['0']]
-#for subdir in subdirs:
-#    fullpath = basedir + '\\' + subdir
-#    print 'searching in ', fullpath
-#    hdf5files = get_contained_files(fullpath,'.hdf5')
-#    print 'found files ', hdf5files
-#    for dayfiles in hdf5files:
-#        print 'processing ', dayfiles, ', Time ', t
-#        fullfilename = fullpath + '\\' + dayfiles
-#        t, dates = MOHIDHdf5toNetcdf(fullfilename,dates,t,time_stride,dataDumpDir)
+#hydrodynamic files
+basedir = 'D:\PV_data\Atlantic_Lagrangian\Hydrodynamic2'
+subdirs = get_immediate_subdirectories(basedir)
+#print subdirs
+
+time_stride = 1
+
+t=0
+dates = [['0']]
+for subdir in subdirs:
+    fullpath = basedir + '\\' + subdir
+    print 'searching in ', fullpath
+    hdf5files = get_contained_files(fullpath,'.hdf5')
+    print 'found files ', hdf5files
+    for dayfiles in hdf5files:
+        print 'processing ', dayfiles, ', Time ', t
+        fullfilename = fullpath + '\\' + dayfiles
+        t, dates = MOHIDHdf5toNetcdf(fullfilename,dates,t,time_stride,dataDumpDir)
             
 ###############################################################################
 
