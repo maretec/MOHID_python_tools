@@ -1,6 +1,8 @@
 # MOHID_python_tools
 Repository of post and pre-processing tools for MOHID written using python 
 
+Common - Python modules common to most tools. Directory manipulation, math functions, etc.
+
 HDF5toNetCDF - converts hydrodynamic and Lagrangian MOHID output files (HDF5) to NetCDF and csv, respectively. 
     - The NetCDF files are 2D, only the bathymetry and surface layer are written at the moment.
     - The files are created as a stream, one file per time step.
