@@ -13,3 +13,6 @@ def get_contained_files(a_dir,extension):
 def mkdir_safe(a_dir):
     if not os.path.exists(a_dir):
         os.makedirs(a_dir)
+        
+def filename_without_ext(path_to_file): 
+    return os.path.splitext(path_to_file)[0]
