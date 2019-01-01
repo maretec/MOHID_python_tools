@@ -24,7 +24,8 @@ if subdirs == []:
 for subdir in subdirs:
     hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
     for hdf5file in hdf5files:
-        #simply create an xdmf file with the same name as 
+        #create an xdmf file with the same name as 
         #the hdf5, on the same directory
+        #this constructor takes care of all of that
         print '--> Processing file', hdf5file
         writexdmf = MXDMF_maker.MXDMFmaker(hdf5file,subdir)
