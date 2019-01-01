@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
 
-import numpy as np
-
-
 class MXDMFwriter:
     def __init__(self, filename, directory):
         self.filename = filename
         self.directory = directory
         self.f = []
         
-    def openfile(self):
+    def openFile(self):
         self.f = open(self.directory +'/'+ self.filename + '.xdmf', 'w')
         
-    def writeheader(self):
+    def writeHeader(self):
         self.f.write('''<?xml version="1.0" ?>
 <!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
 <Xdmf Version="2.0">
