@@ -18,9 +18,13 @@ class MXDMFmaker:
     def __init__(self, hdf5filename, directory):
         self.hdf5filename = os_dir.filename_without_ext(hdf5filename)
         self.directory = directory
+        self.hdf5fileType = []
         #instantiating reader and writer classes
         self.xdmfwriter = writer.MXDMFwriter(self.hdf5filename, self.directory)
         self.hdf5reader = reader.MHDF5Reader(hdf5filename, self.directory)
+        
+        self.hdf5fileType = self.hdf5reader.getFileType()
+        print '--->', self.hdf5fileType, 'file'
         
         self.xdmfwriter.openFile()
         self.xdmfwriter.writeHeader()
