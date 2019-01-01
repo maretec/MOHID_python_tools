@@ -11,24 +11,31 @@ class MHDF5Reader:
         self.validfile = 0
         self.filetype = []
         self.fkeys = self.f.keys()
+        
         self.MOHIDkeys = ['Grid', 'Results', 'Time']
-        if self.fkeys == self.MOHIDkeys:
-            #file is a valid MOHID output
+        self.hydroVars = ['baroclinic force X', 'baroclinic force Y', 'velocity U', 'velocity V', 'velocity W']
+        self.lagrangianVars = []
+        
+        #check if file is a valid MOHID output
+        if all(i in self.fkeys for i in self.MOHIDkeys):
             self.validfile = 1
         else:
             for key in self.MOHIDkeys:
                 if key not in self.fkeys:
                     print 'File does not have', key, 'group, not from MOHID, ignoring'
-        self.hydroVars = ['baroclinic force X', 'baroclinic force Y', 'velocity U', 'velocity V', 'velocity W']
-        
-        
-    def getFileType(self):
+                    
+        #check for file type
         if self.validfile == 1:
             #checking for Hydrodynamic files
             if 'water level' in self.f['Results'].keys():
                 print '---> Hydrodynamic file'
                 self.filetype = 'hydrodynamic'
+                if 'Corners3D' not in self.f['Grid'].keys():
+                    print '----> Old hydrodynamic file, without mesh information, ignoring'
+                    self.validfile = 0
             #cheking for Lagrangian files 
             if 'Group_1' in self.f['Results'].keys():
                 print '---> Lagrangian file'
                 self.filetype = 'lagrangian'
+                
+                

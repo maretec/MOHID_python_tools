@@ -22,7 +22,5 @@ class MXDMFmaker:
         self.xdmfwriter = writer.MXDMFwriter(self.hdf5filename, self.directory)
         self.hdf5reader = reader.MHDF5Reader(hdf5filename, self.directory)
         
-        self.hdf5reader.getFileType()
-        
         self.xdmfwriter.openFile()
         self.xdmfwriter.writeHeader()
