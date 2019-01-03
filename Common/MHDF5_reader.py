@@ -4,6 +4,12 @@ import h5py
 import numpy as np
 
 class MHDF5Reader:
+    #given a file name for an hdf5 file and a directory where it is located
+    #this constructor: 
+    #opens the file
+    #checks if it is a valid MOHID output
+    #checks the type of MOHID file (hydro, lagrangian, etc)
+    #checks if the version of eulerian files is high enough (must have Corners3D) 
     def __init__(self, filename, directory):
         self.filename = filename
         self.directory = directory
@@ -22,7 +28,7 @@ class MHDF5Reader:
         else:
             for key in self.MOHIDkeys:
                 if key not in self.fkeys:
-                    print '- File does not have', key, 'group, not from MOHID, ignoring'
+                    print '- [MHDF5Reader::init]: file does not have', key, 'group, not a MOHID output, ignoring'
                     
         #check for file type
         if self.validfile == 1:
@@ -30,15 +36,29 @@ class MHDF5Reader:
             if 'water level' in self.f['Results'].keys():
                 self.filetype = 'Hydrodynamic'
                 if 'Corners3D' not in self.f['Grid'].keys():
-                    print '- Old hydrodynamic file, without mesh information, ignoring'
+                    print '- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring'
                     self.validfile = 0
             #cheking for Lagrangian files 
             if 'Group_1' in self.f['Results'].keys():
                 self.filetype = 'Lagrangian'
                 
-    def getFileType(self):
-        return self.filetype
+    def isValidFile(self):
+        return self.validfile
                 
-    def getMeshDims(self):
-        return 1
+    #returns the file type as a string
+    def getFileType(self):
+        if self.validfile == 1:
+            return self.filetype
+        else:
+            print '- [MHDF5Reader::getFileType]: invalid file, no type, ignoring'
+                
+    #returns an array with the geometry dimensions
+    def getGeoDims(self):
+        if self.validfile == 1:
+            if self.filetype != 'Lagrangian':
+                return self.f['Grid']['Corners3D']['Latitude'].shape
+            #if self.filetype == 'Lagrangian':
+            #   return self.f['Grid']['Latitude'].size
+        else:
+            print '- [MHDF5Reader::getGeoDims]: invalid file, no geometry, ignoring'
         
