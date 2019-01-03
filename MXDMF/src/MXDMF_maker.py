@@ -19,6 +19,7 @@ class MXDMFmaker:
         self.hdf5filename = os_dir.filename_without_ext(hdf5filename)
         self.directory = directory
         self.hdf5fileType = []
+        self.timeStep = 1
         #instantiating reader and writer classes
         self.xdmfwriter = writer.MXDMFwriter(self.hdf5filename, self.directory)
         self.hdf5reader = reader.MHDF5Reader(hdf5filename, self.directory)
@@ -26,7 +27,20 @@ class MXDMFmaker:
         if self.hdf5reader.isValidFile():
             self.hdf5fileType = self.hdf5reader.getFileType()
             print '--->', self.hdf5fileType, 'file'
-            print self.hdf5reader.getGeoDims()
-        
+            
             self.xdmfwriter.openFile()
             self.xdmfwriter.writeHeader()
+            
+            while self.timeStep <= self.hdf5reader.getNumbTimeSteps():
+                geoDims = self.hdf5reader.getGeoDims(self.timeStep)
+                date = self.hdf5reader.getDate(self.timeStep)
+                
+                self.xdmfwriter.writeGeo(self.hdf5fileType,self.timeStep,date,geoDims)
+                
+                self.timeStep = self.timeStep + 1
+        
+            self.xdmfwriter.closeFile()
+            
+        print '--->', 'Wrote',self.hdf5filename+'.xdmf', 'file'
+        
+            
