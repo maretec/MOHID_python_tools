@@ -17,6 +17,7 @@ class MHDF5Reader:
         self.validfile = 0
         self.filetype = []
         self.fkeys = self.f.keys()
+        self.fTimeSteps = self.f['Time'].keys()
         
         self.MOHIDkeys = ['Grid', 'Results', 'Time']
         self.hydroVars = ['baroclinic force X', 'baroclinic force Y', 'velocity U', 'velocity V', 'velocity W']
@@ -51,14 +52,31 @@ class MHDF5Reader:
             return self.filetype
         else:
             print '- [MHDF5Reader::getFileType]: invalid file, no type, ignoring'
+     
+    #returns the number of time steps in the file
+    def getNumbTimeSteps(self):
+        if self.validfile == 1:
+            return len(self.fTimeSteps)
+        else:
+            print '- [MHDF5Reader::getNumbTimeSteps]: invalid file, ignoring'
+    
+    #returns the date of a time step in the file
+    def getDate(self, timeIndex):
+        if self.validfile == 1:
+            date=self.f['Time'][self.fTimeSteps[timeIndex-1]][:].transpose()
+            date=''.join(str(e) for e in date)
+            return date
+        else:
+            print '- [MHDF5Reader::getDate]: invalid file, ignoring'
                 
     #returns an array with the geometry dimensions
-    def getGeoDims(self):
+    def getGeoDims(self, timeIndex):
         if self.validfile == 1:
             if self.filetype != 'Lagrangian':
                 return self.f['Grid']['Corners3D']['Latitude'].shape
-            #if self.filetype == 'Lagrangian':
-            #   return self.f['Grid']['Latitude'].size
+            if self.filetype == 'Lagrangian':
+                timeVar = 'Latitude_' + str(timeIndex).zfill(5)
+                return self.f['Results']['Group_1']['Data_1D']['Latitude'][timeVar].size
         else:
             print '- [MHDF5Reader::getGeoDims]: invalid file, no geometry, ignoring'
         
