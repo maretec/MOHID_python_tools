@@ -6,9 +6,6 @@ class MXDMFwriter:
     def __init__(self, filename, directory):
         self.filename = filename
         self.directory = directory
-        self.f = []
-        
-    def openFile(self):
         self.f = open(self.directory +'/'+ self.filename + '.xdmf', 'w')
         
     def writeHeader(self):
@@ -65,6 +62,9 @@ class MXDMFwriter:
             </Grid>
 '''
         self.f.write(toWrite)
+        
+    def writeAttribute(self,fileType,timeIndex,date,geoDims):
+        return 1
         
         
 
