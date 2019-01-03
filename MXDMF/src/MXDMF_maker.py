@@ -23,8 +23,10 @@ class MXDMFmaker:
         self.xdmfwriter = writer.MXDMFwriter(self.hdf5filename, self.directory)
         self.hdf5reader = reader.MHDF5Reader(hdf5filename, self.directory)
         
-        self.hdf5fileType = self.hdf5reader.getFileType()
-        print '--->', self.hdf5fileType, 'file'
+        if self.hdf5reader.isValidFile():
+            self.hdf5fileType = self.hdf5reader.getFileType()
+            print '--->', self.hdf5fileType, 'file'
+            print self.hdf5reader.getGeoDims()
         
-        self.xdmfwriter.openFile()
-        self.xdmfwriter.writeHeader()
+            self.xdmfwriter.openFile()
+            self.xdmfwriter.writeHeader()
