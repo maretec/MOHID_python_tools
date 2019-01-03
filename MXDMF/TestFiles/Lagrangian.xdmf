@@ -3,3 +3,381 @@
 <Xdmf Version="2.0">
     <Domain>
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
+            <Grid Name="Step_00001" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="221"/>
+                <Time Value="1" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="221" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00001
+                    </DataItem>
+                    <DataItem Dimensions="221" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00001
+                    </DataItem>
+                    <DataItem Dimensions="221" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00001
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00002" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="215"/>
+                <Time Value="2" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="215" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00002
+                    </DataItem>
+                    <DataItem Dimensions="215" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00002
+                    </DataItem>
+                    <DataItem Dimensions="215" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00002
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00003" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="209"/>
+                <Time Value="3" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="209" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00003
+                    </DataItem>
+                    <DataItem Dimensions="209" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00003
+                    </DataItem>
+                    <DataItem Dimensions="209" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00003
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00004" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="203"/>
+                <Time Value="4" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="203" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00004
+                    </DataItem>
+                    <DataItem Dimensions="203" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00004
+                    </DataItem>
+                    <DataItem Dimensions="203" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00004
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00005" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="200"/>
+                <Time Value="5" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00005
+                    </DataItem>
+                    <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00005
+                    </DataItem>
+                    <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00005
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00006" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="200"/>
+                <Time Value="6" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00006
+                    </DataItem>
+                    <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00006
+                    </DataItem>
+                    <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00006
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00007" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="199"/>
+                <Time Value="7" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="199" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00007
+                    </DataItem>
+                    <DataItem Dimensions="199" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00007
+                    </DataItem>
+                    <DataItem Dimensions="199" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00007
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00008" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="198"/>
+                <Time Value="8" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="198" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00008
+                    </DataItem>
+                    <DataItem Dimensions="198" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00008
+                    </DataItem>
+                    <DataItem Dimensions="198" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00008
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00009" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="196"/>
+                <Time Value="9" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="196" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00009
+                    </DataItem>
+                    <DataItem Dimensions="196" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00009
+                    </DataItem>
+                    <DataItem Dimensions="196" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00009
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00010" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="195"/>
+                <Time Value="10" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="195" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00010
+                    </DataItem>
+                    <DataItem Dimensions="195" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00010
+                    </DataItem>
+                    <DataItem Dimensions="195" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00010
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00011" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="195"/>
+                <Time Value="11" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="195" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00011
+                    </DataItem>
+                    <DataItem Dimensions="195" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00011
+                    </DataItem>
+                    <DataItem Dimensions="195" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00011
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00012" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="193"/>
+                <Time Value="12" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="193" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00012
+                    </DataItem>
+                    <DataItem Dimensions="193" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00012
+                    </DataItem>
+                    <DataItem Dimensions="193" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00012
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00013" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="188"/>
+                <Time Value="13" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="188" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00013
+                    </DataItem>
+                    <DataItem Dimensions="188" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00013
+                    </DataItem>
+                    <DataItem Dimensions="188" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00013
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00014" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="186"/>
+                <Time Value="14" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="186" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00014
+                    </DataItem>
+                    <DataItem Dimensions="186" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00014
+                    </DataItem>
+                    <DataItem Dimensions="186" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00014
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00015" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="183"/>
+                <Time Value="15" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="183" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00015
+                    </DataItem>
+                    <DataItem Dimensions="183" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00015
+                    </DataItem>
+                    <DataItem Dimensions="183" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00015
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00016" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="182"/>
+                <Time Value="16" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="182" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00016
+                    </DataItem>
+                    <DataItem Dimensions="182" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00016
+                    </DataItem>
+                    <DataItem Dimensions="182" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00016
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00017" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="181"/>
+                <Time Value="17" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="181" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00017
+                    </DataItem>
+                    <DataItem Dimensions="181" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00017
+                    </DataItem>
+                    <DataItem Dimensions="181" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00017
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00018" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="180"/>
+                <Time Value="18" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="180" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00018
+                    </DataItem>
+                    <DataItem Dimensions="180" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00018
+                    </DataItem>
+                    <DataItem Dimensions="180" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00018
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00019" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="179"/>
+                <Time Value="19" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="179" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00019
+                    </DataItem>
+                    <DataItem Dimensions="179" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00019
+                    </DataItem>
+                    <DataItem Dimensions="179" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00019
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00020" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="178"/>
+                <Time Value="20" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00020
+                    </DataItem>
+                    <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00020
+                    </DataItem>
+                    <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00020
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00021" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="178"/>
+                <Time Value="21" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00021
+                    </DataItem>
+                    <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00021
+                    </DataItem>
+                    <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00021
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00022" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="177"/>
+                <Time Value="22" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00022
+                    </DataItem>
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00022
+                    </DataItem>
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00022
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00023" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="177"/>
+                <Time Value="23" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00023
+                    </DataItem>
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00023
+                    </DataItem>
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00023
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00024" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="177"/>
+                <Time Value="24" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00024
+                    </DataItem>
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00024
+                    </DataItem>
+                    <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00024
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00025" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="168"/>
+                <Time Value="25" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="168" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00025
+                    </DataItem>
+                    <DataItem Dimensions="168" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_00025
+                    </DataItem>
+                    <DataItem Dimensions="168" NumberType="Float" Precision="8" Format="HDF">
+                        Lagrangian.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_00025
+                    </DataItem>
+                </Geometry>
+            </Grid>
+        </Grid>
+    </Domain>
+</Xdmf>

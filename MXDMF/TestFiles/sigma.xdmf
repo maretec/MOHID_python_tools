@@ -3,3 +3,156 @@
 <Xdmf Version="2.0">
     <Domain>
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
+            <Grid Name="Step_00001" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="1" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00002" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="2" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00003" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="3" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00004" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="4" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00005" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="5" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00006" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="6" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00007" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="7" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00008" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="8" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00009" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="9" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+            <Grid Name="Step_00010" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>
+                <Time Value="10" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        sigma.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+        </Grid>
+    </Domain>
+</Xdmf>
