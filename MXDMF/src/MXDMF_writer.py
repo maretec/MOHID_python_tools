@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import numpy as np
+
 class MXDMFwriter:
     def __init__(self, filename, directory):
         self.filename = filename
@@ -16,16 +18,53 @@ class MXDMFwriter:
     <Domain>
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
 ''')
+        
+    def closeFile(self):
+        self.f.write('''        </Grid>
+    </Domain>
+</Xdmf>
+''')
+        self.f.close()
          
-    def writeGeo(self):
-        self.f.write('''<Grid Name="Box %d" GridType="Uniform"> # 
-        <Topology TopologyType="3DCoRectMesh" Dimensions="%d %d %d"/>
-        <Geometry GeometryType="ORIGIN_DXDYDZ">
-           <DataItem DataType="Float" Dimensions="3" Format="XML">0.0 0.0 0.0</DataItem>
-           <DataItem DataType="Float" Dimensions="3" Format="XML">1.0 1.0 1.0</DataItem>
-        </Geometry>
-        <Time Value="%d" />
-'''%(meshNumber, Nx, Ny, Nz, timeVal))
+    def writeGeo(self,fileType,timeIndex,date,geoDims):
+        timeIndexStr = str(timeIndex).zfill(5)
+        if fileType != 'Lagrangian':
+            geoDimsStr = ' '.join(str(e) for e in geoDims)
+            toWrite = '''            <Grid Name="Step_'''+timeIndexStr+'''" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="'''+geoDimsStr+'''"/>
+                <Time Value="'''+str(timeIndex)+'''" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+            </Grid>
+'''
+        if fileType == 'Lagrangian':
+            geoDimsStr = str(geoDims)
+            toWrite = '''            <Grid Name="Step_'''+timeIndexStr+'''" GridType="Uniform">
+                <Topology TopologyType="Polyvertex" Dimensions="'''+geoDimsStr+'''"/>
+                <Time Value="'''+str(timeIndex)+'''" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_'''+timeIndexStr+'''
+                    </DataItem>
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Latitude_'''+timeIndexStr+'''
+                    </DataItem>
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_'''+timeIndexStr+'''
+                    </DataItem>
+                </Geometry>
+            </Grid>
+'''
+        self.f.write(toWrite)
         
         
 
