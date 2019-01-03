@@ -16,6 +16,16 @@ class MXDMFwriter:
     <Domain>
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
 ''')
+         
+    def writeGeo(self):
+        self.f.write('''<Grid Name="Box %d" GridType="Uniform"> # 
+        <Topology TopologyType="3DCoRectMesh" Dimensions="%d %d %d"/>
+        <Geometry GeometryType="ORIGIN_DXDYDZ">
+           <DataItem DataType="Float" Dimensions="3" Format="XML">0.0 0.0 0.0</DataItem>
+           <DataItem DataType="Float" Dimensions="3" Format="XML">1.0 1.0 1.0</DataItem>
+        </Geometry>
+        <Time Value="%d" />
+'''%(meshNumber, Nx, Ny, Nz, timeVal))
         
         
 
