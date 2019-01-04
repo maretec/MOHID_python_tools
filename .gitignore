@@ -1,0 +1,12 @@
+build_linux/
+build_win/
+
+.vscode
+
+.DS_Store
+**/.DS_Store
+
+*_out/
+*.out
+
+*.pyc

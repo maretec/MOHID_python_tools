@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="2.0">
+    <Domain>
+        <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
+            <Grid Name="Solution_00001" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="27 116 94"/>">
+                <Time Value="1" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/Vorticity3D/Vorticity3D_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/baroclinic force X/baroclinic force X_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/baroclinic force Y/baroclinic force Y_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity U/velocity U_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity V/velocity V_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity W/velocity W_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity W Across/velocity W Across_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity modulus/velocity modulus_00001
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00002" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="27 116 94"/>">
+                <Time Value="2" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/Vorticity3D/Vorticity3D_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/baroclinic force X/baroclinic force X_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/baroclinic force Y/baroclinic force Y_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity U/velocity U_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity V/velocity V_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity W/velocity W_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity W Across/velocity W Across_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity modulus/velocity modulus_00002
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00003" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="27 116 94"/>">
+                <Time Value="3" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/Vorticity3D/Vorticity3D_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/baroclinic force X/baroclinic force X_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/baroclinic force Y/baroclinic force Y_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity U/velocity U_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity V/velocity V_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity W/velocity W_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity W Across/velocity W Across_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
+                        z_level.hdf5:/Results/velocity modulus/velocity modulus_00003
+                    </DataItem>
+                </Attribute>
+            </Grid>
+        </Grid>
+    </Domain>
+</Xdmf>
