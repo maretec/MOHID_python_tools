@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import h5py
-import numpy as np
 
 class MHDF5Reader:
     #given a file name for an hdf5 file and a directory where it is located
@@ -20,8 +19,6 @@ class MHDF5Reader:
         self.fTimeSteps = self.f['Time'].keys()
         
         self.MOHIDkeys = ['Grid', 'Results', 'Time']
-        self.hydroVars = ['baroclinic force X', 'baroclinic force Y', 'velocity U', 'velocity V', 'velocity W']
-        self.lagrangianVars = []
         
         #check if file is a valid MOHID output
         if all(i in self.fkeys for i in self.MOHIDkeys):
@@ -30,7 +27,6 @@ class MHDF5Reader:
             for key in self.MOHIDkeys:
                 if key not in self.fkeys:
                     print '- [MHDF5Reader::init]: file does not have', key, 'group, not a MOHID output, ignoring'
-                    
         #check for file type
         if self.validfile == 1:
             #checking for Hydrodynamic files
@@ -39,9 +35,23 @@ class MHDF5Reader:
                 if 'Corners3D' not in self.f['Grid'].keys():
                     print '- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring'
                     self.validfile = 0
+                self.fVars = self.f['Results'].keys()
+                #Because 2D fiels are mixed with 3D fields
+                exclusions = ['Error','TidePotential','water column','water level']
+                for exc in exclusions:
+                    if exc in self.fVars:
+                        self.fVars.remove(exc)
             #cheking for Lagrangian files 
             if 'Group_1' in self.f['Results'].keys():
                 self.filetype = 'Lagrangian'
+                #storing all variables in 
+                self.fVars = self.f['Results']['Group_1']['Data_1D'].keys()
+                #Because conventions are not followed (name of the variable 
+                #is not the name of the field, mixing diferent dimenisionalities on the same group,...)
+                exclusions = ['X Pos','Y Pos','Z Pos','Latitude average','Longitude average']
+                for exc in exclusions:
+                    if exc in self.fVars:
+                        self.fVars.remove(exc)
                 
     def isValidFile(self):
         return self.validfile
@@ -79,4 +89,22 @@ class MHDF5Reader:
                 return self.f['Results']['Group_1']['Data_1D']['Latitude'][timeVar].size
         else:
             print '- [MHDF5Reader::getGeoDims]: invalid file, no geometry, ignoring'
+            
+    #returns a list with (name,attPath) with all variables 
+    def getAllAttributesPath(self, timeIndex):
+        if self.validfile == 1:
+            Attr = []
+            if self.filetype != 'Lagrangian':
+                for var in self.fVars:
+                    timeVar = var + '_' + str(timeIndex).zfill(5)
+                    pathVar = '/Results/'+var+'/'+timeVar
+                    Attr.append([var, pathVar])
+            if self.filetype == 'Lagrangian':
+                for var in self.fVars:
+                    timeVar = var + '_' + str(timeIndex).zfill(5)
+                    pathVar = '/Results/Group_1/Data_1D/'+var+'/'+timeVar
+                    Attr.append([var, pathVar])
+            return Attr
+        else:
+            print '- [MHDF5Reader::getAllAttributesPath]: invalid file ignoring'
         
