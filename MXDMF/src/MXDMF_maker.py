@@ -34,14 +34,17 @@ class MXDMFmaker:
             while self.timeStep <= self.hdf5reader.getNumbTimeSteps():
                 geoDims = self.hdf5reader.getGeoDims(self.timeStep)
                 date = self.hdf5reader.getDate(self.timeStep)
+                attributes = self.hdf5reader.getAllAttributesPath(self.timeStep)
                 
+                self.xdmfwriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
                 self.xdmfwriter.writeGeo(self.hdf5fileType,self.timeStep,date,geoDims)
-                self.xdmfwriter.writeAttribute(self.hdf5fileType,self.timeStep,date,geoDims)
+                for attr in attributes:
+                    self.xdmfwriter.writeAttribute(self.hdf5fileType,attr,geoDims)
+                self.xdmfwriter.closeGrid()
                 
                 self.timeStep = self.timeStep + 1
         
             self.xdmfwriter.closeFile()
-            
-        print '--->', 'Wrote',self.hdf5filename+'.xdmf', 'file'
+            print '--->', 'Wrote',self.hdf5filename+'.xdmf', 'file'
         
             
