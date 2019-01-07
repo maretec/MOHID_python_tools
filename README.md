@@ -16,4 +16,4 @@ MXDMF - creates a light-data .xdmf metadata indexer of .hdf5 heavy-data files wr
         - Generalize for more Eulerian files (should work, but not tested)
         - Get Eulerian fields from Lagrangian files
         - Implement date-awareness
-        - Option to write a global file, indexing every time-step of a colection of files. This effectivelly bypasses the glue operations and should be very useful for operational-style runs.
+        - Option to write a global file, indexing every time-step of a collection of files. This effectively bypasses the glue operations and should be very useful for operational-style runs.
