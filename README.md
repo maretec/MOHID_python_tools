@@ -17,3 +17,8 @@ MXDMF - creates a light-data .xdmf metadata indexer of .hdf5 heavy-data files wr
         - Get Eulerian fields from Lagrangian files
         - Implement date-awareness
         - Option to write a global file, indexing every time-step of a colection of files. This effectivelly bypasses the glue operations and should be very useful for operational-style runs.
+
+get_boias - Donwload time series daily and monthly  insitu data from ftp server nrt.cmems-du.eu in netcdf format
+        - Built for operational use
+		- Read selected ocean buoys from jason files
+		- Run program by passing arguments such a starting dates, end dates, station ID, monthly or daily data, location of output directory, username and password
