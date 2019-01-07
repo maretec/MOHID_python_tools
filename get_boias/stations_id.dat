@@ -1,0 +1,1120 @@
+{
+  "stations": [
+    {
+      "PLOT_LABEL": "A Guarda_Buoy",
+      "STATION_NAME": "6201031_AGuarda_Buoy",
+      "DOWNSTA_NAME": "6201031",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.9",
+      "LATITUDE": "41.9",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Alghero_Buoy",
+      "STATION_NAME": "61213_Alghero_Buoy",
+      "DOWNSTA_NAME": "61213",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "8.10694",
+      "LATITUDE": "40.54861",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Anglet_Buoy",
+      "STATION_NAME": "62066_Anglet_Buoy",
+      "DOWNSTA_NAME": "62066",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.61400",
+      "LATITUDE": "43.53000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Banyuls_Buoy",
+      "STATION_NAME": "61188_Banyuls_Buoy",
+      "DOWNSTA_NAME": "61188",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.16830",
+      "LATITUDE": "42.48830",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Belle-Ile_Buoy",
+      "STATION_NAME": "62074_Belle-Ile_Buoy",
+      "DOWNSTA_NAME": "62074",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.16830",
+      "LATITUDE": "42.48830",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Bilbao_Buoy",
+      "STATION_NAME": "62024_Bilbao_Buoy",
+      "DOWNSTA_NAME": "62024",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-3.04000",
+      "LATITUDE": "43.64000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Brittany_Buoy",
+      "STATION_NAME": "62163_Brittany_Buoy",
+      "DOWNSTA_NAME": "62163",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.50000",
+      "LATITUDE": "47.50000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cagliari_Buoy",
+      "STATION_NAME": "61221_Cagliari_Buoy",
+      "DOWNSTA_NAME": "61221",
+      "REGION": "MO TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "9.45444",
+      "LATITUDE": "39.11028",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cabo Begur_Buoy",
+      "STATION_NAME": "61196_Cabo_Begur_Buoy",
+      "DOWNSTA_NAME": "61196",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.64000",
+      "LATITUDE": "41.92000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cabo de Gata_Buoy",
+      "STATION_NAME": "61198_Cabo_de_Gata_Buoy",
+      "DOWNSTA_NAME": "61198",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.32000",
+      "LATITUDE": "36.57000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cabo de Palos_Buoy",
+      "STATION_NAME": "61417_Cabo_de_Palos_Buoy",
+      "DOWNSTA_NAME": "61417",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-0.33000",
+      "LATITUDE": "37.65000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cabo de Penhas",
+      "STATION_NAME": "62025_Cabo_de_Penas_Buoy",
+      "DOWNSTA_NAME": "62025",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-6.19",
+      "LATITUDE": "43.73",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cadiz",
+      "STATION_NAME": "62085_Cadiz_Buoy",
+      "DOWNSTA_NAME": "62085",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-6.98",
+      "LATITUDE": "36.84",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cap Ferret_Buoy",
+      "STATION_NAME": "62064_Cap_Ferret_Buoy",
+      "DOWNSTA_NAME": "62064",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.44780",
+      "LATITUDE": "44.65030",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Cortegada Platform",
+      "STATION_NAME": "6201038_Cortegada_Platform",
+      "DOWNSTA_NAME": "6201038",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.9",
+      "LATITUDE": "41.9",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Dragonera_Buoy",
+      "STATION_NAME": "61430_Dragonera_Buoy",
+      "DOWNSTA_NAME": "61430",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "2.10000",
+      "LATITUDE": "39.56000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Donostia_Buoy",
+      "STATION_NAME": "Donostia_Buoy",
+      "DOWNSTA_NAME": "MYO_IR_Donostia",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.02000",
+      "LATITUDE": "43.56000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Espiguette_Buoy",
+      "STATION_NAME": "61431_Espiguette_Buoy",
+      "DOWNSTA_NAME": "61431",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "4.13330",
+      "LATITUDE": "43.42500",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Estaca Bares_Buoy",
+      "STATION_NAME": "62082_Estaca_de_Bares_Buoy",
+      "DOWNSTA_NAME": "62082",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-7.62",
+      "LATITUDE": "44.06",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Faial Pico_Buoy",
+      "STATION_NAME": "6202404_Faial_Pico_Buoy",
+      "DOWNSTA_NAME": "6202404",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-28.53767",
+      "LATITUDE": "38.587667",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Gascogne_Buoy",
+      "STATION_NAME": "62001_Gascogne_Buoy",
+      "DOWNSTA_NAME": "62001",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.00000",
+      "LATITUDE": "45.30000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Gironde Pauillac_Buoy",
+      "STATION_NAME": "62306_Gironde_Pauillac_Buoy",
+      "DOWNSTA_NAME": "62306",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-0.74250",
+      "LATITUDE": "45.19830",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Gironde Libourne_Buoy",
+      "STATION_NAME": "62307_Gironde_Libourne_Buoy",
+      "DOWNSTA_NAME": "62307",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-0.24890",
+      "LATITUDE": "44.91420",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Gironde Bordeaux_Buoy",
+      "STATION_NAME": "62309_Gironde_Bordeaux_Buoy",
+      "DOWNSTA_NAME": "62309",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-0.54610",
+      "LATITUDE": "44.86330",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Gran Canaria_Buoy",
+      "STATION_NAME": "13130_Gran_Canaria_Buoy",
+      "DOWNSTA_NAME": "13130",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-15.8100",
+      "LATITUDE": "28.19000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "IF000548",
+      "STATION_NAME": "IF000548_Buoy",
+      "DOWNSTA_NAME": "IF000548",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-4.00290",
+      "LATITUDE": "47.71510",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "IF000549",
+      "STATION_NAME": "IF000549_Buoy",
+      "DOWNSTA_NAME": "IF000549",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.95770",
+      "LATITUDE": "47.39380",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "IF000552",
+      "STATION_NAME": "IF000552_Buoy",
+      "DOWNSTA_NAME": "IF000552",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.29030",
+      "LATITUDE": "46.70220",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "IF000600",
+      "STATION_NAME": "IF000600_Buoy",
+      "DOWNSTA_NAME": "IF000600",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.33730",
+      "LATITUDE": "46.03730",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Illas Cies_Buoy",
+      "STATION_NAME": "6201040_Illas_Cies_Buoy",
+      "DOWNSTA_NAME": "6201040",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.91",
+      "LATITUDE": "42.17",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Iroise Stanne_Buoy",
+      "STATION_NAME": "62450_Iroise_Stanne_Buoy",
+      "DOWNSTA_NAME": "62450",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-4.55175",
+      "LATITUDE": "48.35796",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Lajes das Flores_Buoy",
+      "STATION_NAME": "6202403_Lajes_das_Flores_Buoy",
+      "DOWNSTA_NAME": "6202403",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-31.16667",
+      "LATITUDE": "39.36433",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Laspezia_Buoy",
+      "STATION_NAME": "61219_Laspezia_Buoy",
+      "DOWNSTA_NAME": "61219",
+      "REGION": "MO TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "9.82778",
+      "LATITUDE": "43.92917",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Leucate_Buoy",
+      "STATION_NAME": "61191_Leucate_Buoy",
+      "DOWNSTA_NAME": "61191",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.12450",
+      "LATITUDE": "42.91620",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Lion_Buoy",
+      "STATION_NAME": "61002_Lion_Buoy",
+      "DOWNSTA_NAME": "61002",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "4.70000",
+      "LATITUDE": "42.10000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Mahon_Buoy",
+      "STATION_NAME": "61197_Mahon_Buoy",
+      "DOWNSTA_NAME": "61197",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.12450",
+      "LATITUDE": "42.91620",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Matxitxako_Buoy",
+      "STATION_NAME": "Matxitxako_Buoy",
+      "DOWNSTA_NAME": "MYO_IR_Matxitxako",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.69000",
+      "LATITUDE": "43.63000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Monican01_Buoy",
+      "STATION_NAME": "Monican01_Buoy",
+      "DOWNSTA_NAME": "MYO_IR_Monican01",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-9.63",
+      "LATITUDE": "39.51",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Monican02_Buoy",
+      "STATION_NAME": "Monican02_Buoy",
+      "DOWNSTA_NAME": "MYO_IR_Monican02",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-9.19",
+      "LATITUDE": "39.75",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Nice_Buoy",
+      "STATION_NAME": "61001_Nice1_Buoy",
+      "DOWNSTA_NAME": "61001",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "7.80000",
+      "LATITUDE": "43.40000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Nice_Buoy",
+      "STATION_NAME": "61187_Nice2_Buoy",
+      "DOWNSTA_NAME": "61187",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "7.22600",
+      "LATITUDE": "43.63600",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Pierres_Noires_Buoy",
+      "STATION_NAME": "62069_Pierres_Noires_Buoy",
+      "DOWNSTA_NAME": "62069",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-4.96830",
+      "LATITUDE": "48.29030",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Plateau du Four_Buoy",
+      "STATION_NAME": "62070_Plateau_du_Four_Buoy",
+      "DOWNSTA_NAME": "62070",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.78700",
+      "LATITUDE": "47.23900",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Ponta Delgada_Buoy",
+      "STATION_NAME": "6202402_Ponta_Delgada_Buoy",
+      "DOWNSTA_NAME": "6202402",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-25.72133",
+      "LATITUDE": "37.725500",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Raia_Buoy",
+      "STATION_NAME": "Raia01_Buoy",
+      "DOWNSTA_NAME": "MYO_IR_Raia01",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-9.562",
+      "LATITUDE": "41.1623",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Rande Platform",
+      "STATION_NAME": "6201039_Rande_Platform",
+      "DOWNSTA_NAME": "6201039",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.9",
+      "LATITUDE": "41.9",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Ribeira_Buoy",
+      "STATION_NAME": "6201062_Ribeira_Buoy",
+      "DOWNSTA_NAME": "6201062",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.9",
+      "LATITUDE": "41.9",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Santander-AGL_Buoy",
+      "STATION_NAME": "6201030_Santander-AGL_Buoy",
+      "DOWNSTA_NAME": "6201030",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-3.77000",
+      "LATITUDE": "43.84000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Sete_Buoy",
+      "STATION_NAME": "61190_Sete_Buoy",
+      "DOWNSTA_NAME": "61190",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.77970",
+      "LATITUDE": "43.37150",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Silleiro_Buoy",
+      "STATION_NAME": "62084_Silleiro_Buoy",
+      "DOWNSTA_NAME": "62084",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-9.4",
+      "LATITUDE": "42.12",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Siniscola_Buoy",
+      "STATION_NAME": "61212_Siniscola_Buoy",
+      "DOWNSTA_NAME": "61212",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "9.89167",
+      "LATITUDE": "40.61667",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Tarragona_Buoy",
+      "STATION_NAME": "61280_Tarragona_Buoy",
+      "DOWNSTA_NAME": "61280",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "1.47000",
+      "LATITUDE": "40.68000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Tenerife_Buoy",
+      "STATION_NAME": "13131_Tenerife_Buoy",
+      "DOWNSTA_NAME": "13131",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-16.5800",
+      "LATITUDE": "28.00000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Valencia_Buoy",
+      "STATION_NAME": "61281_Valencia_Buoy",
+      "DOWNSTA_NAME": "61281",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "0.20000",
+      "LATITUDE": "39.52000",
+      "LEVEL_REF": "0.695"
+    },
+    {
+      "PLOT_LABEL": "Villano-Sisargas_Buoy",
+      "STATION_NAME": "62083_Villano-Sisargas_Buoy",
+      "DOWNSTA_NAME": "62083",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-9.21000",
+      "LATITUDE": "43.49000",
+      "LEVEL_REF": "0.695"
+    }
+  ],
+  "tide": [
+    {
+      "PLOT_LABEL": "A Corunha",
+      "STATION_NAME": "ACorunha_TG",
+      "DOWNSTA_NAME": "CorunaTG",
+      "REGION": "IR TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.39",
+      "LATITUDE": "43.36",
+      "LEVEL_REF": "2.739",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Ajaccio",
+      "STATION_NAME": "Ajaccio_TG ",
+      "DOWNSTA_NAME": "AjaccioTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "8.76290",
+      "LATITUDE": "41.92270 ",
+      "LEVEL_REF": "0.695",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Alcudia",
+      "STATION_NAME": "Alcudia_TG ",
+      "DOWNSTA_NAME": "AlcudiaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.14000",
+      "LATITUDE": "39.83000 ",
+      "LEVEL_REF": "0.695",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Algeciras",
+      "STATION_NAME": "Algeciras_TG",
+      "DOWNSTA_NAME": "AlgecirasTG ",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.36492",
+      "LATITUDE": "36.14823",
+      "LEVEL_REF": "0.695",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Almeria",
+      "STATION_NAME": "Almeria_TG",
+      "DOWNSTA_NAME": "AlmeriaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.48000",
+      "LATITUDE": "36.83000 ",
+      "LEVEL_REF": "0.695",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Arcachon Eyrac",
+      "STATION_NAME": "Arcachon_Eyrac_TG",
+      "DOWNSTA_NAME": "ArcachonEyracTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.16000",
+      "LATITUDE": "44.66000 ",
+      "LEVEL_REF": "0.695",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Arrecife",
+      "STATION_NAME": "Arrecife_TG",
+      "DOWNSTA_NAME": "ArrecifeTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-13.5300",
+      "LATITUDE": "28.97000 ",
+      "LEVEL_REF": "0.695",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Aveiro",
+      "STATION_NAME": "Aveiro_TG",
+      "DOWNSTA_NAME": "AveiroTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.74861",
+      "LATITUDE": "40.64444 ",
+      "LEVEL_REF": "0.695",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Barcelona",
+      "STATION_NAME": "Barcelona_TG",
+      "DOWNSTA_NAME": "BarcelonaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "2.16000",
+      "LATITUDE": "41.34000",
+      "LEVEL_REF": "1.757",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Bayonne Boucau",
+      "STATION_NAME": "Bayonne_Boucau_TG",
+      "DOWNSTA_NAME": "BayonneBoucauTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.52000",
+      "LATITUDE": "43.53000",
+      "LEVEL_REF": "1.757",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Bilbao",
+      "STATION_NAME": "Bilbao_TG",
+      "DOWNSTA_NAME": "BilbaoTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-3.05000",
+      "LATITUDE": "43.36000",
+      "LEVEL_REF": "1.757",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Bonanza",
+      "STATION_NAME": "Bonanza_TG",
+      "DOWNSTA_NAME": "BonanzaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-6.34",
+      "LATITUDE": "36.8",
+      "LEVEL_REF": "1.757",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Brest",
+      "STATION_NAME": "Brest_TG ",
+      "DOWNSTA_NAME": "BrestTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-4.50000",
+      "LATITUDE": "48.38000",
+      "LEVEL_REF": "1.757",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Concarneau",
+      "STATION_NAME": "Concarneau_TG ",
+      "DOWNSTA_NAME": "ConcarneauTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-3.91000",
+      "LATITUDE": "47.87000",
+      "LEVEL_REF": "1.757",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "El Hierro",
+      "STATION_NAME": "El_Hierro_TG ",
+      "DOWNSTA_NAME": "ElHierroTG ",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-17.9000",
+      "LATITUDE": "27.78000",
+      "LEVEL_REF": "1.757",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Ferrol",
+      "STATION_NAME": "Ferrol_TG ",
+      "DOWNSTA_NAME": "FerrolTG ",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.33",
+      "LATITUDE": "43.46",
+      "LEVEL_REF": "2.239",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Formentera",
+      "STATION_NAME": "Formentera_TG ",
+      "DOWNSTA_NAME": "FormenteraTG ",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "1.42000",
+      "LATITUDE": "38.73000",
+      "LEVEL_REF": "2.239",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Fos Sur Mer",
+      "STATION_NAME": "Fos_Sur_Mer_TG ",
+      "DOWNSTA_NAME": "FosSurMerTG ",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "4.89294 ",
+      "LATITUDE": "43.40494",
+      "LEVEL_REF": "2.239",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Fuerteventura",
+      "STATION_NAME": "Fuerteventura_TG ",
+      "DOWNSTA_NAME": "FuerteventuraTG ",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-13.8500",
+      "LATITUDE": "28.50000",
+      "LEVEL_REF": "2.239",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Gandia",
+      "STATION_NAME": "Gandia_TG",
+      "DOWNSTA_NAME": "GandiaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-0.15000",
+      "LATITUDE": "38.99000",
+      "LEVEL_REF": "2.754",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Gijon",
+      "STATION_NAME": "Gijon_TG",
+      "DOWNSTA_NAME": "GijonTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.70",
+      "LATITUDE": "43.56",
+      "LEVEL_REF": "2.754",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Huelva",
+      "STATION_NAME": "Huelva_TG",
+      "DOWNSTA_NAME": "HuelvaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-6.83",
+      "LATITUDE": "37.13",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Ibiza",
+      "STATION_NAME": "Ibiza_TG",
+      "DOWNSTA_NAME": "IbizaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "1.45000",
+      "LATITUDE": "38.91000",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Ile DAix",
+      "STATION_NAME": "Ile_DAix_TG",
+      "DOWNSTA_NAME": "IleDAixTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.17420",
+      "LATITUDE": "46.00740",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "La Figueirette",
+      "STATION_NAME": "La_Figueirette_TG",
+      "DOWNSTA_NAME": "LaFigueiretteTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "6.93377",
+      "LATITUDE": "43.48353 ",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "La Gomera",
+      "STATION_NAME": "La_Gomera_TG",
+      "DOWNSTA_NAME": "GomeraTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-17.1080",
+      "LATITUDE": "28.08700 ",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "La Palma",
+      "STATION_NAME": "La_Palma_TG",
+      "DOWNSTA_NAME": "LaPalmaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-17.7700",
+      "LATITUDE": "28.68000 ",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "La Rochelle",
+      "STATION_NAME": "La_Rochelle_TG",
+      "DOWNSTA_NAME": "LaRochelleTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.22000",
+      "LATITUDE": "46.16000 ",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Las Palmas",
+      "STATION_NAME": "Las_Palmas_TG",
+      "DOWNSTA_NAME": "LasPalmasTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-15.4100",
+      "LATITUDE": "28.14000 ",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Le Conquet",
+      "STATION_NAME": "Le_Conquet_TG",
+      "DOWNSTA_NAME": "LeConquetTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-4.78000",
+      "LATITUDE": "48.36000 ",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Le Crouesty",
+      "STATION_NAME": "Le_Crouesty_TG",
+      "DOWNSTA_NAME": "LeCrouestyTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.89000",
+      "LATITUDE": "47.54000 ",
+      "LEVEL_REF": "2.083",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Leixoes",
+      "STATION_NAME": "Leixoes_TG",
+      "DOWNSTA_NAME": "LeixoesTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.60",
+      "LATITUDE": "36.01",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Malaga",
+      "STATION_NAME": "Malaga_TG",
+      "DOWNSTA_NAME": "MalagaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-4.42000",
+      "LATITUDE": "36.71000",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Mahon",
+      "STATION_NAME": "Mahon_TG",
+      "DOWNSTA_NAME": "MahonTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "4.27000",
+      "LATITUDE": "39.89000",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Marseille",
+      "STATION_NAME": "Marseille_TG",
+      "DOWNSTA_NAME": "MarseilleTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "5.35370",
+      "LATITUDE": "43.27850",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Melilla",
+      "STATION_NAME": "Melilla_TG",
+      "DOWNSTA_NAME": "MelillaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.92000",
+      "LATITUDE": "35.29000",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Monaco",
+      "STATION_NAME": "Monaco_TG",
+      "DOWNSTA_NAME": "MonacoTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "7.42370",
+      "LATITUDE": "43.73300",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Motril ",
+      "STATION_NAME": "Motril_TG",
+      "DOWNSTA_NAME": "MotrilTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-3.52000",
+      "LATITUDE": "36.72000",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Nazare",
+      "STATION_NAME": "Nazare_TG",
+      "DOWNSTA_NAME": "NazareTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.60",
+      "LATITUDE": "36.01",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Nice ",
+      "STATION_NAME": "Nice_TG",
+      "DOWNSTA_NAME": "NiceTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "7.28550",
+      "LATITUDE": "43.69560",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Palma de Mallorca ",
+      "STATION_NAME": "Palma_de_Mallorca_TG ",
+      "DOWNSTA_NAME": "PalmadeMallorcaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "7.28550",
+      "LATITUDE": "43.69560",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Peniche",
+      "STATION_NAME": "Peniche_TG",
+      "DOWNSTA_NAME": "PenicheTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.60",
+      "LATITUDE": "36.01",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Port Bloc",
+      "STATION_NAME": "Port_Bloc_TG ",
+      "DOWNSTA_NAME": "PortBlocTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-1.06160",
+      "LATITUDE": "45.56850",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Port Tudy",
+      "STATION_NAME": "Port_Tudy_TG ",
+      "DOWNSTA_NAME": "PortTudyTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-3.45000",
+      "LATITUDE": "47.64000",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Port Vendres",
+      "STATION_NAME": "Port_Vendres_TG ",
+      "DOWNSTA_NAME": "PortVendresTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.10730",
+      "LATITUDE": "42.52010",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Sagunto",
+      "STATION_NAME": "Sagunto_TG",
+      "DOWNSTA_NAME": "SaguntoTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-0.21000",
+      "LATITUDE": "39.63000",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Saint Nazaire",
+      "STATION_NAME": "Saint_Nazaire_TG",
+      "DOWNSTA_NAME": "SaintNazaireTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-2.20000",
+      "LATITUDE": "47.27000",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Santander",
+      "STATION_NAME": "Santander_TG",
+      "DOWNSTA_NAME": "SantanderTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-3.79000",
+      "LATITUDE": "43.46000",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Sete",
+      "STATION_NAME": "Sete_TG",
+      "DOWNSTA_NAME": "SeteTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "3.70170",
+      "LATITUDE": "43.40000",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Sines",
+      "STATION_NAME": "Sines_TG",
+      "DOWNSTA_NAME": "SinesTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.60",
+      "LATITUDE": "36.01",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Tarifa",
+      "STATION_NAME": "Tarifa_TG",
+      "DOWNSTA_NAME": "TarifaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-5.6",
+      "LATITUDE": "36.01",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Tenerife",
+      "STATION_NAME": "Tenerife_TG",
+      "DOWNSTA_NAME": "TenerifeTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-16.2400",
+      "LATITUDE": "28.48000",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Toulon",
+      "STATION_NAME": "Toulon_TG",
+      "DOWNSTA_NAME": "ToulonTG",
+      "REGION": "GL TS MO",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "5.91460 ",
+      "LATITUDE": "43.12280",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Valencia",
+      "STATION_NAME": "Valencia_TG",
+      "DOWNSTA_NAME": "ValenciaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-0.33000 ",
+      "LATITUDE": "39.46000 ",
+      "LEVEL_REF": "0.720",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Viana do Castelo",
+      "STATION_NAME": "Viana_do_Castelo_TG",
+      "DOWNSTA_NAME": "VianaDoCasteloTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.84",
+      "LATITUDE": "41.69",
+      "LEVEL_REF": "2.1788",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Vigo",
+      "STATION_NAME": "Vigo_TG",
+      "DOWNSTA_NAME": "VigoTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.73",
+      "LATITUDE": "42.24",
+      "LEVEL_REF": "2.117",
+      "ASTRO_TIDE": "0"
+    },
+    {
+      "PLOT_LABEL": "Villagarcia",
+      "STATION_NAME": "Villagarcia_TG",
+      "DOWNSTA_NAME": "VillagarciaTG",
+      "ORIGIN": "MyOcean",
+      "LONGITUDE": "-8.94644",
+      "LATITUDE": "42.55088",
+      "LEVEL_REF": "2.229",
+      "ASTRO_TIDE": "0"
+    }
+  ]
+}
