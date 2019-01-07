@@ -1,8 +1,10 @@
 # getboias.py
 
 Created by: Jorge Palma and Ligia Pinto 
+
 Email: jorgempalma@tecnico.ulisboa.pt, ligia.pinto@tecnico.ulisboa.pt
-01-07-2019
+
+Last Update: 01-07-2019
 
 ## get_boias
 - Donwload time series daily and monthly  insitu data from ftp server nrt.cmems-du.eu in netcdf format
