@@ -2,8 +2,6 @@
 
 Created by: Jorge Palma and Ligia Pinto 
 
-Email: jorgempalma@tecnico.ulisboa.pt, ligia.pinto@tecnico.ulisboa.pt
-
 Last Update: 01-07-2019
 
 ## get_boias
