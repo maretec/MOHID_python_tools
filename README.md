@@ -31,6 +31,6 @@ Repository of post and pre-processing tools for MOHID written using python
 ## MapasDeCampos_by_hidromod
 MapasDeCampos creates figures for almost any MOHID hdf5 file format and MOHID time series files and any variable. Main purpose is for production and operational use, it can generate:
 
-    - 2D plots of any variable inside MOHID hdf5 files 
-    - 1D plots of MOHID time series 
-    - Plot statistical comparison between two hdf5 in mohid format, that come from ComapreHDF5 tool 
+   - 2D plots of any variable inside MOHID hdf5 files 
+   - 1D plots of MOHID time series 
+   - Plot statistical comparison between two hdf5 in mohid format, that come from ComapreHDF5 tool 
