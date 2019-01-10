@@ -1,0 +1,93 @@
+﻿
+#### Tipo de Grafico ####
+PLOT_IMAGE_TYPE : maps                 # Maps or TimeSeries
+PLOT_TYPE : 2                          # se Mapas : 1 para simples
+                                       # se Mapas : 2 para validação
+                                       # se Timeseries : 2 para comparaçao de 2 séries temporais
+                                       # se Timeseries : 5 para validação de 2 series temporais e execução do timeserie analyser
+AQUASAFE          : 1
+DYNAMIC_LIMITS    : 1
+
+FILE_PATH : RGF0.hdf5
+
+SCALAR            : /Results/significant wave height/significant wave height
+SCALAR_MAX        : 1
+SCALAR_MIN        : 0
+-VECTOR_X         : /Results/wave_x/wave_x
+-VECTOR_Y         : /Results/wave_x/wave_x
+-VECTOR_STEP      : 3
+-VECTOR_SIZE      : 50
+-VECTOR_WIDTH     : 0.005
+FIGURE_OUT_NAME   : 01_MAD_01_@%Y-%m-%dT%H-%M-%S@.png
+LEGEND            : Sea Surface Currents (m/s)
+GSSH              : 0
+WORLD_IMAGE       : 1
+WORLD_IMAGE_ESRI  : Ocean_Basemap                          # http://server.arcgisonline.com/arcgis/rest/services
+COLORBAR          : 1
+COLORBAR_SPACING  : 0.1
+DT                : 20
+DX                : 1
+DY                : 1
+-X_PIXEL          : 500
+-y_PIXEL          : 500
+FILL_VALUE        : 0
+DPI               : 300
+COMPRESSIMAGE     : 0
+!FIGURE_COLOR      : #F1F2F6
+VECTOR_COLOR      : #434a54
+FIGURE_QUALITY    : 70
+CONSTANT_VECTOR   : 1
+QUIVER_UNITS      : inches
+FONTSIZE          : 6
+PCOLOR            : 0
+EXTEND            : neither
+-COLORMAP         : [0.6,0.92,1.00;1,1,1;1,0.67,0.46]
+COLORMAP          : bwr
+LABEL             : 0
+LOGO_PATH         : D:\amos\AquaSafe\CoastLines\logo.png
+TIMEZONE : UTC
+!WINDOW : -17 32.5 -16.9 32.7
+
+!TITLE             : Madeira Archipelago @ Sea Surface Temperature
+
+
+#### Definições para Graficos de Validação    ####
+#cores de pyton here https://matplotlib.org/examples/color/colormaps_reference.html
+# Parametro      , posição na grid    , ymin , ymax ,  colobaspace   , Titulo do subplot        , path pr os dados                                                  ,   legenda da colorbar, colormap
+<BEGIN_VALIDATION_PARAMETERS_MAPS>
+Observations      ,  1                ,  21  ,   24    ,     1       ,    Average Observations  ,/Results/temperature average observations/temperature average observations                                , [$^\circ$C]           ,  rainbow
+Modeling          ,  2                , 21   ,  24     ,     1       ,    Average Model         ,/Results/temperature average model/temperature average model                         , [$^\circ$C]           ,  rainbow
+BIAS              ,  3                , -2   ,  2      ,     .5      ,    BIAS                  ,/Results/temperature bias/temperature bias                                                  , [$^\circ$C]           ,  bwr
+CORR              ,  0                , -1   ,  1      ,     .2      ,    R                     ,/Results/temperature correlation/temperature correlation                                    , Correlation [-]       ,  rainbow
+RMS               ,  0                , 0    ,  6      ,    1        ,    RMSE                  ,/Results/temperature root mean square deviation/temperature root mean square deviation      , [$^\circ$C]           ,  rainbow 
+TimeSeries        ,  4                , -5   ,  5      ,     1       ,    Bias                  ,/Results/significant wave height/significant wave height                                     , [$^\circ$C]           ,  GnBu
+<END_VALIDATION_PARAMETERS_MAPS> 
+
+VALIDATION_GRID   : 2 , 2
+VALIDATION_GRID_WS: 0.3
+VALIDATION_GRID_HS: 0.1
+XINCHES             : 10
+YINCHES             : 6
+
+
+
+
+#### Se Validation_TimeSeries ####
+<BEGIN_FILES_LIST>
+0
+1
+2
+<END_FILES_LIST>
+
+<BEGIN_FILES_LIST_COLUMN>
+2
+2
+2
+<END_FILES_LIST_COLUMN>
+
+# Parametro                , 0/1   , Coluna de dados do ficheiro ,Cor da linha,     ymin , ymax , GrupoEixoY, Legend label , Legenda Eixo
+<BEGIN_VALIDATION_PARAMETERS_TS>
+BIAS                       , 1     ,              10              ,  'g'       ,     -2    ,  2   ,  1      , BIAS    , [$^\circ$C]
+RMSE                       , 1     ,              12              ,  'g'       ,     -2    ,  2   ,  1      , RMSE    , [$^\circ$C]
+R                          , 1     ,              11               ,  'r'       ,     0     ,  1   ,  2      , R       , Correlation [-]
+<END_VALIDATION_PARAMETERS_TS>
