@@ -34,7 +34,7 @@ RUN:
 Just run the bash :)
     Run.bat where you need to adapt the python.exe path.
 
-# Known Errors:
+## Known Errors:
 If you get an error like this:
 
          from mpl_toolkits.basemap import Basemap
