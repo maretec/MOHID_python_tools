@@ -16,7 +16,7 @@ MapasDeCampos creates figures for almost any MOHID hdf5 file format and MOHID ti
         - proj4
 
 ## How to use this code:
-This code have several test cases, each test case, has their own bash and PythonFigures.dat which is the main driver of the code.
+This code has several test cases, each test case, has their own bash and PythonFigures.dat which is the main driver of the code.
 
 ### TestFiles/Compare2Hdf5
 Produce a .png images with 4 plots:
