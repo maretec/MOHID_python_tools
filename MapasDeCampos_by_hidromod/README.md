@@ -1,7 +1,7 @@
 # MapasDeCampos
 Created by: Joao Rodrigues @ hidromod https://hidromod.com/
 
-Last Update: 01-10-2019 by Angie
+Last Update: 01-10-2019
 
 MapasDeCampos creates figures for almost any MOHID hdf5 file format and MOHID time series files and any variable. Main purpose is for production and operational use, it can generate:
 
