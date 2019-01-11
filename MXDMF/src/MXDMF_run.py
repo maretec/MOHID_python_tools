@@ -18,17 +18,17 @@ def run():
     print '-> Main directory is', datadir
     #files may be in sub directories
     subdirs = os_dir.get_immediate_subdirectories(datadir)
-    #if subdirs is empty then just point to the main directory, as a list
+    #if subdirs is empty then just point to the main directory
     if subdirs == []:
         subdirs = [datadir]
     
     foundFiles = 0
-    #go through all subdirs 
+    #create mxdmf_maker class objects
+    singleXDMF = MXDMF_maker.MXDMFmaker()
+    #go through all subdirs
     for subdir in subdirs:
         hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
         for hdf5file in hdf5files:
-            #create an mxdmf_maker class object
-            singleXDMF = MXDMF_maker.MXDMFmaker()
             #create an xdmf file with the same name as 
             #the hdf5, on the same directory
             print '--> Processing file', hdf5file            
