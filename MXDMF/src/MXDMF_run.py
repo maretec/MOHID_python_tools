@@ -31,7 +31,8 @@ def run():
             #the hdf5, on the same directory
             #this constructor takes care of all of that
             print '--> Processing file', hdf5file
-            writexdmf = MXDMF_maker.MXDMFmaker(hdf5file,subdir)
+            singleXDMF = MXDMF_maker.MXDMFmaker()
+            singleXDMF.doFile(hdf5file,subdir)
             foundFiles = foundFiles + 1
     
     if foundFiles == 0:
