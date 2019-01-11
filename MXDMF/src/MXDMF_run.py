@@ -27,17 +27,17 @@ def run():
     for subdir in subdirs:
         hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
         for hdf5file in hdf5files:
+            #create an mxdmf_maker class object
+            singleXDMF = MXDMF_maker.MXDMFmaker()
             #create an xdmf file with the same name as 
             #the hdf5, on the same directory
-            #this constructor takes care of all of that
-            print '--> Processing file', hdf5file
-            singleXDMF = MXDMF_maker.MXDMFmaker()
+            print '--> Processing file', hdf5file            
             singleXDMF.doFile(hdf5file,subdir)
             foundFiles = foundFiles + 1
     
     if foundFiles == 0:
         print '-> No files found. Are you sure the directory is correct?'
     else:
-        print '-> Processed ' + str(foundFiles) + ' files'
+        print '-> Finished. Processed ' + str(foundFiles) + ' files'
             
 run()
