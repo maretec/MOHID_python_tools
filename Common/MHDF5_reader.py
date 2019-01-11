@@ -70,11 +70,19 @@ class MHDF5Reader:
         else:
             print '- [MHDF5Reader::getNumbTimeSteps]: invalid file, ignoring'
     
-    #returns the date of a time step in the file
+    #returns the date of a time step in the file in string format
+    def getDateStr(self, timeIndex):
+        if self.validfile == 1:
+            date=self.getDate(timeIndex)
+            date=''.join(str(e) for e in date)
+            return date
+        else:
+            print '- [MHDF5Reader::getDate]: invalid file, ignoring'
+            
+    #returns the date of a time step in the file in list format
     def getDate(self, timeIndex):
         if self.validfile == 1:
             date=self.f['Time'][self.fTimeSteps[timeIndex-1]][:].transpose()
-            date=''.join(str(e) for e in date)
             return date
         else:
             print '- [MHDF5Reader::getDate]: invalid file, ignoring'

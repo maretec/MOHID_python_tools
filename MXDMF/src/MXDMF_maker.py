@@ -42,7 +42,8 @@ class MXDMFmaker:
             
             while self.timeStep <= self.hdf5reader.getNumbTimeSteps():
                 geoDims = self.hdf5reader.getGeoDims(self.timeStep)
-                date = self.hdf5reader.getDate(self.timeStep)
+                date = self.hdf5reader.getDateStr(self.timeStep)
+                print date
                 attributes = self.hdf5reader.getAllAttributesPath(self.timeStep)
                 
                 self.xdmfwriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
