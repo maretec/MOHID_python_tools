@@ -34,7 +34,7 @@ class MXDMFwriter:
         if fileType != 'Lagrangian':
             geoDimsStr = ' '.join(str(e) for e in geoDims)
             toWrite = '''                <Topology TopologyType="3DSMesh" Dimensions="'''+geoDimsStr+'''"/>">
-                <Time Value="'''+str(timeIndex)+'''" />
+                <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
                         '''+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
@@ -50,7 +50,7 @@ class MXDMFwriter:
         if fileType == 'Lagrangian':
             geoDimsStr = str(geoDims)
             toWrite = '''                <Topology TopologyType="Polyvertex" Dimensions="'''+geoDimsStr+'''"/>
-                <Time Value="'''+str(timeIndex)+'''" />
+                <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
                         '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_'''+timeIndexStr+'''

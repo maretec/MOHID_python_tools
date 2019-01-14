@@ -8,6 +8,7 @@
 import sys
 sys.path.append('../../Common')
 import os_dir
+import MDateTime as mdate
 
 import MXDMF_writer as writer
 import MHDF5_reader as reader
@@ -42,12 +43,12 @@ class MXDMFmaker:
             
             while self.timeStep <= self.hdf5reader.getNumbTimeSteps():
                 geoDims = self.hdf5reader.getGeoDims(self.timeStep)
-                date = self.hdf5reader.getDateStr(self.timeStep)
-                print date
+                date = self.hdf5reader.getDate(self.timeStep)
+                timeStamp = mdate.getTimeStampFromMOHIDDate(date)
                 attributes = self.hdf5reader.getAllAttributesPath(self.timeStep)
                 
                 self.xdmfwriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
-                self.xdmfwriter.writeGeo(self.hdf5fileType,self.timeStep,date,geoDims)
+                self.xdmfwriter.writeGeo(self.hdf5fileType,self.timeStep,timeStamp,geoDims)
                 for attr in attributes:
                     self.xdmfwriter.writeAttribute(self.hdf5fileType,attr,geoDims)
                 self.xdmfwriter.closeGrid()
