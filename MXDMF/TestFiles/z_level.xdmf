@@ -5,7 +5,7 @@
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
             <Grid Name="Solution_00001" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="27 116 94"/>">
-                <Time Value="1" />
+                <Time Value="24472.0" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
                         z_level.hdf5:/Grid/Corners3D/Longitude
@@ -60,7 +60,7 @@
             </Grid>
             <Grid Name="Solution_00002" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="27 116 94"/>">
-                <Time Value="2" />
+                <Time Value="24472.0069444" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
                         z_level.hdf5:/Grid/Corners3D/Longitude
@@ -115,7 +115,7 @@
             </Grid>
             <Grid Name="Solution_00003" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="27 116 94"/>">
-                <Time Value="3" />
+                <Time Value="24472.0138889" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="27 116 94" NumberType="Float" Precision="8" Format="HDF">
                         z_level.hdf5:/Grid/Corners3D/Longitude
