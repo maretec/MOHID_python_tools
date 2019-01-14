@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import h5py
+import MDateTime
 
 class MHDF5Reader:
     #given a file name for an hdf5 file and a directory where it is located
@@ -72,10 +73,8 @@ class MHDF5Reader:
     
     #returns the date of a time step in the file in string format
     def getDateStr(self, timeIndex):
-        if self.validfile == 1:
-            date=self.getDate(timeIndex)
-            date=''.join(str(e) for e in date)
-            return date
+        if self.validfile == 1:            
+            return MDateTime.getDateStringFromMOHIDDate(self.getDate(timeIndex))
         else:
             print '- [MHDF5Reader::getDate]: invalid file, ignoring'
             
