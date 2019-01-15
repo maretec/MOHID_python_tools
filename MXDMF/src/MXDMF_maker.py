@@ -73,11 +73,11 @@ class MXDMFmaker:
         
         #if file is valid, we create a xmdf writer object and feed it
         if self.hdf5reader.isValidFile():
-            self.xdmfwriter = writer.MXDMFwriter(self.hdf5filename, self.directory)
+            self.xdmfwriter = writer.MXDMFwriter()
+            self.xdmfwriter.openFile(self.hdf5filename, self.directory)
             self.hdf5fileType = self.hdf5reader.getFileType()
+
             print('- [MXDMFmaker::doFile]:', self.hdf5fileType, 'file')
-            
-            self.xdmfwriter.writeHeader()
             
             while self.timeStep <= self.hdf5reader.getNumbTimeSteps():
                 geoDims = self.hdf5reader.getGeoDims(self.timeStep)
@@ -95,3 +95,6 @@ class MXDMFmaker:
         
             self.xdmfwriter.closeFile()
             print('- [MXDMFmaker::doFile]:', 'Wrote',self.hdf5filename+'.xdmf', 'file')
+            
+    def addFile(self, hdf5filename, directory, glueFile):
+        return 1
