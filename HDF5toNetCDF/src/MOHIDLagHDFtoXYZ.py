@@ -11,12 +11,12 @@ import numpy as np
 def MOHIDLagHdf5toNetcdf(filename, dates= [['0']], in_t=0, outdir=''):
     f = h5py.File(filename,'r')
     
-    TimestepsX = f['Results']['Group_1']['Data_1D']['Longitude'].keys()
-    TimestepsY = f['Results']['Group_1']['Data_1D']['Latitude'].keys()
-    TimestepsZ = f['Results']['Group_1']['Data_1D']['Z Pos'].keys()
+    TimestepsX = list(f['Results']['Group_1']['Data_1D']['Longitude'].keys())
+    TimestepsY = list(f['Results']['Group_1']['Data_1D']['Latitude'].keys())
+    TimestepsZ = list(f['Results']['Group_1']['Data_1D']['Z Pos'].keys())
     #TimestepsOid = f['Results']['Group_1']['Data_1D']['Origin ID'].keys()
-    TimestepsOid = f['Results']['Group_1']['Data_1D']['Partic ID'].keys()
-    TimeList = f['Time'].keys()
+    TimestepsOid = list(f['Results']['Group_1']['Data_1D']['Partic ID'].keys())
+    TimeList = list(f['Time'].keys())
     
     t=in_t
     for time in range(0,len(TimestepsX)):

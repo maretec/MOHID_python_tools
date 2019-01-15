@@ -4,7 +4,7 @@
 #    !        IST/MARETEC, Water Modelling Group, Mohid modelling system
 #    !------------------------------------------------------------------------------
 #    !
-#    ! TITLE         : MXDMF_run
+#    ! TITLE         : MDateTime
 #    ! PROJECT       : Mohid python tools
 #    ! MODULE        : background
 #    ! URL           : http://www.mohid.com
@@ -15,7 +15,7 @@
 #    !> Ricardo Birjukovs Canelas
 #    !
 #    ! DESCRIPTION:
-#    !global pupetter script for launching xdmf writer objects over hdf5 MOHID outputs
+#    !this encondes/decodes the MOHID date/time array to/from a float of total time since a reference date, in days 
 #    !------------------------------------------------------------------------------
 #    
 #    MIT License
@@ -39,45 +39,41 @@
 #    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #    SOFTWARE.
-
-import os
-import sys
-
-sys.path.append('../../Common')
-import os_dir
-
-import MXDMF_maker
-
-def run():
-    if len(sys.argv) >1:
-        datadir = sys.argv[1]
-    else:
-        basepath = os.path.dirname(__file__)
-        datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
-        
-    print('-> Main directory is', datadir)
-    #files may be in sub directories
-    subdirs = os_dir.get_immediate_subdirectories(datadir)
-    #if subdirs is empty then just point to the main directory
-    if subdirs == []:
-        subdirs = [datadir]
     
-    foundFiles = 0
-    #create mxdmf_maker class objects
-    singleXDMF = MXDMF_maker.MXDMFmaker()
-    #go through all subdirs
-    for subdir in subdirs:
-        hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
-        for hdf5file in hdf5files:
-            #create an xdmf file with the same name as 
-            #the hdf5, on the same directory
-            print('--> Processing file', hdf5file)           
-            singleXDMF.doFile(hdf5file,subdir)
-            foundFiles = foundFiles + 1
-    
-    if foundFiles == 0:
-        print('-> No files found. Are you sure the directory is correct?')
-    else:
-        print('-> Finished. Processed ' + str(foundFiles) + ' files')
-            
-run()
+from datetime import datetime, timedelta
+
+# Public API
+
+def getTimeStampFromMOHIDDate(MohidDate):
+    delta = datetime(int(MohidDate[0]), int(MohidDate[1]), int(MohidDate[2]), int(MohidDate[3]), int(MohidDate[4]), int(MohidDate[5])) - BaseDateTime()
+    timeStamp = delta.total_seconds()/timedelta(days=1).total_seconds()
+    return timeStamp
+
+def getMOHIDDateFromTimeStamp(timeStamp):
+    MD = getDateTimeFromTimeStamp(timeStamp)
+    MohidDate = [MD.year, MD.month, MD.day, MD.hour, MD.minute, MD.second]
+    return MohidDate
+
+def getDateStringFromTimeStamp(timeStamp):
+    return getDateTimeFromTimeStamp(timeStamp).strftime("%Y-%m-%d %H:%M:%S")
+
+def getDateStringFromMOHIDDate(MohidDate):
+    timeStamp = getTimeStampFromMOHIDDate(MohidDate)
+    return getDateTimeFromTimeStamp(timeStamp).strftime("%Y-%m-%d %H:%M:%S")
+
+
+###private functions
+
+def BaseDateTime():
+    return datetime(1950, 1, 1, 0, 0, 0)
+
+def getDateTimeFromTimeStamp(timeStamp):
+    delta = timedelta(seconds=timeStamp*timedelta (days=1).total_seconds())
+    return BaseDateTime() + delta
+
+#API examples
+#MOHIDate = [2000, 8, 19, 1, 1, 37]
+#print getTimeStampFromMOHIDDate(MOHIDate)
+#print getMOHIDDateFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate))
+#print getDateStringFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate))
+#print getDateStringFromMOHIDDate(MOHIDate)
