@@ -49,8 +49,12 @@ import os_dir
 import MXDMF_maker
 
 def run():
+    glueFiles = False
     if len(sys.argv) >1:
         datadir = sys.argv[1]
+        if len(sys.argv) >2:
+            if sys.argv[2] == 'Glue':
+                glueFiles = True
     else:
         basepath = os.path.dirname(__file__)
         datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
@@ -71,6 +75,8 @@ def run():
     foundFiles = 0
     #create mxdmf_maker class objects
     singleXDMF = MXDMF_maker.MXDMFmaker()
+    glueXDMF = MXDMF_maker.MXDMFmaker()
+    
     #go through all subdirs
     for subdir in subdirs:
         hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
@@ -79,6 +85,7 @@ def run():
             #the hdf5, on the same directory
             print('--> Processing file', hdf5file)           
             singleXDMF.doFile(hdf5file,subdir)
+            glueXDMF.addFile(hdf5file,subdir,glueFiles)
             foundFiles = foundFiles + 1
     
     if foundFiles == 0:
