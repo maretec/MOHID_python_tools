@@ -42,10 +42,22 @@
 #    SOFTWARE.
 
 class MXDMFwriter:
-    def __init__(self, filename, directory):
+    def __init__(self):
+        self.filename = []
+        self.directory = []        
+        
+    def openFile(self, filename, directory):
         self.filename = filename
         self.directory = directory
         self.f = open(self.directory +'/'+ self.filename + '.xdmf', 'w')
+        self.writeHeader()
+    
+    def closeFile(self):
+        self.f.write('''        </Grid>
+    </Domain>
+</Xdmf>
+''')
+        self.f.close()
         
     def writeHeader(self):
         self.f.write('''<?xml version="1.0" ?>
@@ -54,13 +66,6 @@ class MXDMFwriter:
     <Domain>
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
 ''')
-        
-    def closeFile(self):
-        self.f.write('''        </Grid>
-    </Domain>
-</Xdmf>
-''')
-        self.f.close()
         
     def openGrid(self,gridName):
         self.f.write('''            <Grid Name="'''+gridName+'''" GridType="Uniform">
