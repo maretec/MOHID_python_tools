@@ -13,7 +13,7 @@ def MOHIDHdf5toNetcdf(filename, dates= [['0']], in_t=0, file_stride=0, outdir=''
     coords={'lat': (('lat'),f['Grid']['Latitude'][0,:-1]),
             'lon': (('lon'),f['Grid']['Longitude'][:-1,0])}
     
-    TimeList = f['Time'].keys()
+    TimeList = list(f['Time'].keys())
     
     dates_in = dates
     

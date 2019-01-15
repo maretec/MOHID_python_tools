@@ -26,11 +26,11 @@ t=0
 dates = [['0']]
 for subdir in subdirs:
     fullpath = basedir + '\\' + subdir
-    print 'searching in ', fullpath
+    print('searching in ', fullpath)
     hdf5files = os_dir.get_contained_files(fullpath,'.hdf5')
-    print 'found files ', hdf5files
+    print('found files ', hdf5files)
     for dayfiles in hdf5files:
-        print 'processing ', dayfiles, ', Time ', t
+        print('processing ', dayfiles, ', Time ', t)
         fullfilename = fullpath + '\\' + dayfiles
         t, dates = MOHIDHdf5toNetcdf(fullfilename,dates,t,time_stride,dataDumpDir)
             
@@ -45,10 +45,10 @@ t=0
 dates = [['0']]
 for subdir in subdirs:
     fullpath = basedir + '\\' + subdir
-    print 'searching in ', fullpath
+    print('searching in ', fullpath)
     hdf5files = os_dir.get_contained_files(fullpath,'.hdf5')
-    print 'found files ', hdf5files
+    print('found files ', hdf5files)
     for dayfiles in hdf5files:
-        print 'processing ', dayfiles, ', Time ', t
+        print('processing ', dayfiles, ', Time ', t)
         fullfilename = fullpath + '\\' + dayfiles
         t, dates = MOHIDLagHdf5toNetcdf(fullfilename,dates,t,dataDumpDir)
