@@ -37,7 +37,7 @@ class MXDMFmaker:
         if self.hdf5reader.isValidFile():
             self.xdmfwriter = writer.MXDMFwriter(self.hdf5filename, self.directory)
             self.hdf5fileType = self.hdf5reader.getFileType()
-            print '- [MXDMFmaker::doFile]:', self.hdf5fileType, 'file'
+            print('- [MXDMFmaker::doFile]:', self.hdf5fileType, 'file')
             
             self.xdmfwriter.writeHeader()
             
@@ -56,6 +56,4 @@ class MXDMFmaker:
                 self.timeStep = self.timeStep + 1
         
             self.xdmfwriter.closeFile()
-            print '- [MXDMFmaker::doFile]:', 'Wrote',self.hdf5filename+'.xdmf', 'file'
-        
-            
+            print('- [MXDMFmaker::doFile]:', 'Wrote',self.hdf5filename+'.xdmf', 'file')

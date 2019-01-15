@@ -15,7 +15,7 @@ def run():
         basepath = os.path.dirname(__file__)
         datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
         
-    print '-> Main directory is', datadir
+    print('-> Main directory is', datadir)
     #files may be in sub directories
     subdirs = os_dir.get_immediate_subdirectories(datadir)
     #if subdirs is empty then just point to the main directory
@@ -31,13 +31,13 @@ def run():
         for hdf5file in hdf5files:
             #create an xdmf file with the same name as 
             #the hdf5, on the same directory
-            print '--> Processing file', hdf5file            
+            print('--> Processing file', hdf5file)           
             singleXDMF.doFile(hdf5file,subdir)
             foundFiles = foundFiles + 1
     
     if foundFiles == 0:
-        print '-> No files found. Are you sure the directory is correct?'
+        print('-> No files found. Are you sure the directory is correct?')
     else:
-        print '-> Finished. Processed ' + str(foundFiles) + ' files'
+        print('-> Finished. Processed ' + str(foundFiles) + ' files')
             
 run()
