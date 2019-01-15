@@ -44,13 +44,14 @@ import h5py
 import MDateTime
 
 class MHDF5Reader:
+    
     #given a file name for an hdf5 file and a directory where it is located
     #this constructor: 
     #opens the file
     #checks if it is a valid MOHID output
     #checks the type of MOHID file (hydro, lagrangian, etc)
     #checks if the version of eulerian files is high enough (must have Corners3D) 
-    def __init__(self, filename, directory):
+    def __init__(self, filename, directory, mandatoryMesh = True):
         self.filename = filename
         self.directory = directory
         self.f = h5py.File(self.directory +'/'+ self.filename, 'r')
@@ -73,9 +74,10 @@ class MHDF5Reader:
             #checking for Hydrodynamic files
             if 'water level' in list(self.f['Results'].keys()):
                 self.filetype = 'Hydrodynamic'
-                if 'Corners3D' not in list(self.f['Grid'].keys()):
-                    print('- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring')
-                    self.validfile = 0
+                if mandatoryMesh:
+                    if 'Corners3D' not in list(self.f['Grid'].keys()):
+                        print('- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring')
+                        self.validfile = 0
                 self.fVars = list(self.f['Results'].keys())
                 #Because 2D fiels are mixed with 3D fields
                 exclusions = ['Error','TidePotential','water column','water level']
