@@ -55,7 +55,7 @@
             </Grid>
             <Grid Name="Solution_00002" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="215"/>
-                <Time Value="22290.0416667" />
+                <Time Value="22290.041666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="215" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00002
@@ -105,7 +105,7 @@
             </Grid>
             <Grid Name="Solution_00003" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="209"/>
-                <Time Value="22290.0833333" />
+                <Time Value="22290.083333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="209" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00003
@@ -205,7 +205,7 @@
             </Grid>
             <Grid Name="Solution_00005" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="200"/>
-                <Time Value="22290.1666667" />
+                <Time Value="22290.166666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00005
@@ -255,7 +255,7 @@
             </Grid>
             <Grid Name="Solution_00006" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="200"/>
-                <Time Value="22290.2083333" />
+                <Time Value="22290.208333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="200" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00006
@@ -355,7 +355,7 @@
             </Grid>
             <Grid Name="Solution_00008" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="198"/>
-                <Time Value="22290.2916667" />
+                <Time Value="22290.291666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="198" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00008
@@ -405,7 +405,7 @@
             </Grid>
             <Grid Name="Solution_00009" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="196"/>
-                <Time Value="22290.3333333" />
+                <Time Value="22290.333333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="196" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00009
@@ -505,7 +505,7 @@
             </Grid>
             <Grid Name="Solution_00011" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="195"/>
-                <Time Value="22290.4166667" />
+                <Time Value="22290.416666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="195" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00011
@@ -555,7 +555,7 @@
             </Grid>
             <Grid Name="Solution_00012" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="193"/>
-                <Time Value="22290.4583333" />
+                <Time Value="22290.458333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="193" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00012
@@ -655,7 +655,7 @@
             </Grid>
             <Grid Name="Solution_00014" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="186"/>
-                <Time Value="22290.5416667" />
+                <Time Value="22290.541666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="186" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00014
@@ -705,7 +705,7 @@
             </Grid>
             <Grid Name="Solution_00015" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="183"/>
-                <Time Value="22290.5833333" />
+                <Time Value="22290.583333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="183" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00015
@@ -805,7 +805,7 @@
             </Grid>
             <Grid Name="Solution_00017" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="181"/>
-                <Time Value="22290.6666667" />
+                <Time Value="22290.666666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="181" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00017
@@ -855,7 +855,7 @@
             </Grid>
             <Grid Name="Solution_00018" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="180"/>
-                <Time Value="22290.7083333" />
+                <Time Value="22290.708333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="180" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00018
@@ -955,7 +955,7 @@
             </Grid>
             <Grid Name="Solution_00020" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="178"/>
-                <Time Value="22290.7916667" />
+                <Time Value="22290.791666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00020
@@ -1005,7 +1005,7 @@
             </Grid>
             <Grid Name="Solution_00021" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="178"/>
-                <Time Value="22290.8333333" />
+                <Time Value="22290.833333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="178" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00021
@@ -1105,7 +1105,7 @@
             </Grid>
             <Grid Name="Solution_00023" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="177"/>
-                <Time Value="22290.9166667" />
+                <Time Value="22290.916666666668" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00023
@@ -1155,7 +1155,7 @@
             </Grid>
             <Grid Name="Solution_00024" GridType="Uniform">
                 <Topology TopologyType="Polyvertex" Dimensions="177"/>
-                <Time Value="22290.9583333" />
+                <Time Value="22290.958333333332" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="177" NumberType="Float" Precision="8" Format="HDF">
                         Lagrangian.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_00024
