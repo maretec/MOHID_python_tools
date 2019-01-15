@@ -61,6 +61,12 @@ def run():
     #if subdirs is empty then just point to the main directory
     if subdirs == []:
         subdirs = [datadir]
+    else:
+        i = 0
+        for subdir in subdirs:
+            subdir = os.path.abspath(os.path.join(datadir, subdir))
+            subdirs[i] = subdir
+            i = i + 1
     
     foundFiles = 0
     #create mxdmf_maker class objects
