@@ -70,18 +70,23 @@ def run():
     foundFiles = 0
     #create mxdmf_maker class objects
     singleXDMF = MXDMF_maker.MXDMFmaker()
-    glueXDMF = MXDMF_maker.MXDMFmaker()
+    if glueFiles:
+        glueXDMF = MXDMF_maker.MXDMFmaker(glueFiles)
+        hdf5files = os_dir.get_contained_files(subdirs[0],'.hdf5')
+        glueXDMF.openGlueWriter(hdf5files,datadir)
     
     #go through all subdirs
     for subdir in subdirs:
-        subdir = os.path.abspath(os.path.join(datadir, subdir))
+        absSubDir = os.path.abspath(os.path.join(datadir, subdir))
         hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
         for hdf5file in hdf5files:
+            print('--> Processing file', hdf5file) 
             #create an xdmf file with the same name as 
             #the hdf5, on the same directory
-            print('--> Processing file', hdf5file)           
-            singleXDMF.doFile(hdf5file,subdir)
-            glueXDMF.addFile(hdf5file,subdir,glueFiles)
+            singleXDMF.doFile(hdf5file,absSubDir)
+            if glueFiles:
+                #add to the gluing file
+                glueXDMF.addFile(hdf5file,absSubDir,subdir)
             foundFiles = foundFiles + 1
     
     if foundFiles == 0:
