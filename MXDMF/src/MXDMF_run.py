@@ -58,6 +58,7 @@ def run():
     else:
         basepath = os.path.dirname(__file__)
         datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
+        #datadir = 'D:\PV_data\PCOMS_Lagrangian\Lagrangian'
         
     print('-> Main directory is', datadir)
     #files may be in sub directories
@@ -65,12 +66,6 @@ def run():
     #if subdirs is empty then just point to the main directory
     if subdirs == []:
         subdirs = [datadir]
-    else:
-        i = 0
-        for subdir in subdirs:
-            subdir = os.path.abspath(os.path.join(datadir, subdir))
-            subdirs[i] = subdir
-            i = i + 1
     
     foundFiles = 0
     #create mxdmf_maker class objects
@@ -79,6 +74,7 @@ def run():
     
     #go through all subdirs
     for subdir in subdirs:
+        subdir = os.path.abspath(os.path.join(datadir, subdir))
         hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
         for hdf5file in hdf5files:
             #create an xdmf file with the same name as 
