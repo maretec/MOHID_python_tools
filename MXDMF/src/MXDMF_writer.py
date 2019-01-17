@@ -75,11 +75,29 @@ class MXDMFwriter:
         self.f.write('''            </Grid>
 ''')
          
-    def writeGeo(self,fileType,timeIndex,date,geoDims):
+    def writeGeo(self,fileType,timeIndex,date,geoDims,dimensionality):
         timeIndexStr = str(timeIndex).zfill(5)
         if fileType != 'Lagrangian':
             geoDimsStr = ' '.join(str(e) for e in geoDims)
-            toWrite = '''                <Topology TopologyType="3DSMesh" Dimensions="'''+geoDimsStr+'''"/>">
+            if dimensionality == 2:
+                topology = '2DSMesh'
+                address = '/Grid'
+            if dimensionality == 3:
+                topology = '3DSMesh'
+                address = '/Grid/Corners3D'
+            toWrite = '''                <Topology TopologyType="'''+topology+'''" Dimensions="'''+geoDimsStr+'''"/>">
+                <Time Value="'''+str(date)+'''" />
+                <Geometry GeometryType="X_Y">
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:'''+address+'''/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
+                        '''+self.filename+'''.hdf5:'''+address+'''/Latitude
+                    </DataItem>
+                </Geometry>
+'''
+            if dimensionality == 3:
+                toWrite = '''                <Topology TopologyType="3DSMesh" Dimensions="'''+geoDimsStr+'''"/>">
                 <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
@@ -111,11 +129,16 @@ class MXDMFwriter:
 '''
         self.f.write(toWrite)
         
-    def writeAttribute(self,fileType,attr,geoDims):
+    def writeAttribute(self,fileType,attr,geoDims,dimensionality):
         attrName = attr[0]
-        attrPath = attr[1]
+        attrPath = attr[1]        
         if fileType != 'Lagrangian':
-            geoDimsStr = ' '.join(str(e) for e in geoDims)
+            meshDims = []
+            if dimensionality == 2:
+                meshDims[:] = [x - 1 for x in geoDims]
+            if dimensionality == 3:
+                meshDims = geoDims[0]-1, geoDims[1], geoDims[2]                
+            geoDimsStr = ' '.join(str(e) for e in meshDims)
         else:
             geoDimsStr = str(geoDims)
         toWrite = '''                <Attribute Name="'''+attrName+'''" AttributeType="Scalar" Center="Cell">

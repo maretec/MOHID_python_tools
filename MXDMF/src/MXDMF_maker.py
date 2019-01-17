@@ -91,15 +91,15 @@ class SingleMXDMFmaker:
             print('- [MXDMFmaker::doFile]:', self.hdf5fileType, 'file')
             
             while self.timeStep <= self.hdf5reader.getNumbTimeSteps():
-                geoDims = self.hdf5reader.getGeoDims(self.timeStep)
+                meshDims = self.hdf5reader.getMeshDims(self.timeStep)
                 date = self.hdf5reader.getDate(self.timeStep)
                 timeStamp = mdate.getTimeStampFromMOHIDDate(date)
                 attributes = self.hdf5reader.getAllAttributesPath(self.timeStep)
                 
                 self.xdmfwriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
-                self.xdmfwriter.writeGeo(self.hdf5fileType,self.timeStep,timeStamp,geoDims)
+                self.xdmfwriter.writeGeo(self.hdf5fileType,self.timeStep,timeStamp,meshDims,self.hdf5reader.getGeoDims())
                 for attr in attributes:
-                    self.xdmfwriter.writeAttribute(self.hdf5fileType,attr,geoDims)
+                    self.xdmfwriter.writeAttribute(self.hdf5fileType,attr,meshDims,self.hdf5reader.getGeoDims())
                 self.xdmfwriter.closeGrid()
                 
                 self.timeStep = self.timeStep + 1
@@ -121,7 +121,7 @@ class GlueMXDMFmaker():
         self.hdf5fileType = []
         self.directory = []
     
-    def openGlueWriter(self, filenames, directory):
+    def openGlueWriter(self, filenames, subdir, directory):
         self.hdf5filename = filenames
         self.directory = directory
         
