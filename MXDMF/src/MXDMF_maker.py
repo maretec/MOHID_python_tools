@@ -110,8 +110,8 @@ class SingleMXDMFmaker:
             
 class GlueMXDMFmaker():
     def __init__(self):  
-        self.gluefilenames = []
-        self.gluedirectory = []
+        self.glueFileName = []
+        self.glueDirectory = []
         self.hdf5Reader = []
         
         #this will be a list of writers, one for each type of output
@@ -119,11 +119,19 @@ class GlueMXDMFmaker():
         self.hdf5FileName = []
         self.hdf5validFile = []
         self.hdf5FileType = []
-        self.directory = []
     
-    def openGlueWriter(self, filenames, subdir, directory):
+    def openGlueWriter(self, filenames, absSubDir, directory):
         self.hdf5FileName = filenames
-        self.directory = directory
+        self.glueDirectory = directory
+        
+        f = 0
+        for hdf5File in self.hdf5FileName:
+            hdf5Reader = reader.MHDF5Reader(hdf5File, absSubDir)
+            self.glueFileName[f] = os_dir.filename_without_ext(hdf5File)
+            self.xdmfWriter[f] = writer.MXDMFwriter()
+            self.xdmfWriter[f].openFile(self.glueFileName[f], self.gluedirectory)
+            self.hdf5FileType[f] = hdf5Reader.getFileType()
+        
         
                 
         #self.xdmfWriter.openFile(self.gluefilename, self.gluedirectory)

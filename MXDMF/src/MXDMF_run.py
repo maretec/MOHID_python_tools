@@ -57,7 +57,8 @@ def run():
                 glueFiles = True
     else:
         basepath = os.path.dirname(__file__)
-        datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
+        datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles_op"))
+        glueFiles = True
         #datadir = 'D:\PV_data\PCOMS_Lagrangian\Lagrangian'
         
     print('-> Main directory is', datadir)
@@ -70,10 +71,11 @@ def run():
     foundFiles = 0
     #create mxdmf_maker class objects
     singleXDMF = MXDMF_maker.MXDMFmaker()
-    if glueFiles:
-        glueXDMF = MXDMF_maker.MXDMFmaker(glueFiles)
-        hdf5files = os_dir.get_contained_files(subdirs[0],'.hdf5')
-        glueXDMF.openGlueWriter(hdf5files,subdirs[0],datadir)
+    glueXDMF = MXDMF_maker.MXDMFmaker(glueFiles)
+    if glueFiles:        
+        absSubDir = os.path.abspath(os.path.join(datadir, subdirs[0]))
+        hdf5files = os_dir.get_contained_files(absSubDir,'.hdf5')
+        glueXDMF.openGlueWriter(hdf5files,absSubDir,datadir)
     
     #go through all subdirs
     for subdir in subdirs:
