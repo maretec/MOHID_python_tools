@@ -72,8 +72,12 @@ def run():
     #create mxdmf_maker class objects
     singleXDMF = MXDMF_maker.MXDMFmaker()
     glueXDMF = MXDMF_maker.MXDMFmaker(glueFiles)
-    if glueFiles:        
-        absSubDir = os.path.abspath(os.path.join(datadir, subdirs[0]))
+    if glueFiles:
+        if len(subdirs) > 1:
+            subdir = subdirs[1]
+        else:
+            subdir = subdirs
+        absSubDir = os.path.abspath(os.path.join(datadir, subdir))
         hdf5files = os_dir.get_contained_files(absSubDir,'.hdf5')
         glueXDMF.openGlueWriter(hdf5files,absSubDir,datadir)
     

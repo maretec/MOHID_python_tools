@@ -125,19 +125,20 @@ class GlueMXDMFmaker():
         self.glueDirectory = directory
         
         for hdf5File in self.hdf5FileName:
-            self.hdf5Reader = reader.MHDF5Reader(hdf5File, absSubDir)
-            if self.hdf5Reader.isValidFile():
-                self.glueFileName.append(os_dir.filename_without_ext(hdf5File))
-                self.xdmfWriter.append(writer.MXDMFwriter())
-                
-                self.xdmfWriter[-1].openFile(self.glueFileName[-1], self.glueDirectory)
-                self.hdf5FileType.append(self.hdf5Reader.getFileType())
-        
-        
-                
-        #self.xdmfWriter.openFile(self.gluefilename, self.gluedirectory)
+            if '_1' not in hdf5File:
+                self.hdf5Reader = reader.MHDF5Reader(hdf5File, absSubDir)
+                if self.hdf5Reader.isValidFile():
+                    self.glueFileName.append(os_dir.filename_without_ext(hdf5File))
+                    self.xdmfWriter.append(writer.MXDMFwriter())
+                    
+                    self.xdmfWriter[-1].openFile(self.glueFileName[-1], self.glueDirectory)
+                    self.hdf5FileType.append(self.hdf5Reader.getFileType())
             
     def addFile(self, hdf5FileName, absDirectory, directory):
+        timeStep = 1
+        f = 0
+        
+        
         return 1
     
     
