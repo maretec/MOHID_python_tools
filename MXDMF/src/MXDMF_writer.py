@@ -75,7 +75,7 @@ class MXDMFwriter:
         self.f.write('''            </Grid>
 ''')
          
-    def writeGeo(self,fileType,timeIndex,date,geoDims,dimensionality):
+    def writeGeo(self,fileType,timeIndex,date,geoDims,dimensionality, path = ''):
         timeIndexStr = str(timeIndex).zfill(5)
         if fileType != 'Lagrangian':
             geoDimsStr = ' '.join(str(e) for e in geoDims)
@@ -89,10 +89,10 @@ class MXDMFwriter:
                 <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:'''+address+'''/Longitude
+                        '''+path+self.filename+'''.hdf5:'''+address+'''/Longitude
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:'''+address+'''/Latitude
+                        '''+path+self.filename+'''.hdf5:'''+address+'''/Latitude
                     </DataItem>
                 </Geometry>
 '''
@@ -101,13 +101,13 @@ class MXDMFwriter:
                 <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
+                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Latitude
+                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Latitude
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Vertical
+                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Vertical
                     </DataItem>
                 </Geometry>
 '''
@@ -117,19 +117,19 @@ class MXDMFwriter:
                 <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_'''+timeIndexStr+'''
+                        '''+path+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_'''+timeIndexStr+'''
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Latitude/Latitude_'''+timeIndexStr+'''
+                        '''+path+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Latitude/Latitude_'''+timeIndexStr+'''
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_'''+timeIndexStr+'''
+                        '''+path+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_'''+timeIndexStr+'''
                     </DataItem>
                 </Geometry>
 '''
         self.f.write(toWrite)
         
-    def writeAttribute(self,fileType,attr,geoDims,dimensionality):
+    def writeAttribute(self,fileType,attr,geoDims,dimensionality, path = ''):
         attrName = attr[0]
         attrPath = attr[1]        
         if fileType != 'Lagrangian':
@@ -143,7 +143,7 @@ class MXDMFwriter:
             geoDimsStr = str(geoDims)
         toWrite = '''                <Attribute Name="'''+attrName+'''" AttributeType="Scalar" Center="Cell">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+self.filename+'''.hdf5:'''+attrPath+'''
+                        '''+path+self.filename+'''.hdf5:'''+attrPath+'''
                     </DataItem>
                 </Attribute>
 '''
