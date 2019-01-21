@@ -57,9 +57,7 @@ def run():
                 glueFiles = True
     else:
         basepath = os.path.dirname(__file__)
-        datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles_op"))
-        glueFiles = True
-        #datadir = 'D:\PV_data\PCOMS_Lagrangian\Lagrangian'
+        datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
         
     print('-> Main directory is', datadir)
     #files may be in sub directories
