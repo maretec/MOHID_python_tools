@@ -57,7 +57,7 @@ class MHDF5Reader:
         self.f = h5py.File(self.directory +'/'+ self.fileName, 'r')
         self.validFile = 0
         self.fileType = []
-        self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'WaterProperties2D']
+        self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'WaterProperties2D', 'InterfaceSedimentWater', 'InterfaceWaterAir', 'Turbulence']
         self.fileKeys = self.f.keys()
         self.fileTimeSteps = list(self.f['Time'].keys())        
         
@@ -92,10 +92,10 @@ class MHDF5Reader:
             if 'temperature' in list(self.f['Results'].keys()):
                 self.fileType = 'WaterProperties'
                 #weird props
-                exclusions = ['Assimila']                
+                exclusions = ['Assimila']
                 if self.getGeoDims() == 2:
                     self.fileType = 'WaterProperties2D'
-                    exclusions = [] 
+                    exclusions = []
                 if mandatoryMesh and self.fileType == 'WaterProperties':
                     if 'Corners3D' not in list(self.f['Grid'].keys()):
                         print('- [MHDF5Reader::init]: old WaterProperties file, without mesh information, ignoring')
@@ -115,6 +115,17 @@ class MHDF5Reader:
                 for exc in exclusions:
                     if exc in self.fVars:
                         self.fVars.remove(exc)
+            #checking for interface files
+            if 'Deposition' in list(self.f['Results'].keys()):
+                self.fileType = 'InterfaceSedimentWater'
+                self.validFile = 0
+            if 'evaporation' in list(self.f['Results'].keys()):
+                self.fileType = 'InterfaceWaterAir'
+                self.validFile = 0
+            #checking for turbulence files
+            if 'Diffusivity' in list(self.f['Results'].keys()):
+                self.fileType = 'Turbulence'
+                self.validFile = 0
                 
     def isValidFile(self):
         return self.validFile
