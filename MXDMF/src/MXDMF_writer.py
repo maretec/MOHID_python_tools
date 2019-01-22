@@ -42,22 +42,10 @@
 #    SOFTWARE.
 
 class MXDMFwriter:
-    def __init__(self):
-        self.filename = []
-        self.directory = []        
-        
-    def openFile(self, filename, directory):
+    def __init__(self, filename, directory):
         self.filename = filename
         self.directory = directory
         self.f = open(self.directory +'/'+ self.filename + '.xdmf', 'w')
-        self.writeHeader()
-    
-    def closeFile(self):
-        self.f.write('''        </Grid>
-    </Domain>
-</Xdmf>
-''')
-        self.f.close()
         
     def writeHeader(self):
         self.f.write('''<?xml version="1.0" ?>
@@ -67,6 +55,13 @@ class MXDMFwriter:
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
 ''')
         
+    def closeFile(self):
+        self.f.write('''        </Grid>
+    </Domain>
+</Xdmf>
+''')
+        self.f.close()
+        
     def openGrid(self,gridName):
         self.f.write('''            <Grid Name="'''+gridName+'''" GridType="Uniform">
 ''')
@@ -75,39 +70,21 @@ class MXDMFwriter:
         self.f.write('''            </Grid>
 ''')
          
-    def writeGeo(self,fileType,timeIndex,date,geoDims,dimensionality, path = ''):
+    def writeGeo(self,fileType,timeIndex,date,geoDims):
         timeIndexStr = str(timeIndex).zfill(5)
         if fileType != 'Lagrangian':
             geoDimsStr = ' '.join(str(e) for e in geoDims)
-            if dimensionality == 2:
-                topology = '2DSMesh'
-                address = '/Grid'
-            if dimensionality == 3:
-                topology = '3DSMesh'
-                address = '/Grid/Corners3D'
-            toWrite = '''                <Topology TopologyType="'''+topology+'''" Dimensions="'''+geoDimsStr+'''"/>">
-                <Time Value="'''+str(date)+'''" />
-                <Geometry GeometryType="X_Y">
-                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:'''+address+'''/Longitude
-                    </DataItem>
-                    <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:'''+address+'''/Latitude
-                    </DataItem>
-                </Geometry>
-'''
-            if dimensionality == 3:
-                toWrite = '''                <Topology TopologyType="3DSMesh" Dimensions="'''+geoDimsStr+'''"/>">
+            toWrite = '''                <Topology TopologyType="3DSMesh" Dimensions="'''+geoDimsStr+'''"/>">
                 <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
+                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Latitude
+                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Latitude
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Vertical
+                        '''+self.filename+'''.hdf5:/Grid/Corners3D/Vertical
                     </DataItem>
                 </Geometry>
 '''
@@ -117,33 +94,28 @@ class MXDMFwriter:
                 <Time Value="'''+str(date)+'''" />
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_'''+timeIndexStr+'''
+                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_'''+timeIndexStr+'''
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Latitude/Latitude_'''+timeIndexStr+'''
+                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Latitude/Latitude_'''+timeIndexStr+'''
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_'''+timeIndexStr+'''
+                        '''+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Z Pos/Z Position_'''+timeIndexStr+'''
                     </DataItem>
                 </Geometry>
 '''
         self.f.write(toWrite)
         
-    def writeAttribute(self,fileType,attr,geoDims,dimensionality, path = ''):
+    def writeAttribute(self,fileType,attr,geoDims):
         attrName = attr[0]
-        attrPath = attr[1]        
+        attrPath = attr[1]
         if fileType != 'Lagrangian':
-            meshDims = []
-            if dimensionality == 2:
-                meshDims[:] = [x - 1 for x in geoDims]
-            if dimensionality == 3:
-                meshDims = geoDims[0]-1, geoDims[1], geoDims[2]                
-            geoDimsStr = ' '.join(str(e) for e in meshDims)
+            geoDimsStr = ' '.join(str(e) for e in geoDims)
         else:
             geoDimsStr = str(geoDims)
         toWrite = '''                <Attribute Name="'''+attrName+'''" AttributeType="Scalar" Center="Cell">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:'''+attrPath+'''
+                        '''+self.filename+'''.hdf5:'''+attrPath+'''
                     </DataItem>
                 </Attribute>
 '''

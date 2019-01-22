@@ -53,128 +53,45 @@ import MHDF5_reader as reader
 
 ###############################################################################
 
-
-# a factory for our maker objects
-def MXDMFmaker(glue = False):    
-    if glue:
-        return GlueMXDMFmaker()
-    else:
-        return SingleMXDMFmaker()
-    
-
-class SingleMXDMFmaker:
+class MXDMFmaker:
     def __init__(self):
-        self.hdf5FileName = []
+        self.hdf5filename = []
         self.directory = []
-        self.hdf5FileType = []
+        self.hdf5fileType = []
         self.timeStep = []
         #instantiating reader and writer classes
-        self.hdf5Reader = []
-        self.xdmfWriter = []
-        self.hdf5FileName = []
-        self.directory = []        
+        self.hdf5reader = []
+        self.xdmfwriter = []
             
-    def doFile(self, hdf5FileName, directory):
-        self.hdf5FileName = os_dir.filename_without_ext(hdf5FileName)
+    def doFile(self, hdf5filename, directory):
+        self.hdf5filename = os_dir.filename_without_ext(hdf5filename)
         self.directory = directory
-        self.hdf5FileType = []
+        self.hdf5fileType = []
         self.timeStep = 1
-        #instantiating reader
-        self.hdf5Reader = reader.MHDF5Reader(hdf5FileName, self.directory)
+        #instantiating reader and writer classes
+        self.hdf5reader = reader.MHDF5Reader(hdf5filename, self.directory)
         
         #if file is valid, we create a xmdf writer object and feed it
-        if self.hdf5Reader.isValidFile():
-            self.xdmfWriter = writer.MXDMFwriter()
-            self.xdmfWriter.openFile(self.hdf5FileName, self.directory)
-            self.hdf5FileType = self.hdf5Reader.getFileType()
-
-            print('- [MXDMFmaker::doFile]:', self.hdf5FileType, 'file')
+        if self.hdf5reader.isValidFile():
+            self.xdmfwriter = writer.MXDMFwriter(self.hdf5filename, self.directory)
+            self.hdf5fileType = self.hdf5reader.getFileType()
+            print('- [MXDMFmaker::doFile]:', self.hdf5fileType, 'file')
             
-            while self.timeStep <= self.hdf5Reader.getNumbTimeSteps():
-                meshDims = self.hdf5Reader.getMeshDims(self.timeStep)
-                date = self.hdf5Reader.getDate(self.timeStep)
+            self.xdmfwriter.writeHeader()
+            
+            while self.timeStep <= self.hdf5reader.getNumbTimeSteps():
+                geoDims = self.hdf5reader.getGeoDims(self.timeStep)
+                date = self.hdf5reader.getDate(self.timeStep)
                 timeStamp = mdate.getTimeStampFromMOHIDDate(date)
-                attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)
+                attributes = self.hdf5reader.getAllAttributesPath(self.timeStep)
                 
-                self.xdmfWriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
-                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,meshDims,self.hdf5Reader.getGeoDims())
+                self.xdmfwriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
+                self.xdmfwriter.writeGeo(self.hdf5fileType,self.timeStep,timeStamp,geoDims)
                 for attr in attributes:
-                    self.xdmfWriter.writeAttribute(self.hdf5FileType,attr,meshDims,self.hdf5Reader.getGeoDims())
-                self.xdmfWriter.closeGrid()
+                    self.xdmfwriter.writeAttribute(self.hdf5fileType,attr,geoDims)
+                self.xdmfwriter.closeGrid()
                 
                 self.timeStep = self.timeStep + 1
         
-            self.xdmfWriter.closeFile()
-            print('- [MXDMFmaker::doFile]:', 'Wrote',self.hdf5FileName+'.xdmf', 'file')
-            
-            
-class GlueMXDMFmaker():
-    def __init__(self):
-        #set once
-        self.glueFileName = []
-        self.glueDirectory = []
-        
-        #this will be lists of things/objects, one for each type of output
-        self.xdmfWriter = []
-        self.hdf5FileName = []
-        self.hdf5FileType = []
-        self.usedTimes = []
-        
-        #to use at class calls
-        self.hdf5Reader = []
-        self.timeStep = []
-        self.currDir = []
-        self.currFileName = []
-    
-    def openGlueWriter(self, fileNames, absSubDir, directory):
-        self.hdf5FileName = fileNames
-        self.glueDirectory = directory
-        
-        for hdf5File in self.hdf5FileName:
-            if '_1' not in hdf5File:
-                self.hdf5Reader = reader.MHDF5Reader(hdf5File, absSubDir)
-                if self.hdf5Reader.isValidFile():
-                    self.glueFileName.append(os_dir.filename_without_ext(hdf5File))
-                    self.xdmfWriter.append(writer.MXDMFwriter())
-                    
-                    self.xdmfWriter[-1].openFile(self.glueFileName[-1], self.glueDirectory)
-                    self.hdf5FileType.append(self.hdf5Reader.getFileType())
-                    self.usedTimes.append([])
-            
-    def addFile(self, hdf5FileName, absSubDir, subdir):
-        self.currFileName = os_dir.filename_without_ext(hdf5FileName)
-        self.currDir = absSubDir
-        self.hdf5Reader = reader.MHDF5Reader(hdf5FileName, self.currDir)
-        if self.hdf5Reader.isValidFile():
-            f = self.glueFileName.index(self.currFileName)
-            self.timeStep = 1
-            
-            while self.timeStep <= self.hdf5Reader.getNumbTimeSteps():
-                    meshDims = self.hdf5Reader.getMeshDims(self.timeStep)
-                    date = self.hdf5Reader.getDate(self.timeStep)
-                    timeStamp = mdate.getTimeStampFromMOHIDDate(date)
-                    
-                    if timeStamp not in self.usedTimes[f]:
-                        attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)                        
-                        self.xdmfWriter[f].openGrid('Solution_'+str(self.timeStep).zfill(5))
-                        self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
-                        for attr in attributes:
-                            self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],attr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
-                        self.xdmfWriter[f].closeGrid()
-                        self.usedTimes[f].append(timeStamp)
-                    
-                    self.timeStep = self.timeStep + 1
-        
-        
-        print('- [MXDMFmaker::addFile]:', 'Indexed the',self.currFileName+'.xdmf', 'file')
-    
-
-    def closeGlueWriter(self):
-        for xdmfWriter in self.xdmfWriter:
-            xdmfWriter.closeFile()
-    
-    
-    
-    
-    
-    
+            self.xdmfwriter.closeFile()
+            print('- [MXDMFmaker::doFile]:', 'Wrote',self.hdf5filename+'.xdmf', 'file')

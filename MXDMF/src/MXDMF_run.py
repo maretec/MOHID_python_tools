@@ -49,12 +49,8 @@ import os_dir
 import MXDMF_maker
 
 def run():
-    glueFiles = False
     if len(sys.argv) >1:
         datadir = sys.argv[1]
-        if len(sys.argv) >2:
-            if sys.argv[2] == 'Glue':
-                glueFiles = True
     else:
         basepath = os.path.dirname(__file__)
         datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
@@ -65,41 +61,25 @@ def run():
     #if subdirs is empty then just point to the main directory
     if subdirs == []:
         subdirs = [datadir]
+    else:
+        i = 0
+        for subdir in subdirs:
+            subdir = os.path.abspath(os.path.join(datadir, subdir))
+            subdirs[i] = subdir
+            i = i + 1
     
     foundFiles = 0
     #create mxdmf_maker class objects
     singleXDMF = MXDMF_maker.MXDMFmaker()
-    glueXDMF = MXDMF_maker.MXDMFmaker(glueFiles)
-    if glueFiles:
-        ignoreGlueDir = []
-        for subdir in subdirs: #we need to search for hotstart files and ignore them
-            absSubDir = os.path.abspath(os.path.join(datadir, subdir))
-            hdf5files = os_dir.get_contained_files(absSubDir,'.hdf5')
-            if '_1' in hdf5files[0]: #this is the current convention
-                ignoreGlueDir.append(subdir)
-        for subdir in subdirs: #going to search for the first good dir and create empty .xdmf files based on those
-            if subdir not in ignoreGlueDir:
-                absSubDir = os.path.abspath(os.path.join(datadir, subdir))
-                hdf5files = os_dir.get_contained_files(absSubDir,'.hdf5')
-                glueXDMF.openGlueWriter(hdf5files,absSubDir,datadir)
-                break
-    
     #go through all subdirs
     for subdir in subdirs:
-        absSubDir = os.path.abspath(os.path.join(datadir, subdir))
-        hdf5files = os_dir.get_contained_files(absSubDir,'.hdf5')
+        hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
         for hdf5file in hdf5files:
-            print('--> Processing file', hdf5file) 
             #create an xdmf file with the same name as 
             #the hdf5, on the same directory
-            singleXDMF.doFile(hdf5file,absSubDir)
-            if glueFiles and (subdir not in ignoreGlueDir):
-                #add to the gluing file
-                glueXDMF.addFile(hdf5file,absSubDir,subdir)
+            print('--> Processing file', hdf5file)           
+            singleXDMF.doFile(hdf5file,subdir)
             foundFiles = foundFiles + 1
-    
-    if glueFiles:
-        glueXDMF.closeGlueWriter()
     
     if foundFiles == 0:
         print('-> No files found. Are you sure the directory is correct?')
