@@ -3,3 +3,881 @@
 <Xdmf Version="2.0">
     <Domain>
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
+            <Grid Name="Solution_00001" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.0" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00001
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00001
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00002" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.125" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00002
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00003" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.25" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00003
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00004" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.375" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00004
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00005" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.5" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00005
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00006" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.625" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00006
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00007" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.75" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00007
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00008" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24106.875" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00008
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00009" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.0" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00009
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00002" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.125" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00002
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00003" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.25" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00003
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00004" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.375" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00004
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00005" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.5" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00005
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00006" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.625" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00006
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00007" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.75" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00007
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00008" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24107.875" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00008
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00009" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.0" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00009
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00002" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.125" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00002
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00002
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00003" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.25" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00003
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00003
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00004" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.375" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00004
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00004
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00005" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.5" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00005
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00005
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00006" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.625" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00006
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00006
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00007" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.75" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00007
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00007
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00008" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24108.875" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00008
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00008
+                    </DataItem>
+                </Attribute>
+            </Grid>
+            <Grid Name="Solution_00009" GridType="Uniform">
+                <Topology TopologyType="3DSMesh" Dimensions="51 125 177"/>">
+                <Time Value="24109.0" />
+                <Geometry GeometryType="X_Y_Z">
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Longitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Latitude
+                    </DataItem>
+                    <DataItem Dimensions="51 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Grid/Corners3D/Vertical
+                    </DataItem>
+                </Geometry>
+                <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity U/velocity U_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity V/velocity V_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity W/velocity W_00009
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="50 125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic.hdf5:/Results/velocity modulus/velocity modulus_00009
+                    </DataItem>
+                </Attribute>
+            </Grid>
+        </Grid>
+    </Domain>
+</Xdmf>
