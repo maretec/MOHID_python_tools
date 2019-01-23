@@ -166,7 +166,7 @@ class GlueMXDMFmaker():
                     self.timeStep = self.timeStep + 1
         
         
-        print('- [MXDMFmaker::addFile]:', 'Indexed the',self.currFileName+'.xdmf', 'file')
+        print('- [MXDMFmaker::addFile]:', 'Indexed the',self.currFileName+'.hdf5', 'file')
     
 
     def closeGlueWriter(self):

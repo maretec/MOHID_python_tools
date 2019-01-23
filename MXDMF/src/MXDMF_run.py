@@ -53,11 +53,12 @@ def run():
     if len(sys.argv) >1:
         datadir = sys.argv[1]
         if len(sys.argv) >2:
-            if sys.argv[2] == 'Glue':
+            if sys.argv[2] == 'glue':
                 glueFiles = True
     else:
         basepath = os.path.dirname(__file__)
         datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
+
         
     print('-> Main directory is', datadir)
     #files may be in sub directories
