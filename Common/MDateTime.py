@@ -46,7 +46,8 @@ from datetime import datetime, timedelta
 
 def getTimeStampFromMOHIDDate(MohidDate):
     delta = datetime(int(MohidDate[0]), int(MohidDate[1]), int(MohidDate[2]), int(MohidDate[3]), int(MohidDate[4]), int(MohidDate[5])) - BaseDateTime()
-    timeStamp = delta.total_seconds()/timedelta(days=1).total_seconds()
+    timeStamp = delta.total_seconds()
+	#timeStamp = delta.total_seconds()/timedelta(days=1).total_seconds()
     return timeStamp
 
 def getMOHIDDateFromTimeStamp(timeStamp):
@@ -65,7 +66,8 @@ def getDateStringFromMOHIDDate(MohidDate):
 ###private functions
 
 def BaseDateTime():
-    return datetime(1950, 1, 1, 0, 0, 0)
+    #return datetime(1950, 1, 1, 0, 0, 0)
+	return datetime(2004, 1, 1, 0, 0, 0)
 
 def getDateTimeFromTimeStamp(timeStamp):
     delta = timedelta(seconds=timeStamp*timedelta (days=1).total_seconds())
