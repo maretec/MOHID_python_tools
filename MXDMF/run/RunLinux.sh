@@ -13,6 +13,7 @@ MXDMF=${src}/MXDMF_run.py
 # CODES are executed according the selected parameters of execution in this testcase
 errcode=0
 if [ $errcode -eq 0 ]; then
+  #python $MXDMF $dataDir glue
   python $MXDMF $dataDir
   errcode=$?
 fi
