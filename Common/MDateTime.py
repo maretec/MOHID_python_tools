@@ -77,10 +77,15 @@ def getDateTimeFromTimeStamp(timeStamp):
     delta = timedelta(seconds=timeStamp*timedelta (days=1).total_seconds())
     return BaseDateTime() + delta
 
+def getTimeStampFromDateTime(Date):
+    delta = Date - BaseDateTime()
+    timeStamp = delta.total_seconds()/timedelta(days=1).total_seconds()
+    return timeStamp
+
 #API examples
-MOHIDate = [2000, 8, 19, 1, 1, 37]
-print(getTimeStampFromMOHIDDate(MOHIDate))
-print(getMOHIDDateFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate)))
-print(getDateStringFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate)))
-print(getDateStringFromMOHIDDate(MOHIDate))
-print(getTimeStampFromDateString(getDateStringFromMOHIDDate(MOHIDate)))
+#MOHIDate = [2000, 8, 19, 1, 1, 37]
+#print(getTimeStampFromMOHIDDate(MOHIDate))
+#print(getMOHIDDateFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate)))
+#print(getDateStringFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate)))
+#print(getDateStringFromMOHIDDate(MOHIDate))
+#print(getTimeStampFromDateString(getDateStringFromMOHIDDate(MOHIDate)))
