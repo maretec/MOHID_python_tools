@@ -10,7 +10,7 @@ set MXDMF="%src%/MXDMF_run.py"
 
 rem CODES are executed according the selected parameters of execution in this case
 python %MXDMF% -i %dataDir%
-rem python %MXDMF% -i %dataDir% -g
+rem python %MXDMF% -i %dataDir% -g true
 if not "%ERRORLEVEL%" == "0" goto fail
 
 :success
