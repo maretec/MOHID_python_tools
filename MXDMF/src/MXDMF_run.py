@@ -42,6 +42,7 @@
 
 import os
 import sys
+import argparse
 
 sys.path.append('../../Common')
 import os_dir
@@ -49,18 +50,23 @@ import os_dir
 import MXDMF_maker
 
 def run():
-    glueFiles = False
-    if len(sys.argv) >1:
-        datadir = sys.argv[1]
-        if len(sys.argv) >2:
-            if sys.argv[2] == 'glue':
-                glueFiles = True
-    else:
+    argParser = argparse.ArgumentParser(description='Indexes MOHID outputs in xmdf files. Use -h for help.')
+    argParser.add_argument("-i", "--input", dest="datadir",
+                    help="input directory containing .hdf5 files or subdirectories with them", metavar="dir")
+    argParser.add_argument("-g", "--glue", dest="glueFiles", default=False,
+                    help="option to atempt to produce a master indexer, that 'glues' all of the files")
+    args = argParser.parse_args()
+
+    datadir = getattr(args,'datadir')
+    if datadir == None: #reverting to the test files
         basepath = os.path.dirname(__file__)
         datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
-
+    glueFiles = getattr(args,'glueFiles')
+    if glueFiles != False:
+        glueFiles = True
         
     print('-> Main directory is', datadir)
+    print('-> Attempting to glue files =', glueFiles)
     #files may be in sub directories
     subdirs = os_dir.get_immediate_subdirectories(datadir)
     #if subdirs is empty then just point to the main directory

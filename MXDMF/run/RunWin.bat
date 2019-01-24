@@ -9,8 +9,8 @@ set src=../src
 set MXDMF="%src%/MXDMF_run.py"
 
 rem CODES are executed according the selected parameters of execution in this case
-python %MXDMF% %dataDir%
-rem python %MXDMF% %dataDir% glue
+python %MXDMF% -i %dataDir%
+rem python %MXDMF% -i %dataDir% -g
 if not "%ERRORLEVEL%" == "0" goto fail
 
 :success
