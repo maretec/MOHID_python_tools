@@ -92,12 +92,12 @@ class SingleMXDMFmaker:
             
             while self.timeStep <= self.hdf5Reader.getNumbTimeSteps():
                 meshDims = self.hdf5Reader.getMeshDims(self.timeStep)
-                date = self.hdf5Reader.getDate(self.timeStep)
-                timeStamp = mdate.getTimeStampFromMOHIDDate(date)
+                dateStr = self.hdf5Reader.getDateStr(self.timeStep)
+                timeStamp = mdate.getTimeStampFromDateString(dateStr)
                 attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)
                 
                 self.xdmfWriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
-                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,meshDims,self.hdf5Reader.getGeoDims())
+                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims())
                 for attr in attributes:
                     self.xdmfWriter.writeAttribute(self.hdf5FileType,attr,meshDims,self.hdf5Reader.getGeoDims())
                 self.xdmfWriter.closeGrid()
@@ -151,13 +151,13 @@ class GlueMXDMFmaker():
             
             while self.timeStep <= self.hdf5Reader.getNumbTimeSteps():
                     meshDims = self.hdf5Reader.getMeshDims(self.timeStep)
-                    date = self.hdf5Reader.getDate(self.timeStep)
-                    timeStamp = mdate.getTimeStampFromMOHIDDate(date)
+                    dateStr = self.hdf5Reader.getDateStr(self.timeStep)
+                    timeStamp = mdate.getTimeStampFromDateString(dateStr)
                     
                     if timeStamp not in self.usedTimes[f]:
                         attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)                        
                         self.xdmfWriter[f].openGrid('Solution_'+str(self.timeStep).zfill(5))
-                        self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
+                        self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
                         for attr in attributes:
                             self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],attr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
                         self.xdmfWriter[f].closeGrid()

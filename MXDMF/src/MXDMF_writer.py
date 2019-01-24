@@ -75,7 +75,7 @@ class MXDMFwriter:
         self.f.write('''            </Grid>
 ''')
          
-    def writeGeo(self,fileType,timeIndex,date,geoDims,dimensionality, path = ''):
+    def writeGeo(self,fileType,timeIndex,timeStamp,dateStr,geoDims,dimensionality, path = ''):
         timeIndexStr = str(timeIndex).zfill(5)
         if fileType != 'Lagrangian':
             geoDimsStr = ' '.join(str(e) for e in geoDims)
@@ -86,7 +86,7 @@ class MXDMFwriter:
                 topology = '3DSMesh'
                 address = '/Grid/Corners3D'
             toWrite = '''                <Topology TopologyType="'''+topology+'''" Dimensions="'''+geoDimsStr+'''"/>">
-                <Time Value="'''+str(date)+'''" />
+                <Time Value="'''+str(timeStamp)+'''" /> <!--date: '''+dateStr+'''-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
                         '''+path+self.filename+'''.hdf5:'''+address+'''/Longitude
@@ -98,7 +98,7 @@ class MXDMFwriter:
 '''
             if dimensionality == 3:
                 toWrite = '''                <Topology TopologyType="3DSMesh" Dimensions="'''+geoDimsStr+'''"/>">
-                <Time Value="'''+str(date)+'''" />
+                <Time Value="'''+str(timeStamp)+'''" /> <!--date: '''+dateStr+'''-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
                         '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
@@ -114,7 +114,7 @@ class MXDMFwriter:
         if fileType == 'Lagrangian':
             geoDimsStr = str(geoDims)
             toWrite = '''                <Topology TopologyType="Polyvertex" Dimensions="'''+geoDimsStr+'''"/>
-                <Time Value="'''+str(date)+'''" />
+                <Time Value="'''+str(timeStamp)+'''" /> <!--date: '''+dateStr+'''-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
                         '''+path+self.filename+'''.hdf5:/Results/Group_1/Data_1D/Longitude/Longitude_'''+timeIndexStr+'''
