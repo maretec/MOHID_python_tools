@@ -141,7 +141,7 @@ class GlueMXDMFmaker():
                     self.hdf5FileType.append(self.hdf5Reader.getFileType())
                     self.usedTimes.append([])
             
-    def addFile(self, hdf5FileName, absSubDir, subdir):
+    def addFile(self, hdf5FileName, absSubDir, subdir, firstDate='', lastDate=''):
         self.currFileName = os_dir.filename_without_ext(hdf5FileName)
         self.currDir = absSubDir
         self.hdf5Reader = reader.MHDF5Reader(hdf5FileName, self.currDir)

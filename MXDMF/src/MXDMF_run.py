@@ -55,6 +55,10 @@ def run():
                     help="input directory containing .hdf5 files or subdirectories with them", metavar="dir")
     argParser.add_argument("-g", "--glue", dest="glueFiles", default=False,
                     help="option to atempt to produce a master indexer, that 'glues' all of the files")
+    argParser.add_argument("-fd", "--firstdate", dest="firstDate", default='',
+                    help="option to control the first date for the master indexer")
+    argParser.add_argument("-ld", "--lastdate", dest="lastDate", default='',
+                    help="option to control the last date for the master indexer")
     args = argParser.parse_args()
 
     datadir = getattr(args,'datadir')
@@ -64,6 +68,8 @@ def run():
     glueFiles = getattr(args,'glueFiles')
     if glueFiles != False:
         glueFiles = True
+    firstDate = getattr(args,'firstDate')
+    lastDate = getattr(args,'lastDate')
         
     print('-> Main directory is', datadir)
     print('-> Attempting to glue files =', glueFiles)
@@ -102,7 +108,7 @@ def run():
             singleXDMF.doFile(hdf5file,absSubDir)
             if glueFiles and (subdir not in ignoreGlueDir):
                 #add to the gluing file
-                glueXDMF.addFile(hdf5file,absSubDir,subdir)
+                glueXDMF.addFile(hdf5file,absSubDir,subdir,firstDate,lastDate)
             foundFiles = foundFiles + 1
     
     if glueFiles:
