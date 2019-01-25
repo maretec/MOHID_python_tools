@@ -14,13 +14,12 @@ Repository of post and pre-processing tools for MOHID written using python
 ## MXDMF 
 - Creates a light-data .xdmf metadata indexer of .hdf5 heavy-data files written by MOHID. This allows for MOHID hdf5 data to be read and manipulated using Paraview, Visit, etc.
     - Use the run file to point at a directory containing either .hdf5 files or subdirectories with them
-    - A .xdmf file will be created next to each valid .hdf5 file (if Eulerian file, it must have a Grid/Corners3D/(lat,lon,z) group (MOHID update 2/1/2019)
-    - TODO:
-        - Generalize for more Eulerian files (should work, but not tested)
+    - A .xdmf file will be created next to each valid .hdf5 file (if 3D Eulerian file, it must have a Grid/Corners3D/(lat,lon,z) group (MOHID update 2/1/2019)
+    - Use the options to 'glue' your operational data - see run scripts
+    - Valid for normal MOHID Water outputs if you have new cases were it doesn't work open an issue and provide a minimal example
+    - TODO:        
         - Get Eulerian fields from Lagrangian files
-        - Implement date-awareness
-        - Option to write a global file, indexing every time-step of a colection of files. This effectivelly bypasses the glue operations and should be very useful for operational-style runs.
-
+	
 ## get_boias 
 - Donwload time series daily and monthly  insitu data from ftp server nrt.cmems-du.eu in netcdf format
 
