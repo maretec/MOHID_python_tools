@@ -154,7 +154,20 @@ class GlueMXDMFmaker():
                     dateStr = self.hdf5Reader.getDateStr(self.timeStep)
                     timeStamp = mdate.getTimeStampFromDateString(dateStr)
                     
-                    if timeStamp not in self.usedTimes[f]:
+                    #checking for exceptions to add the file
+                    addStep = True
+                    if firstDate != '':
+                        firstDateStamp = mdate.getTimeStampFromDateString(firstDate)
+                        if timeStamp < firstDateStamp:
+                            addStep = False
+                    if lastDate != '':
+                        lastDateStamp = mdate.getTimeStampFromDateString(lastDate)
+                        if timeStamp > lastDateStamp:
+                            addStep = False
+                    if timeStamp in self.usedTimes[f]:
+                        addStep = False
+                    
+                    if addStep:
                         attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)                        
                         self.xdmfWriter[f].openGrid('Solution_'+str(self.timeStep).zfill(5))
                         self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
