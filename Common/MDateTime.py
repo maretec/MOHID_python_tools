@@ -45,8 +45,8 @@ from datetime import datetime, timedelta
 # Public API
 
 def getTimeStampFromMOHIDDate(MohidDate):
-    delta = datetime(int(MohidDate[0]), int(MohidDate[1]), int(MohidDate[2]), int(MohidDate[3]), int(MohidDate[4]), int(MohidDate[5])) - BaseDateTime()
-    timeStamp = delta.total_seconds()/timedelta(days=1).total_seconds()
+    date = datetime(int(MohidDate[0]), int(MohidDate[1]), int(MohidDate[2]), int(MohidDate[3]), int(MohidDate[4]), int(MohidDate[5]))
+    timeStamp = getTimeStampFromDateTime(date)
     return timeStamp
 
 def getMOHIDDateFromTimeStamp(timeStamp):
@@ -61,6 +61,12 @@ def getDateStringFromMOHIDDate(MohidDate):
     timeStamp = getTimeStampFromMOHIDDate(MohidDate)
     return getDateTimeFromTimeStamp(timeStamp).strftime("%Y-%m-%d %H:%M:%S")
 
+def getTimeStampFromDateString(DateString):
+    #string of the type '2000-08-19 01:01:37'
+    date = datetime.strptime(DateString, "%Y-%m-%d %H:%M:%S")
+    timeStamp = getTimeStampFromDateTime(date)
+    return timeStamp
+
 
 ###private functions
 
@@ -71,9 +77,15 @@ def getDateTimeFromTimeStamp(timeStamp):
     delta = timedelta(seconds=timeStamp*timedelta (days=1).total_seconds())
     return BaseDateTime() + delta
 
+def getTimeStampFromDateTime(Date):
+    delta = Date - BaseDateTime()
+    timeStamp = delta.total_seconds()/timedelta(days=1).total_seconds()
+    return timeStamp
+
 #API examples
 #MOHIDate = [2000, 8, 19, 1, 1, 37]
-#print getTimeStampFromMOHIDDate(MOHIDate)
-#print getMOHIDDateFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate))
-#print getDateStringFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate))
-#print getDateStringFromMOHIDDate(MOHIDate)
+#print(getTimeStampFromMOHIDDate(MOHIDate))
+#print(getMOHIDDateFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate)))
+#print(getDateStringFromTimeStamp(getTimeStampFromMOHIDDate(MOHIDate)))
+#print(getDateStringFromMOHIDDate(MOHIDate))
+#print(getTimeStampFromDateString(getDateStringFromMOHIDDate(MOHIDate)))
