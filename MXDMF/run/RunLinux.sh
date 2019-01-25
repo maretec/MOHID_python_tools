@@ -3,8 +3,7 @@
 clear
 
 # "dataDir" is named according to the testcase ----- CHANGE THIS HERE --------
-# dataDir=/Users/rbc-laptop/Documents/GitHub/MOHID_python_tools/MXDMF/TestFiles
-dataDir=/Users/rbc-laptop/Desktop/TestFiles
+dataDir=../TestFiles
 
 # "executables" are renamed and called from their directory
 src=../src
@@ -13,8 +12,10 @@ MXDMF=${src}/MXDMF_run.py
 # CODES are executed according the selected parameters of execution in this testcase
 errcode=0
 if [ $errcode -eq 0 ]; then
-  #python $MXDMF -i $dataDir -g true
   python $MXDMF -i $dataDir
+  #python $MXDMF -i $dataDir -g true
+  # python $MXDMF -i $dataDir -g true -fd "2000-08-19 01:01:35"
+  # python $MXDMF -i $dataDir -g true -fd "2000-08-19 01:01:35" -ld "2000-08-20 00:00:00"
   errcode=$?
 fi
 
