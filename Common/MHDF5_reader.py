@@ -111,7 +111,7 @@ class MHDF5Reader:
                 self.fVars = list(self.f['Results']['Group_1']['Data_1D'].keys())
                 #Because conventions are not followed (name of the variable 
                 #is not the name of the field, mixing diferent dimenisionalities on the same group,...)
-                exclusions = ['X Pos','Y Pos','Z Pos','Latitude average','Longitude average']
+                exclusions = ['X Pos','Y Pos','Z Pos','Latitude average','Longitude average', 'googlemaps_x_average', 'googlemaps_y_average']
                 for exc in exclusions:
                     if exc in self.fVars:
                         self.fVars.remove(exc)
