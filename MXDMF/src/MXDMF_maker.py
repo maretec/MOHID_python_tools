@@ -92,12 +92,12 @@ class SingleMXDMFmaker:
             
             while self.timeStep <= self.hdf5Reader.getNumbTimeSteps():
                 meshDims = self.hdf5Reader.getMeshDims(self.timeStep)
-                date = self.hdf5Reader.getDate(self.timeStep)
-                timeStamp = mdate.getTimeStampFromMOHIDDate(date)
+                dateStr = self.hdf5Reader.getDateStr(self.timeStep)
+                timeStamp = mdate.getTimeStampFromDateString(dateStr)
                 attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)
                 
                 self.xdmfWriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
-                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,meshDims,self.hdf5Reader.getGeoDims())
+                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims())
                 for attr in attributes:
                     self.xdmfWriter.writeAttribute(self.hdf5FileType,attr,meshDims,self.hdf5Reader.getGeoDims())
                 self.xdmfWriter.closeGrid()
@@ -141,7 +141,7 @@ class GlueMXDMFmaker():
                     self.hdf5FileType.append(self.hdf5Reader.getFileType())
                     self.usedTimes.append([])
             
-    def addFile(self, hdf5FileName, absSubDir, subdir):
+    def addFile(self, hdf5FileName, absSubDir, subdir, firstDate='', lastDate=''):
         self.currFileName = os_dir.filename_without_ext(hdf5FileName)
         self.currDir = absSubDir
         self.hdf5Reader = reader.MHDF5Reader(hdf5FileName, self.currDir)
@@ -151,13 +151,26 @@ class GlueMXDMFmaker():
             
             while self.timeStep <= self.hdf5Reader.getNumbTimeSteps():
                     meshDims = self.hdf5Reader.getMeshDims(self.timeStep)
-                    date = self.hdf5Reader.getDate(self.timeStep)
-                    timeStamp = mdate.getTimeStampFromMOHIDDate(date)
+                    dateStr = self.hdf5Reader.getDateStr(self.timeStep)
+                    timeStamp = mdate.getTimeStampFromDateString(dateStr)
                     
-                    if timeStamp not in self.usedTimes[f]:
+                    #checking for exceptions to add the file
+                    addStep = True
+                    if firstDate != '':
+                        firstDateStamp = mdate.getTimeStampFromDateString(firstDate)
+                        if timeStamp < firstDateStamp:
+                            addStep = False
+                    if lastDate != '':
+                        lastDateStamp = mdate.getTimeStampFromDateString(lastDate)
+                        if timeStamp > lastDateStamp:
+                            addStep = False
+                    if timeStamp in self.usedTimes[f]:
+                        addStep = False
+                    
+                    if addStep:
                         attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)                        
                         self.xdmfWriter[f].openGrid('Solution_'+str(self.timeStep).zfill(5))
-                        self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
+                        self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
                         for attr in attributes:
                             self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],attr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
                         self.xdmfWriter[f].closeGrid()

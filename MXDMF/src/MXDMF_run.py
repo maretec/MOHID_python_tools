@@ -42,6 +42,7 @@
 
 import os
 import sys
+import argparse
 
 sys.path.append('../../Common')
 import os_dir
@@ -49,18 +50,38 @@ import os_dir
 import MXDMF_maker
 
 def run():
-    glueFiles = False
-    if len(sys.argv) >1:
-        datadir = sys.argv[1]
-        if len(sys.argv) >2:
-            if sys.argv[2] == 'glue':
-                glueFiles = True
-    else:
-        basepath = os.path.dirname(__file__)
-        datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))
+    
+    #cmd line argument parsing---------------------------
+    argParser = argparse.ArgumentParser(description='Indexes MOHID outputs in xmdf files. Use -h for help.')
+    argParser.add_argument("-i", "--input", dest="datadir",
+                    help="input directory containing .hdf5 files or subdirectories with them", metavar="dir")
+    argParser.add_argument("-g", "--glue", dest="glueFiles", default=False,
+                    help="option to atempt to produce a master indexer, that 'glues' all of the files")
+    argParser.add_argument("-fd", "--firstdate", dest="firstDate", default='',
+                    help="option to control the first date for the master indexer, format as 2000-08-19 01:01:37")
+    argParser.add_argument("-ld", "--lastdate", dest="lastDate", default='',
+                    help="option to control the last date for the master indexer, format as 2000-08-19 01:01:37")
+    args = argParser.parse_args()
 
+    datadir = getattr(args,'datadir')
+    if datadir == None: #reverting to the test files
+        basepath = os.path.dirname(__file__)
+        datadir = os.path.abspath(os.path.join(basepath, "..", "TestFiles"))        
+    glueFiles = getattr(args,'glueFiles')
+    if glueFiles != False:
+        glueFiles = True
+    firstDate = str(getattr(args,'firstDate'))
+    lastDate = str(getattr(args,'lastDate'))
         
     print('-> Main directory is', datadir)
+    if glueFiles:
+        print('-> Attempting to glue files')
+    if firstDate != '':
+        print('-> First date to be indexed is', firstDate)
+    if lastDate != '':
+        print('-> First date to be indexed is', lastDate)    
+    #------------------------------------------------------    
+    
     #files may be in sub directories
     subdirs = os_dir.get_immediate_subdirectories(datadir)
     #if subdirs is empty then just point to the main directory
@@ -71,6 +92,8 @@ def run():
     #create mxdmf_maker class objects
     singleXDMF = MXDMF_maker.MXDMFmaker()
     glueXDMF = MXDMF_maker.MXDMFmaker(glueFiles)
+    
+    #Creating files to index to if glue is required
     if glueFiles:
         ignoreGlueDir = []
         for subdir in subdirs: #we need to search for hotstart files and ignore them
@@ -85,6 +108,7 @@ def run():
                 glueXDMF.openGlueWriter(hdf5files,absSubDir,datadir)
                 break
     
+    #Run the thing
     #go through all subdirs
     for subdir in subdirs:
         absSubDir = os.path.abspath(os.path.join(datadir, subdir))
@@ -96,7 +120,7 @@ def run():
             singleXDMF.doFile(hdf5file,absSubDir)
             if glueFiles and (subdir not in ignoreGlueDir):
                 #add to the gluing file
-                glueXDMF.addFile(hdf5file,absSubDir,subdir)
+                glueXDMF.addFile(hdf5file,absSubDir,subdir,firstDate,lastDate)
             foundFiles = foundFiles + 1
     
     if glueFiles:
