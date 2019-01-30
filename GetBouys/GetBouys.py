@@ -46,7 +46,8 @@ def get_parser():
     parser.add_argument('-m', dest='monthly',
                         help='monthly type',
                         action='store_true', required=False)
-
+                        
+                        
     parser.add_argument('-strm', dest='strmonth', type=lambda d: datetime.datetime.strptime(d, '%Y%m'),
                         help="the Start Date :'format YYYYMM ",
                         required=False)
@@ -69,13 +70,8 @@ def get_parser():
                         default='RAkopeci',
                         action='store', required=False)
 
-
-    #parser.add_argument('-mv', '--moveto', help="move from download to archive dir",
-    #                    default='archive',
-    #                    action="store", required=False)
     parser.add_argument('-t', '--convert', help="Convert netcdf to mohid time series", action="store_true")
 
-    #parser.add_argument('-t', '--convert', help="Convert netcdf to mohid time series", action="store", required=False)
 
     ## Assign args to variables
     args=parser.parse_args()
@@ -144,19 +140,18 @@ def download(station):
         if file_exist:
             break
 
-        print(' trying in ' + path)
-
         if args.monthly:
             path += '/monthly/mooring'
+            print(' trying in ' + path)
             delta_time = datetime.timedelta(days=32)
             output = args.output + '/Monthly'
             if not os.path.exists(output):
                 os.makedirs(output)
         else:
             path += '/latest'
+            print(' trying in ' + path)
             delta_time = datetime.timedelta(days=1)
             output = args.output + '/Daily'
-
 
         ## change to path directory
         ftp.cwd(path)
@@ -212,7 +207,6 @@ def download(station):
 
 
 
-            #print(' process ' + time_dir)
 
 
             output2 = output + '/' + time_dir_output
