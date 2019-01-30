@@ -10,3 +10,4 @@ build_win/
 *.out
 
 *.pyc
+*.nc
