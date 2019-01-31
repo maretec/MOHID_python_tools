@@ -79,7 +79,7 @@ def run():
     if firstDate != '':
         print('-> First date to be indexed is', firstDate)
     if lastDate != '':
-        print('-> First date to be indexed is', lastDate)    
+        print('-> First date to be indexed is', lastDate)
     #------------------------------------------------------    
     
     #files may be in sub directories
