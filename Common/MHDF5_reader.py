@@ -57,7 +57,7 @@ class MHDF5Reader:
         self.f = h5py.File(self.directory +'/'+ self.fileName, 'r')
         self.validFile = 0
         self.fileType = []
-        self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'WaterProperties2D', 'InterfaceSedimentWater', 'InterfaceWaterAir', 'Turbulence']
+        self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'WaterProperties2D', 'InterfaceSedimentWater', 'InterfaceWaterAir', 'Turbulence', 'Generic', 'Generic2D']
         self.fileKeys = self.f.keys()
         self.fileTimeSteps = list(self.f['Time'].keys())        
         
@@ -126,6 +126,18 @@ class MHDF5Reader:
             if 'Diffusivity' in list(self.f['Results'].keys()):
                 self.fileType = 'Turbulence'
                 self.validFile = 0
+            #maybe it can be a generic file...
+            if self.fileType == []:
+                self.fileType = 'Generic'
+                exclusions = []                
+                if self.getGeoDims() == 2:
+                    self.fileType = 'Generic2D'
+                    exclusions = []
+                self.fVars = list(self.f['Results'].keys())                
+                for exc in exclusions:
+                    if exc in self.fVars:
+                        self.fVars.remove(exc)
+                
                 
     def isValidFile(self):
         return self.validFile
@@ -163,11 +175,17 @@ class MHDF5Reader:
     def getGeoDims(self):
         if self.validFile == 1:
             if self.fileType != 'Lagrangian':
-                dims = self.f['Grid']['WaterPoints3D'].shape
-                if dims[0] == 1: #first layer, it's a 2D file
+                if 'WaterPoints3D' in list(self.f['Grid'].keys()):
+                    dims = self.f['Grid']['WaterPoints3D'].shape
+                    if dims[0] == 1: #first layer, it's a 2D file
+                        return 2
+                    else:
+                        return 3
+                elif 'WaterPoints2D' in list(self.f['Grid'].keys()):
                     return 2
-                else:
-                    return 3
+                else: 
+                    self.validFile = 0
+                    return 0
             if self.fileType == 'Lagrangian':
                 return 3
         else:
