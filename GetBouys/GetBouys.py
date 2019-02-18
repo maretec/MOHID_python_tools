@@ -15,6 +15,7 @@ import json
 from ftplib import FTP
 import shutil
 import pandas as pd
+import yaml
 
 date_base = None
 
@@ -23,13 +24,16 @@ def get_parser():
     """ Get parser object """
     parser=argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter, description='A program to download timeseries from CMES')
 
-
     parser.add_argument('-v', '--verbose',
                         help="verbose",
                         action="store_true")
 
     parser.add_argument('-c', '--config',
                         help="path file stations list", default='stations_id.dat',
+                        action='store', required=False)
+                        
+    parser.add_argument('-f', '--filedata',
+                        help="path file to input data",
                         action='store', required=False)
 
     parser.add_argument('-s',dest='stations',
@@ -62,12 +66,12 @@ def get_parser():
 
     parser.add_argument('-u', dest='username',
                         help='Username to access FTP server',
-                        default='xxxxx',
+                        default='xxxxxxxx',
                         action='store', required=False)
 
     parser.add_argument('-p', dest='password',
                         help='Password to access FTP server',
-                        default='xxxxxx',
+                        default='xxxxxxxxx',
                         action='store', required=False)
 
     parser.add_argument('-t', '--convert', help="Convert netcdf to mohid time series", action="store_true")
@@ -106,6 +110,37 @@ def get_parser():
 
     return args
 
+def read_input_file(filename):
+    global args
+    
+    stream = open(filename, "r")
+    vars = yaml.load(stream)
+   
+    if 'MONTHLY' in vars:
+        if vars['MONTHLY'] == 1:
+            args.monthly = True
+        else:
+            args.monthly = False
+            
+    strday = None
+    endday = None
+    if 'START' in vars:
+        str = vars['START']
+        strday = datetime.datetime.strptime(str.strip(), '%Y %m %d %H %M %S')
+     
+    if 'END' in vars:
+        end = vars['END']
+        endday = datetime.datetime.strptime(end.strip(), '%Y %m %d %H %M %S')
+        
+    if args.monthly:
+        args.strmonth = strday
+        args.endmonth = endday
+    else:
+        args.strday = strday
+        args.endday = endday
+        
+    return True
+    
 def read_stations():
     if not args.stations and os.path.isfile(args.config):
         with open(args.config) as f:
@@ -258,7 +293,6 @@ def get_contained_files(a_dir,extension):
     return [file for file in os.listdir(a_dir)
             if file.endswith(extension)]
 
-
 def diff_dates(datetime):
     diffdt =  datetime - date_base
     return int(diffdt.total_seconds())
@@ -350,7 +384,7 @@ def convert_nc2mohidts():
                    depth_id = nc.variables['DEPH'][1,:]
                    depth_var = nc.variables['DEPH'][:]
                 except:
-                   pass
+                   depth_id=[0.0]
                 n=len(depth_id)
                 a = np.arange(0, n, 1)
                 #get time
@@ -379,11 +413,15 @@ def convert_nc2mohidts():
                     extract_date(df, 'date')
                     #adding the variables
                     for x in LIST:
-                        varid= nc.variables[x].standard_name
-                        #try:
-                        df[varid]= nc.variables[x][:,l]
-                        #except:
-                         #  pass
+                        try:
+                           varid= nc.variables[x].standard_name
+                           #print('Writing Standar Name ' + varid)  
+                           df[varid]= nc.variables[x][:,l]
+                        except:
+                           varid= nc.variables[x].long_name
+                           #print('Writing Long Name ' + varid)
+                           df[varid]= nc.variables[x][:,l]
+
                     df=df.drop(columns=['date'])
                     # create a list of header variables
                     hd = list(df.columns)
@@ -400,7 +438,10 @@ if __name__ == '__main__':
 
     args = get_parser()
     
-
+    ## datetime from datefile
+    if args.filedata:
+        read_input_file(args.filedata)
+        
     data = read_stations()
 
     if 'stations' in data:
