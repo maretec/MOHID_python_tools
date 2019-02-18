@@ -3,7 +3,7 @@
 set output=\\DAVINCI\DataCenter\DadosBase\Oceanografia\Fixed_Stations
 
 : ====daily
-python GetBouys.py -d  %output% -t > daily.log 2>&1
+python ..\GetBouys.py -d  %output%  > daily.log 2>&1
 
 : ====monthly
 for /f "skip=8 tokens=2,3,4,5,6,7,8 delims=: " %%D in ('robocopy /l * \ \ /ns /nc /ndl /nfl /np /njh /XF * /XD *') do (
@@ -15,5 +15,5 @@ for /f "skip=8 tokens=2,3,4,5,6,7,8 delims=: " %%D in ('robocopy /l * \ \ /ns /n
   set "MM=%%H"
   set "SS=%%I"
 )
-if %day%==01 python GetBouys.py -m -d %output% -t > monthly.log 2>&1
+if %day%==01 python ..\GetBouys.py -m -d %output% > monthly.log 2>&1
 
