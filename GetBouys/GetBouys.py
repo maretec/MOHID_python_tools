@@ -62,12 +62,12 @@ def get_parser():
 
     parser.add_argument('-u', dest='username',
                         help='Username to access FTP server',
-                        default='xxxxxxxx',
+                        default='xxxxx',
                         action='store', required=False)
 
     parser.add_argument('-p', dest='password',
                         help='Password to access FTP server',
-                        default='xxxxxxxxx',
+                        default='xxxxxx',
                         action='store', required=False)
 
     parser.add_argument('-t', '--convert', help="Convert netcdf to mohid time series", action="store_true")
