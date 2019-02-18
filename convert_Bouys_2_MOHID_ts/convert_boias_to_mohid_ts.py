@@ -7,8 +7,6 @@ Created on Fri Jan 11 11:57:37 2019
 import os
 import sys
 import argparse
-sys.path.append('../Common')
-import os_dir
 
 import numpy as np
 import netCDF4
@@ -16,6 +14,10 @@ import pandas as pd
 #import datetime
 #import matplotlib.pyplot as plt
 #import xarray as xr
+
+def get_contained_files(a_dir,extension):
+    return [file for file in os.listdir(a_dir)
+            if file.endswith(extension)]
 
 def get_parser():
 
@@ -78,7 +80,7 @@ args = get_parser()
 
 #ncfile= '6202403_Lajes_das_Flores_Buoy.nc'
 WorkingFolder = args.dir #'\\\\davinci\\DataCenter\\DadosBase\\Oceanografia\\Fixed_Stations\\Monthly\\2018-05'
-ncfilesfiles = os_dir.get_contained_files(WorkingFolder,'.nc')
+ncfilesfiles = get_contained_files(WorkingFolder,'.nc')
 # this function converts one file only
 
 
@@ -89,8 +91,12 @@ for ncfile in ncfilesfiles:
     # get location of the bouy
     lat = nc.variables['LATITUDE'][0]
     lon = nc.variables['LONGITUDE'][0]
-    depth_id = nc.variables['DEPH'][1,:]
-    depth_var = nc.variables['DEPH'][:]
+    try:
+      depth_id = nc.variables['DEPH'][1,:]
+      depth_var = nc.variables['DEPH'][:]
+    except:
+      depth_id=[0.0]
+       #pass
     n=len(depth_id)
     a = np.arange(0, n, 1)
     #get time
@@ -110,7 +116,7 @@ for ncfile in ncfilesfiles:
     stopwords = ['TIME','LATITUDE','LONGITUDE','DEPH','POSITIONING_SYSTEM','DC_REFERENCE','VPSP','FLU3'] +  matching_QC + matching_DM
     # add all list together will get all variables that are not QC variables
     LIST = [word for word in KEYS if word not in stopwords ]
-    print(LIST)
+    #print(LIST)
 
     for l in a:
         # create a pandas dataframe
@@ -119,12 +125,16 @@ for ncfile in ncfilesfiles:
         extract_date(df, 'date')
         #adding the variables
         for x in LIST:
-            varid= nc.variables[x].standard_name
-            print(x)
-            #try:
-            df[varid]= nc.variables[x][:,l]
-            #except:
-             #  pass
+            try: 
+                varid= nc.variables[x].standard_name
+                #print('Writing Standar Name ' + varid)  
+                df[varid]= nc.variables[x][:,l]
+            except:
+               varid= nc.variables[x].long_name
+               #print('Writing Long Name ' + varid)
+               df[varid]= nc.variables[x][:,l]
+            
+            
         df=df.drop(columns=['date'])
         # create a list of header variables
         hd = list(df.columns)
@@ -135,6 +145,7 @@ for ncfile in ncfilesfiles:
         depth2str_label = depth2str.replace(".", "p", 1)
         base_filename = ncfile.replace(".nc","")
         base_filename_out= base_filename.strip() + '_D_' + depth2str_label + '.ets'
+        print('Writing MOHID format ' + base_filename_out)
         writedata2mohid_format(WorkingFolder,base_filename_out,df,depth2str)
 
 ###################################
