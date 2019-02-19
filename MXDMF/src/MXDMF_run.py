@@ -87,12 +87,6 @@ def run():
     #if subdirs is empty then just point to the main directory
     if subdirs == []:
         subdirs = [datadir]
-    else:
-        i = 0
-        for subdir in subdirs:
-            subdir = os.path.abspath(os.path.join(datadir, subdir))
-            subdirs[i] = subdir
-            i = i + 1
     
     foundFiles = 0
     #create mxdmf_maker class objects
@@ -117,8 +111,10 @@ def run():
     #Run the thing
     #go through all subdirs
     for subdir in subdirs:
-        hdf5files = os_dir.get_contained_files(subdir,'.hdf5')
+        absSubDir = os.path.abspath(os.path.join(datadir, subdir))
+        hdf5files = os_dir.get_contained_files(absSubDir,'.hdf5')
         for hdf5file in hdf5files:
+            print('--> Processing file', hdf5file) 
             #create an xdmf file with the same name as 
             #the hdf5, on the same directory
             singleXDMF.doFile(hdf5file,absSubDir)
@@ -126,6 +122,9 @@ def run():
                 #add to the gluing file
                 glueXDMF.addFile(hdf5file,absSubDir,subdir,firstDate,lastDate)
             foundFiles = foundFiles + 1
+    
+    if glueFiles:
+        glueXDMF.closeGlueWriter()
     
     if foundFiles == 0:
         print('-> No files found. Are you sure the directory is correct?')
