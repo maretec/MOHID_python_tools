@@ -17,7 +17,7 @@ Last Update: 02-18-2019
 #### From Command Arguments
 Inside the run folders there is a two .bash that runs for windows:
  - run.bat          : Is meant to run in operational mode. It will look for the current date and donwload data for the last 3 days
- - run_one_time.bat : Donwload data for specific dates, could be from the daily folder or montlhy directory
+ - run_one_time.bat : Donwload data for specific dates, could be from the daily  or montlhy 
 
 
 ## REQUIREMENT 
