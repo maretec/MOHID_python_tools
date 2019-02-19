@@ -538,29 +538,29 @@
     },
     {
       "PLOT_LABEL": "Ajaccio",
-      "STATION_NAME": "Ajaccio_TG ",
+      "STATION_NAME": "Ajaccio_TG",
       "DOWNSTA_NAME": "AjaccioTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "8.76290",
-      "LATITUDE": "41.92270 ",
+      "LATITUDE": "41.92270",
       "LEVEL_REF": "0.695",
       "ASTRO_TIDE": "0"
     },
     {
       "PLOT_LABEL": "Alcudia",
-      "STATION_NAME": "Alcudia_TG ",
+      "STATION_NAME": "Alcudia_TG",
       "DOWNSTA_NAME": "AlcudiaTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "3.14000",
-      "LATITUDE": "39.83000 ",
+      "LATITUDE": "39.83000",
       "LEVEL_REF": "0.695",
       "ASTRO_TIDE": "0"
     },
     {
       "PLOT_LABEL": "Algeciras",
       "STATION_NAME": "Algeciras_TG",
-      "DOWNSTA_NAME": "AlgecirasTG ",
+      "DOWNSTA_NAME": "AlgecirasTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-5.36492",
       "LATITUDE": "36.14823",
@@ -573,7 +573,7 @@
       "DOWNSTA_NAME": "AlmeriaTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-2.48000",
-      "LATITUDE": "36.83000 ",
+      "LATITUDE": "36.83000",
       "LEVEL_REF": "0.695",
       "ASTRO_TIDE": "0"
     },
@@ -584,7 +584,7 @@
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-1.16000",
-      "LATITUDE": "44.66000 ",
+      "LATITUDE": "44.66000",
       "LEVEL_REF": "0.695",
       "ASTRO_TIDE": "0"
     },
@@ -594,7 +594,7 @@
       "DOWNSTA_NAME": "ArrecifeTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-13.5300",
-      "LATITUDE": "28.97000 ",
+      "LATITUDE": "28.97000",
       "LEVEL_REF": "0.695",
       "ASTRO_TIDE": "0"
     },
@@ -604,7 +604,7 @@
       "DOWNSTA_NAME": "AveiroTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-8.74861",
-      "LATITUDE": "40.64444 ",
+      "LATITUDE": "40.64444",
       "LEVEL_REF": "0.695",
       "ASTRO_TIDE": "0"
     },
@@ -651,7 +651,7 @@
     },
     {
       "PLOT_LABEL": "Brest",
-      "STATION_NAME": "Brest_TG ",
+      "STATION_NAME": "Brest_TG",
       "DOWNSTA_NAME": "BrestTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
@@ -662,7 +662,7 @@
     },
     {
       "PLOT_LABEL": "Concarneau",
-      "STATION_NAME": "Concarneau_TG ",
+      "STATION_NAME": "Concarneau_TG",
       "DOWNSTA_NAME": "ConcarneauTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
@@ -673,8 +673,8 @@
     },
     {
       "PLOT_LABEL": "El Hierro",
-      "STATION_NAME": "El_Hierro_TG ",
-      "DOWNSTA_NAME": "ElHierroTG ",
+      "STATION_NAME": "El_Hierro_TG",
+      "DOWNSTA_NAME": "ElHierroTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-17.9000",
       "LATITUDE": "27.78000",
@@ -683,8 +683,8 @@
     },
     {
       "PLOT_LABEL": "Ferrol",
-      "STATION_NAME": "Ferrol_TG ",
-      "DOWNSTA_NAME": "FerrolTG ",
+      "STATION_NAME": "Ferrol_TG",
+      "DOWNSTA_NAME": "FerrolTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-8.33",
       "LATITUDE": "43.46",
@@ -693,8 +693,8 @@
     },
     {
       "PLOT_LABEL": "Formentera",
-      "STATION_NAME": "Formentera_TG ",
-      "DOWNSTA_NAME": "FormenteraTG ",
+      "STATION_NAME": "Formentera_TG",
+      "DOWNSTA_NAME": "FormenteraTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "1.42000",
       "LATITUDE": "38.73000",
@@ -703,19 +703,19 @@
     },
     {
       "PLOT_LABEL": "Fos Sur Mer",
-      "STATION_NAME": "Fos_Sur_Mer_TG ",
-      "DOWNSTA_NAME": "FosSurMerTG ",
+      "STATION_NAME": "Fos_Sur_Mer_TG",
+      "DOWNSTA_NAME": "FosSurMerTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
-      "LONGITUDE": "4.89294 ",
+      "LONGITUDE": "4.89294",
       "LATITUDE": "43.40494",
       "LEVEL_REF": "2.239",
       "ASTRO_TIDE": "0"
     },
     {
       "PLOT_LABEL": "Fuerteventura",
-      "STATION_NAME": "Fuerteventura_TG ",
-      "DOWNSTA_NAME": "FuerteventuraTG ",
+      "STATION_NAME": "Fuerteventura_TG",
+      "DOWNSTA_NAME": "FuerteventuraTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-13.8500",
       "LATITUDE": "28.50000",
@@ -780,7 +780,7 @@
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "6.93377",
-      "LATITUDE": "43.48353 ",
+      "LATITUDE": "43.48353",
       "LEVEL_REF": "2.083",
       "ASTRO_TIDE": "0"
     },
@@ -790,7 +790,7 @@
       "DOWNSTA_NAME": "GomeraTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-17.1080",
-      "LATITUDE": "28.08700 ",
+      "LATITUDE": "28.08700",
       "LEVEL_REF": "2.083",
       "ASTRO_TIDE": "0"
     },
@@ -800,7 +800,7 @@
       "DOWNSTA_NAME": "LaPalmaTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-17.7700",
-      "LATITUDE": "28.68000 ",
+      "LATITUDE": "28.68000",
       "LEVEL_REF": "2.083",
       "ASTRO_TIDE": "0"
     },
@@ -811,7 +811,7 @@
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-1.22000",
-      "LATITUDE": "46.16000 ",
+      "LATITUDE": "46.16000",
       "LEVEL_REF": "2.083",
       "ASTRO_TIDE": "0"
     },
@@ -821,7 +821,7 @@
       "DOWNSTA_NAME": "LasPalmasTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-15.4100",
-      "LATITUDE": "28.14000 ",
+      "LATITUDE": "28.14000",
       "LEVEL_REF": "2.083",
       "ASTRO_TIDE": "0"
     },
@@ -832,7 +832,7 @@
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-4.78000",
-      "LATITUDE": "48.36000 ",
+      "LATITUDE": "48.36000",
       "LEVEL_REF": "2.083",
       "ASTRO_TIDE": "0"
     },
@@ -843,7 +843,7 @@
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "-2.89000",
-      "LATITUDE": "47.54000 ",
+      "LATITUDE": "47.54000",
       "LEVEL_REF": "2.083",
       "ASTRO_TIDE": "0"
     },
@@ -910,7 +910,7 @@
       "ASTRO_TIDE": "0"
     },
     {
-      "PLOT_LABEL": "Motril ",
+      "PLOT_LABEL": "Motril",
       "STATION_NAME": "Motril_TG",
       "DOWNSTA_NAME": "MotrilTG",
       "ORIGIN": "MyOcean",
@@ -930,7 +930,7 @@
       "ASTRO_TIDE": "0"
     },
     {
-      "PLOT_LABEL": "Nice ",
+      "PLOT_LABEL": "Nice",
       "STATION_NAME": "Nice_TG",
       "DOWNSTA_NAME": "NiceTG",
       "REGION": "GL TS MO",
@@ -941,8 +941,8 @@
       "ASTRO_TIDE": "0"
     },
     {
-      "PLOT_LABEL": "Palma de Mallorca ",
-      "STATION_NAME": "Palma_de_Mallorca_TG ",
+      "PLOT_LABEL": "Palma de Mallorca",
+      "STATION_NAME": "Palma_de_Mallorca_TG",
       "DOWNSTA_NAME": "PalmadeMallorcaTG",
       "ORIGIN": "MyOcean",
       "LONGITUDE": "7.28550",
@@ -962,7 +962,7 @@
     },
     {
       "PLOT_LABEL": "Port Bloc",
-      "STATION_NAME": "Port_Bloc_TG ",
+      "STATION_NAME": "Port_Bloc_TG",
       "DOWNSTA_NAME": "PortBlocTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
@@ -973,7 +973,7 @@
     },
     {
       "PLOT_LABEL": "Port Tudy",
-      "STATION_NAME": "Port_Tudy_TG ",
+      "STATION_NAME": "Port_Tudy_TG",
       "DOWNSTA_NAME": "PortTudyTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
@@ -984,7 +984,7 @@
     },
     {
       "PLOT_LABEL": "Port Vendres",
-      "STATION_NAME": "Port_Vendres_TG ",
+      "STATION_NAME": "Port_Vendres_TG",
       "DOWNSTA_NAME": "PortVendresTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
@@ -1071,7 +1071,7 @@
       "DOWNSTA_NAME": "ToulonTG",
       "REGION": "GL TS MO",
       "ORIGIN": "MyOcean",
-      "LONGITUDE": "5.91460 ",
+      "LONGITUDE": "5.91460",
       "LATITUDE": "43.12280",
       "LEVEL_REF": "0.720",
       "ASTRO_TIDE": "0"
@@ -1081,8 +1081,8 @@
       "STATION_NAME": "Valencia_TG",
       "DOWNSTA_NAME": "ValenciaTG",
       "ORIGIN": "MyOcean",
-      "LONGITUDE": "-0.33000 ",
-      "LATITUDE": "39.46000 ",
+      "LONGITUDE": "-0.33000",
+      "LATITUDE": "39.46000",
       "LEVEL_REF": "0.720",
       "ASTRO_TIDE": "0"
     },
