@@ -5,7 +5,7 @@
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
             <Grid Name="Solution_00001" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.0" />
+                <Time Value="24472.0" /> <!--date: 2017-01-01 00:00:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -18,49 +18,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00001
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00001
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00001
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00001
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00001
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00001
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00001
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00001
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00002" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.006944444445" />
+                <Time Value="24472.006944444445" /> <!--date: 2017-01-01 00:10:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -73,49 +73,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00002
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00002
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00002
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00002
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00002
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00002
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00002
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00002
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00003" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.01388888889" />
+                <Time Value="24472.01388888889" /> <!--date: 2017-01-01 00:20:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -128,49 +128,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00003
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00003
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00003
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00003
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00003
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00003
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00003
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00003
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00004" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.020833333332" />
+                <Time Value="24472.020833333332" /> <!--date: 2017-01-01 00:30:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -183,49 +183,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00004
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00004
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00004
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00004
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00004
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00004
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00004
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00004
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00005" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.027777777777" />
+                <Time Value="24472.027777777777" /> <!--date: 2017-01-01 00:40:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -238,49 +238,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00005
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00005
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00005
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00005
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00005
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00005
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00005
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00005
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00006" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.034722222223" />
+                <Time Value="24472.034722222223" /> <!--date: 2017-01-01 00:50:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -293,49 +293,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00006
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00006
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00006
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00006
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00006
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00006
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00006
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00006
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00007" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.041666666668" />
+                <Time Value="24472.041666666668" /> <!--date: 2017-01-01 01:00:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -348,49 +348,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00007
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00007
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00007
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00007
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00007
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00007
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00007
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00007
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00008" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.04861111111" />
+                <Time Value="24472.04861111111" /> <!--date: 2017-01-01 01:10:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -403,49 +403,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00008
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00008
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00008
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00008
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00008
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00008
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00008
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00008
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00009" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.055555555555" />
+                <Time Value="24472.055555555555" /> <!--date: 2017-01-01 01:20:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -458,49 +458,49 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00009
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00009
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00009
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00009
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00009
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00009
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00009
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00009
                     </DataItem>
                 </Attribute>
             </Grid>
             <Grid Name="Solution_00010" GridType="Uniform">
                 <Topology TopologyType="3DSMesh" Dimensions="8 116 94"/>">
-                <Time Value="24472.0625" />
+                <Time Value="24472.0625" /> <!--date: 2017-01-01 01:30:00-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Grid/Corners3D/Longitude
@@ -513,42 +513,42 @@
                     </DataItem>
                 </Geometry>
                 <Attribute Name="Vorticity3D" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/Vorticity3D/Vorticity3D_00010
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force X" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force X/baroclinic force X_00010
                     </DataItem>
                 </Attribute>
                 <Attribute Name="baroclinic force Y" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/baroclinic force Y/baroclinic force Y_00010
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity U" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity U/velocity U_00010
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity V" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity V/velocity V_00010
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W/velocity W_00010
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity W Across" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity W Across/velocity W Across_00010
                     </DataItem>
                 </Attribute>
                 <Attribute Name="velocity modulus" AttributeType="Scalar" Center="Cell">
-                    <DataItem Dimensions="8 116 94" NumberType="Float" Precision="8" Format="HDF">
+                    <DataItem Dimensions="7 116 94" NumberType="Float" Precision="8" Format="HDF">
                         sigma.hdf5:/Results/velocity modulus/velocity modulus_00010
                     </DataItem>
                 </Attribute>
