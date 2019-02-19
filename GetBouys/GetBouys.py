@@ -404,7 +404,7 @@ def convert_nc2mohidts():
                 stopwords = ['TIME','LATITUDE','LONGITUDE','DEPH','POSITIONING_SYSTEM','DC_REFERENCE','VPSP','FLU3'] +  matching_QC + matching_DM
                 # add all list together will get all variables that are not QC variables
                 LIST = [word for word in KEYS if word not in stopwords ]
-                print(LIST)
+                #print(LIST)
 
                 for l in a:
                     # create a pandas dataframe
@@ -432,6 +432,7 @@ def convert_nc2mohidts():
                     depth2str_label = depth2str.replace(".", "p", 1)
                     base_filename = ncfile.replace(".nc","")
                     base_filename_out= base_filename.strip() + '_D_' + depth2str_label + '.ets'
+                    print('Writing MOHID format ' + base_filename_out)
                     writedata2mohid_format(output2,base_filename_out,df,depth2str)
 
 if __name__ == '__main__':
