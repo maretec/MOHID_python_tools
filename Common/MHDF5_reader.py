@@ -44,15 +44,14 @@ import h5py
 import MDateTime
 
 class MHDF5Reader:
-    
     #given a file name for an hdf5 file and a directory where it is located
     #this constructor: 
     #opens the file
     #checks if it is a valid MOHID output
     #checks the type of MOHID file (hydro, lagrangian, etc)
     #checks if the version of eulerian files is high enough (must have Corners3D) 
-    def __init__(self, fileName, directory, mandatoryMesh = True):
-        self.fileName = fileName
+    def __init__(self, filename, directory):
+        self.filename = filename
         self.directory = directory
         self.f = h5py.File(self.directory +'/'+ self.fileName, 'r')
         self.validFile = 0
@@ -60,53 +59,34 @@ class MHDF5Reader:
         self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'WaterProperties2D', 'InterfaceSedimentWater', 'InterfaceWaterAir', 'Turbulence', 'Generic', 'Generic2D']
         self.fileKeys = self.f.keys()
         self.fileTimeSteps = list(self.f['Time'].keys())        
+
         
         self.MOHIDkeys = ['Grid', 'Results', 'Time']
         
         #check if file is a valid MOHID output
-        if all(i in self.fileKeys for i in self.MOHIDkeys):
-            self.validFile = 1
+        if all(i in self.fkeys for i in self.MOHIDkeys):
+            self.validfile = 1
         else:
             for key in self.MOHIDkeys:
-                if key not in self.fileKeys:
+                if key not in self.fkeys:
                     print('- [MHDF5Reader::init]: file does not have', key, 'group, not a MOHID output, ignoring')
         #check for file type
-        if self.validFile == 1:
+        if self.validfile == 1:
             #checking for Hydrodynamic files
             if 'water level' in list(self.f['Results'].keys()):
-                self.fileType = 'Hydrodynamic'
+                self.filetype = 'Hydrodynamic'
+                if 'Corners3D' not in list(self.f['Grid'].keys()):
+                    print('- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring')
+                    self.validfile = 0
+                self.fVars = list(self.f['Results'].keys())
                 #Because 2D fiels are mixed with 3D fields
-                exclusions = ['Error','TidePotential','water column','water level']                
-                if self.getGeoDims() == 2:
-                    self.fileType = 'Hydrodynamic2D'
-                    exclusions = [] 
-                if mandatoryMesh and self.fileType == 'Hydrodynamic':
-                    if 'Corners3D' not in list(self.f['Grid'].keys()):
-                        print('- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring')
-                        self.validFile = 0
-                self.fVars = list(self.f['Results'].keys())                
-                for exc in exclusions:
-                    if exc in self.fVars:
-                        self.fVars.remove(exc)
-            #checking for WaterProperies files
-            if 'temperature' in list(self.f['Results'].keys()):
-                self.fileType = 'WaterProperties'
-                #weird props
-                exclusions = ['Assimila']
-                if self.getGeoDims() == 2:
-                    self.fileType = 'WaterProperties2D'
-                    exclusions = []
-                if mandatoryMesh and self.fileType == 'WaterProperties':
-                    if 'Corners3D' not in list(self.f['Grid'].keys()):
-                        print('- [MHDF5Reader::init]: old WaterProperties file, without mesh information, ignoring')
-                        self.validFile = 0
-                self.fVars = list(self.f['Results'].keys())                
+                exclusions = ['Error','TidePotential','water column','water level']
                 for exc in exclusions:
                     if exc in self.fVars:
                         self.fVars.remove(exc)
             #cheking for Lagrangian files 
             if 'Group_1' in list(self.f['Results'].keys()):
-                self.fileType = 'Lagrangian'
+                self.filetype = 'Lagrangian'
                 #storing all variables in 
                 self.fVars = list(self.f['Results']['Group_1']['Data_1D'].keys())
                 #Because conventions are not followed (name of the variable 
@@ -140,33 +120,33 @@ class MHDF5Reader:
                 
                 
     def isValidFile(self):
-        return self.validFile
+        return self.validfile
                 
     #returns the file type as a string
     def getFileType(self):
-        if self.validFile == 1:
-            return self.fileType
+        if self.validfile == 1:
+            return self.filetype
         else:
-            print('- [MHDF5Reader::getfileType]: invalid file, no type, ignoring')
+            print('- [MHDF5Reader::getFileType]: invalid file, no type, ignoring')
      
     #returns the number of time steps in the file
     def getNumbTimeSteps(self):
-        if self.validFile == 1:
-            return len(self.fileTimeSteps)
+        if self.validfile == 1:
+            return len(self.fTimeSteps)
         else:
             print('- [MHDF5Reader::getNumbTimeSteps]: invalid file, ignoring')
     
     #returns the date of a time step in the file in string format
     def getDateStr(self, timeIndex):
-        if self.validFile == 1:            
+        if self.validfile == 1:            
             return MDateTime.getDateStringFromMOHIDDate(self.getDate(timeIndex))
         else:
             print('- [MHDF5Reader::getDate]: invalid file, ignoring')
             
     #returns the date of a time step in the file in list format
     def getDate(self, timeIndex):
-        if self.validFile == 1:
-            date = list(self.f['Time'][self.fileTimeSteps[timeIndex-1]][:].transpose())
+        if self.validfile == 1:
+            date = list(self.f['Time'][self.fTimeSteps[timeIndex-1]][:].transpose())
             return date
         else:
             print('- [MHDF5Reader::getDate]: invalid file, ignoring')
@@ -196,24 +176,22 @@ class MHDF5Reader:
         if self.validFile == 1:
             if self.fileType != 'Lagrangian' and self.getGeoDims() == 3:
                 return self.f['Grid']['Corners3D']['Latitude'].shape
-            if self.fileType != 'Lagrangian' and self.getGeoDims() == 2:
-                return self.f['Grid']['Latitude'].shape
-            if self.fileType == 'Lagrangian':
+            if self.filetype == 'Lagrangian':
                 timeVar = 'Latitude_' + str(timeIndex).zfill(5)
                 return self.f['Results']['Group_1']['Data_1D']['Latitude'][timeVar].size
         else:
-            print('- [MHDF5Reader::getMeshDims]: invalid file, no mesh geometry, ignoring')
+            print('- [MHDF5Reader::getGeoDims]: invalid file, no geometry, ignoring')
             
-    #returns a list with (name,attPath) with all variables
+    #returns a list with (name,attPath) with all variables 
     def getAllAttributesPath(self, timeIndex):
-        if self.validFile == 1:
+        if self.validfile == 1:
             Attr = []
-            if self.fileType != 'Lagrangian':
+            if self.filetype != 'Lagrangian':
                 for var in self.fVars:
                     timeVar = var + '_' + str(timeIndex).zfill(5)
                     pathVar = '/Results/'+var+'/'+timeVar
                     Attr.append([var, pathVar])
-            if self.fileType == 'Lagrangian':
+            if self.filetype == 'Lagrangian':
                 for var in self.fVars:
                     timeVar = var + '_' + str(timeIndex).zfill(5)
                     pathVar = '/Results/Group_1/Data_1D/'+var+'/'+timeVar
