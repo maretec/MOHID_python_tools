@@ -20,12 +20,15 @@ Repository of post and pre-processing tools for MOHID written using python
     - TODO:        
         - Get Eulerian fields from Lagrangian files
 	
-## get_boias 
-- Donwload time series daily and monthly  insitu data from ftp server nrt.cmems-du.eu in netcdf format
+##  GetBouys  
+- Donwload time series daily and monthly  insitu data from ftp server nrt.cmems-du.eu in netcdf format and transform to Mohid time series Format
 
 	- Built for operational use
 	- Read selected ocean buoys from jason files
 	- Run program by passing arguments such a starting dates, end dates, station ID, monthly or daily data, location of output directory, username and password
+
+##  Convert_Bouys_2_MOHID_ts
+- Given a path of Time Series netcdf it will trasnform to MOHID format
 
 ## MapasDeCampos_by_hidromod
 MapasDeCampos creates figures for almost any MOHID hdf5 file format and MOHID time series files and any variable. Main purpose is for production and operational use, it can generate:
@@ -33,3 +36,6 @@ MapasDeCampos creates figures for almost any MOHID hdf5 file format and MOHID ti
    - 2D plots of any variable inside MOHID hdf5 files 
    - 1D plots of MOHID time series 
    - Plot statistical comparison between two hdf5 in mohid format, that come from ComapreHDF5 tool 
+   
+## GetPaths
+- Write a file with all the paths of a file than ends with certain extension
