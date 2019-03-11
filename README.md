@@ -1,5 +1,7 @@
 # MOHID_python_tools
-Repository of post and pre-processing tools for MOHID written using python 
+Open source repository to build post/pre-processing tools for [MOHID]( https://github.com/Mohid-Water-Modelling-System/Mohid)
+
+Please see bellow some of the tools already available.
 
 ## Common 
  Python modules common to most tools. Directory manipulation, math functions, etc.
@@ -39,3 +41,10 @@ MapasDeCampos creates figures for almost any MOHID hdf5 file format and MOHID ti
    
 ## GetPaths
 - Write a file with all the paths of a file than ends with certain extension
+
+# CONTRIBUTE TO THE CODE
+This tools are mainly mantained by MARETEC and HIDROMOD and we encourage to share your tools with us.
+
+If you want to contribute please feel free to contact us to our mailing group mohid.maretec@maretec.tecnico.ulisboa.pt for questions and ways to contribute.
+
+![Alt text](contributors_logos.png?raw=true "Optional Title")
