@@ -171,7 +171,7 @@ class MHDF5Reader:
         else:
             print('- [MHDF5Reader::getDate]: invalid file, ignoring')
                 
-    #returns the geometry dimensions
+    #returns the geometry dimensionality
     def getGeoDims(self):
         if self.validFile == 1:
             if self.fileType != 'Lagrangian':
@@ -221,3 +221,16 @@ class MHDF5Reader:
             return Attr
         else:
             print('- [MHDF5Reader::getAllAttributesPath]: invalid file ignoring')        
+    
+    #returns true if the file has bathymetry field
+    def hasBathymetry(self):
+        if self.validFile == 1:            
+            if self.fileType != 'Lagrangian':
+                if 'Bathymetry' in list(self.f['Grid'].keys()):
+                    return 1
+                else:
+                    return 0
+            if self.fileType == 'Lagrangian':
+                return 0
+        else:
+            print('- [MHDF5Reader::hasBathymetry]: invalid file ignoring')
