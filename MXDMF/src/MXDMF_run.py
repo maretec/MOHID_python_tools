@@ -72,6 +72,9 @@ def run():
         glueFiles = True
     firstDate = str(getattr(args,'firstDate'))
     lastDate = str(getattr(args,'lastDate'))
+    
+    #datadir="C:\Users\RBC_workhorse\Documents\GitHub\MOHID_python_tools\ConvertCSV2HDF5\testFiles"
+    #glueFiles = True
         
     print('-> Main directory is', datadir)
     if glueFiles:
