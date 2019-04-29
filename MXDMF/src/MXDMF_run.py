@@ -72,13 +72,13 @@ def run():
     glueFiles = getattr(args,'glueFiles')
     if glueFiles != False:
         glueFiles = True
-    forceDir = str(getattr(args,'forceDir'))
+    forceDir = getattr(args,'forceDir')
     if forceDir != False:
         forceDir = True
     firstDate = str(getattr(args,'firstDate'))
     lastDate = str(getattr(args,'lastDate'))
     
-    #datadir="C:\Users\RBC_workhorse\Documents\GitHub\MOHID_python_tools\ConvertCSV2HDF5\testFiles"
+    #datadir="..."
     #glueFiles = True
         
     print('-> Main directory is', datadir)

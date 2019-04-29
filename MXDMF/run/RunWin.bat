@@ -5,14 +5,14 @@ rem IF YOU ARE USING ANACONDA, OPEN A CMD LINE, TYPE 'ACTIVATE BASE' AND THEN RU
 
 
 rem "dataDir" is named according to the testcase ----- CHANGE THIS HERE --------
-set dataDir=../TestFiles
+set dataDir=C:\Users\RBC_workhorse\Documents\GitHub\MOHID_python_tools\MXDMF\TestFiles_op
 
 rem "executables" are renamed and called from their directory
 set src=../src
 set MXDMF="%src%/MXDMF_run.py"
 
 rem CODES are executed according the selected parameters of execution in this case
-python %MXDMF% -i %dataDir%
+python %MXDMF% -i %dataDir% -g true
 rem python %MXDMF% -i %dataDir% -f true
 rem python %MXDMF% -i %dataDir% -g true
 rem python %MXDMF% -i %dataDir% -g true -fd "2000-08-19 01:01:35"

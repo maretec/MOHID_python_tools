@@ -56,6 +56,7 @@ class MHDF5Reader:
         self.directory = directory
         self.f = h5py.File(self.directory +'/'+ self.fileName, 'r')
         self.validFile = 0
+        self.Corners3D = 0
         self.fileType = []
         self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'WaterProperties2D', 'InterfaceSedimentWater', 'InterfaceWaterAir', 'Turbulence', 'Generic', 'Generic2D']
         self.fileKeys = self.f.keys()
@@ -79,11 +80,15 @@ class MHDF5Reader:
                 exclusions = ['Error','TidePotential','water column','water level']                
                 if self.getGeoDims() == 2:
                     self.fileType = 'Hydrodynamic2D'
-                    exclusions = [] 
+                    exclusions = []
+                    if 'Corners3D' in list(self.f['Grid'].keys()):
+                        self.Corners3D = 1
                 if mandatoryMesh and self.fileType == 'Hydrodynamic':
+                    self.Corners3D = 1
                     if 'Corners3D' not in list(self.f['Grid'].keys()):
                         print('- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring')
                         self.validFile = 0
+                        self.Corners3D = 0
                 self.fVars = list(self.f['Results'].keys())                
                 for exc in exclusions:
                     if exc in self.fVars:
@@ -96,10 +101,14 @@ class MHDF5Reader:
                 if self.getGeoDims() == 2:
                     self.fileType = 'WaterProperties2D'
                     exclusions = []
+                    if 'Corners3D' in list(self.f['Grid'].keys()):
+                        self.Corners3D = 1
                 if mandatoryMesh and self.fileType == 'WaterProperties':
+                    self.Corners3D = 1
                     if 'Corners3D' not in list(self.f['Grid'].keys()):
                         print('- [MHDF5Reader::init]: old WaterProperties file, without mesh information, ignoring')
                         self.validFile = 0
+                        self.Corners3D = 0
                 self.fVars = list(self.f['Results'].keys())                
                 for exc in exclusions:
                     if exc in self.fVars:
@@ -141,6 +150,9 @@ class MHDF5Reader:
                 
     def isValidFile(self):
         return self.validFile
+    
+    def hasCorners3D(self):
+        return self.Corners3D
                 
     #returns the file type as a string
     def getFileType(self):

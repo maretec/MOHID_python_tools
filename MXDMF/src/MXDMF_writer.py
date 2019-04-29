@@ -75,13 +75,16 @@ class MXDMFwriter:
         self.f.write('''            </Grid>
 ''')
          
-    def writeGeo(self,fileType,timeIndex,timeStamp,dateStr,geoDims,dimensionality, path = ''):
+    def writeGeo(self,fileType,timeIndex,timeStamp,dateStr,geoDims,dimensionality, hasCorners3D, path = ''):
         timeIndexStr = str(timeIndex).zfill(5)
         if fileType != 'Lagrangian':
             geoDimsStr = ' '.join(str(e) for e in geoDims)
             if dimensionality == 2:
                 topology = '2DSMesh'
+                #if coners3D are available use that
                 address = '/Grid'
+                if hasCorners3D:
+                    address = '/Grid/Corners3D'
             if dimensionality == 3:
                 topology = '3DSMesh'
                 address = '/Grid/Corners3D'

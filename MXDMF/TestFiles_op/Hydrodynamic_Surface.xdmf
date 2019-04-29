@@ -5,7 +5,7 @@
         <Grid Name="Box" GridType="Collection" CollectionType="Temporal">
             <Grid Name="Solution_00001" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.0" />
+                <Time Value="24106.0" /> <!--date: 2016-01-01 00:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -34,10 +34,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00001
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00002" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.041666666668" />
+                <Time Value="24106.041666666668" /> <!--date: 2016-01-01 01:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -66,10 +71,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00002
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00003" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.083333333332" />
+                <Time Value="24106.083333333332" /> <!--date: 2016-01-01 02:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -98,10 +108,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00003
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00004" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.125" />
+                <Time Value="24106.125" /> <!--date: 2016-01-01 03:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -130,10 +145,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00004
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00005" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.166666666668" />
+                <Time Value="24106.166666666668" /> <!--date: 2016-01-01 04:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -162,10 +182,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00005
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00006" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.208333333332" />
+                <Time Value="24106.208333333332" /> <!--date: 2016-01-01 05:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -194,10 +219,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00006
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00007" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.25" />
+                <Time Value="24106.25" /> <!--date: 2016-01-01 06:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -226,10 +256,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00007
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00008" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.291666666668" />
+                <Time Value="24106.291666666668" /> <!--date: 2016-01-01 07:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -258,10 +293,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00008
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00009" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.333333333332" />
+                <Time Value="24106.333333333332" /> <!--date: 2016-01-01 08:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -290,10 +330,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00009
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00010" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.375" />
+                <Time Value="24106.375" /> <!--date: 2016-01-01 09:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -322,10 +367,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00010
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00011" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.416666666668" />
+                <Time Value="24106.416666666668" /> <!--date: 2016-01-01 10:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -354,10 +404,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00011
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00012" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.458333333332" />
+                <Time Value="24106.458333333332" /> <!--date: 2016-01-01 11:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -386,10 +441,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00012
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00013" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.5" />
+                <Time Value="24106.5" /> <!--date: 2016-01-01 12:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -418,10 +478,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00013
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00014" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.541666666668" />
+                <Time Value="24106.541666666668" /> <!--date: 2016-01-01 13:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -450,10 +515,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00014
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00015" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.583333333332" />
+                <Time Value="24106.583333333332" /> <!--date: 2016-01-01 14:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -482,10 +552,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00015
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00016" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.625" />
+                <Time Value="24106.625" /> <!--date: 2016-01-01 15:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -514,10 +589,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00016
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00017" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.666666666668" />
+                <Time Value="24106.666666666668" /> <!--date: 2016-01-01 16:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -546,10 +626,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00017
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00018" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.708333333332" />
+                <Time Value="24106.708333333332" /> <!--date: 2016-01-01 17:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -578,10 +663,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00018
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00019" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.75" />
+                <Time Value="24106.75" /> <!--date: 2016-01-01 18:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -610,10 +700,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00019
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00020" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.791666666668" />
+                <Time Value="24106.791666666668" /> <!--date: 2016-01-01 19:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -642,10 +737,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00020
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00021" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.833333333332" />
+                <Time Value="24106.833333333332" /> <!--date: 2016-01-01 20:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -674,10 +774,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00021
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00022" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.875" />
+                <Time Value="24106.875" /> <!--date: 2016-01-01 21:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -706,10 +811,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00022
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00023" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.916666666668" />
+                <Time Value="24106.916666666668" /> <!--date: 2016-01-01 22:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -738,10 +848,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00023
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00024" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24106.958333333332" />
+                <Time Value="24106.958333333332" /> <!--date: 2016-01-01 23:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -770,10 +885,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00024
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00025" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.0" />
+                <Time Value="24107.0" /> <!--date: 2016-01-02 00:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -802,10 +922,15 @@
                         2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00025
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-01_2016-01-02/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00002" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.041666666668" />
+                <Time Value="24107.041666666668" /> <!--date: 2016-01-02 01:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -834,10 +959,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00002
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00003" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.083333333332" />
+                <Time Value="24107.083333333332" /> <!--date: 2016-01-02 02:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -866,10 +996,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00003
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00004" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.125" />
+                <Time Value="24107.125" /> <!--date: 2016-01-02 03:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -898,10 +1033,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00004
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00005" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.166666666668" />
+                <Time Value="24107.166666666668" /> <!--date: 2016-01-02 04:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -930,10 +1070,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00005
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00006" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.208333333332" />
+                <Time Value="24107.208333333332" /> <!--date: 2016-01-02 05:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -962,10 +1107,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00006
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00007" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.25" />
+                <Time Value="24107.25" /> <!--date: 2016-01-02 06:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -994,10 +1144,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00007
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00008" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.291666666668" />
+                <Time Value="24107.291666666668" /> <!--date: 2016-01-02 07:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1026,10 +1181,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00008
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00009" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.333333333332" />
+                <Time Value="24107.333333333332" /> <!--date: 2016-01-02 08:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1058,10 +1218,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00009
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00010" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.375" />
+                <Time Value="24107.375" /> <!--date: 2016-01-02 09:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1090,10 +1255,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00010
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00011" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.416666666668" />
+                <Time Value="24107.416666666668" /> <!--date: 2016-01-02 10:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1122,10 +1292,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00011
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00012" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.458333333332" />
+                <Time Value="24107.458333333332" /> <!--date: 2016-01-02 11:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1154,10 +1329,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00012
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00013" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.5" />
+                <Time Value="24107.5" /> <!--date: 2016-01-02 12:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1186,10 +1366,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00013
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00014" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.541666666668" />
+                <Time Value="24107.541666666668" /> <!--date: 2016-01-02 13:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1218,10 +1403,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00014
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00015" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.583333333332" />
+                <Time Value="24107.583333333332" /> <!--date: 2016-01-02 14:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1250,10 +1440,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00015
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00016" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.625" />
+                <Time Value="24107.625" /> <!--date: 2016-01-02 15:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1282,10 +1477,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00016
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00017" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.666666666668" />
+                <Time Value="24107.666666666668" /> <!--date: 2016-01-02 16:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1314,10 +1514,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00017
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00018" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.708333333332" />
+                <Time Value="24107.708333333332" /> <!--date: 2016-01-02 17:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1346,10 +1551,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00018
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00019" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.75" />
+                <Time Value="24107.75" /> <!--date: 2016-01-02 18:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1378,10 +1588,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00019
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00020" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.791666666668" />
+                <Time Value="24107.791666666668" /> <!--date: 2016-01-02 19:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1410,10 +1625,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00020
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00021" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.833333333332" />
+                <Time Value="24107.833333333332" /> <!--date: 2016-01-02 20:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1442,10 +1662,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00021
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00022" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.875" />
+                <Time Value="24107.875" /> <!--date: 2016-01-02 21:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1474,10 +1699,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00022
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00023" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.916666666668" />
+                <Time Value="24107.916666666668" /> <!--date: 2016-01-02 22:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1506,10 +1736,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00023
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00024" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24107.958333333332" />
+                <Time Value="24107.958333333332" /> <!--date: 2016-01-02 23:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1538,10 +1773,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00024
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00025" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.0" />
+                <Time Value="24108.0" /> <!--date: 2016-01-03 00:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1570,10 +1810,15 @@
                         2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00025
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-02_2016-01-03/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00002" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.041666666668" />
+                <Time Value="24108.041666666668" /> <!--date: 2016-01-03 01:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1602,10 +1847,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00002
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00003" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.083333333332" />
+                <Time Value="24108.083333333332" /> <!--date: 2016-01-03 02:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1634,10 +1884,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00003
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00004" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.125" />
+                <Time Value="24108.125" /> <!--date: 2016-01-03 03:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1666,10 +1921,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00004
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00005" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.166666666668" />
+                <Time Value="24108.166666666668" /> <!--date: 2016-01-03 04:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1698,10 +1958,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00005
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00006" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.208333333332" />
+                <Time Value="24108.208333333332" /> <!--date: 2016-01-03 05:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1730,10 +1995,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00006
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00007" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.25" />
+                <Time Value="24108.25" /> <!--date: 2016-01-03 06:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1762,10 +2032,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00007
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00008" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.291666666668" />
+                <Time Value="24108.291666666668" /> <!--date: 2016-01-03 07:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1794,10 +2069,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00008
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00009" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.333333333332" />
+                <Time Value="24108.333333333332" /> <!--date: 2016-01-03 08:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1826,10 +2106,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00009
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00010" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.375" />
+                <Time Value="24108.375" /> <!--date: 2016-01-03 09:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1858,10 +2143,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00010
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00011" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.416666666668" />
+                <Time Value="24108.416666666668" /> <!--date: 2016-01-03 10:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1890,10 +2180,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00011
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00012" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.458333333332" />
+                <Time Value="24108.458333333332" /> <!--date: 2016-01-03 11:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1922,10 +2217,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00012
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00013" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.5" />
+                <Time Value="24108.5" /> <!--date: 2016-01-03 12:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1954,10 +2254,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00013
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00014" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.541666666668" />
+                <Time Value="24108.541666666668" /> <!--date: 2016-01-03 13:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -1986,10 +2291,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00014
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00015" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.583333333332" />
+                <Time Value="24108.583333333332" /> <!--date: 2016-01-03 14:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2018,10 +2328,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00015
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00016" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.625" />
+                <Time Value="24108.625" /> <!--date: 2016-01-03 15:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2050,10 +2365,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00016
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00017" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.666666666668" />
+                <Time Value="24108.666666666668" /> <!--date: 2016-01-03 16:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2082,10 +2402,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00017
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00018" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.708333333332" />
+                <Time Value="24108.708333333332" /> <!--date: 2016-01-03 17:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2114,10 +2439,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00018
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00019" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.75" />
+                <Time Value="24108.75" /> <!--date: 2016-01-03 18:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2146,10 +2476,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00019
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00020" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.791666666668" />
+                <Time Value="24108.791666666668" /> <!--date: 2016-01-03 19:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2178,10 +2513,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00020
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00021" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.833333333332" />
+                <Time Value="24108.833333333332" /> <!--date: 2016-01-03 20:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2210,10 +2550,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00021
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00022" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.875" />
+                <Time Value="24108.875" /> <!--date: 2016-01-03 21:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2242,10 +2587,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00022
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00023" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.916666666668" />
+                <Time Value="24108.916666666668" /> <!--date: 2016-01-03 22:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2274,10 +2624,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00023
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00024" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24108.958333333332" />
+                <Time Value="24108.958333333332" /> <!--date: 2016-01-03 23:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2306,10 +2661,15 @@
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00024
                     </DataItem>
                 </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
+                    </DataItem>
+                </Attribute>
             </Grid>
             <Grid Name="Solution_00025" GridType="Uniform">
                 <Topology TopologyType="2DSMesh" Dimensions="126 178"/>">
-                <Time Value="24109.0" />
+                <Time Value="24109.0" /> <!--date: 2016-01-04 00:00:00-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="126 178" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Longitude
@@ -2336,6 +2696,11 @@
                 <Attribute Name="water level" AttributeType="Scalar" Center="Cell">
                     <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
                         2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Results/water level/water level_00025
+                    </DataItem>
+                </Attribute>
+                <Attribute Name="Bathymetry" AttributeType="Scalar" Center="Cell">
+                    <DataItem Dimensions="125 177" NumberType="Float" Precision="8" Format="HDF">
+                        2016-01-03_2016-01-04/Hydrodynamic_Surface.hdf5:/Grid/Bathymetry
                     </DataItem>
                 </Attribute>
             </Grid>
