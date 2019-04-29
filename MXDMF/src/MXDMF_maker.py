@@ -95,9 +95,10 @@ class SingleMXDMFmaker:
                 dateStr = self.hdf5Reader.getDateStr(self.timeStep)
                 timeStamp = mdate.getTimeStampFromDateString(dateStr)
                 attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)
+                corners3D = self.hdf5Reader.hasCorners3D()
                 
                 self.xdmfWriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
-                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims())
+                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),corners3D)
                 for attr in attributes:
                     self.xdmfWriter.writeAttribute(self.hdf5FileType,attr,meshDims,self.hdf5Reader.getGeoDims())
                 if self.hdf5Reader.getGeoDims() < 3:
@@ -151,6 +152,7 @@ class GlueMXDMFmaker():
         if self.hdf5Reader.isValidFile():
             f = self.glueFileName.index(self.currFileName)
             self.timeStep = 1
+            corners3D = self.hdf5Reader.hasCorners3D()
             
             while self.timeStep <= self.hdf5Reader.getNumbTimeSteps():
                     meshDims = self.hdf5Reader.getMeshDims(self.timeStep)
@@ -173,7 +175,7 @@ class GlueMXDMFmaker():
                     if addStep:
                         attributes = self.hdf5Reader.getAllAttributesPath(self.timeStep)                        
                         self.xdmfWriter[f].openGrid('Solution_'+str(self.timeStep).zfill(5))
-                        self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
+                        self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),corners3D,subdir+'/')
                         for attr in attributes:
                             self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],attr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
                         if self.hdf5Reader.getGeoDims() < 3:
