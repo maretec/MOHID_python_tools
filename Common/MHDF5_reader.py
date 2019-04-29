@@ -77,10 +77,10 @@ class MHDF5Reader:
             if 'water level' in list(self.f['Results'].keys()):
                 self.fileType = 'Hydrodynamic'
                 #Because 2D fiels are mixed with 3D fields
-                exclusions = ['Error','TidePotential','water column','water level','VolumeCreated']                
+                exclusions = ['Error','TidePotential','water column','water level','VolumeCreated']
                 if self.getGeoDims() == 2:
                     self.fileType = 'Hydrodynamic2D'
-                    exclusions = []
+                    exclusions = ['Error','VolumeCreated']
                     if 'Corners3D' in list(self.f['Grid'].keys()):
                         self.Corners3D = 1
                 if mandatoryMesh and self.fileType == 'Hydrodynamic':
@@ -89,7 +89,7 @@ class MHDF5Reader:
                         print('- [MHDF5Reader::init]: old hydrodynamic file, without mesh information, ignoring')
                         self.validFile = 0
                         self.Corners3D = 0
-                self.fVars = list(self.f['Results'].keys())                
+                self.fVars = list(self.f['Results'].keys())
                 for exc in exclusions:
                     if exc in self.fVars:
                         self.fVars.remove(exc)
@@ -120,7 +120,7 @@ class MHDF5Reader:
                 self.fVars = list(self.f['Results']['Group_1']['Data_1D'].keys())
                 #Because conventions are not followed (name of the variable 
                 #is not the name of the field, mixing diferent dimenisionalities on the same group,...)
-                exclusions = ['X Pos','Y Pos','Z Pos','Latitude average','Longitude average', 'googlemaps_x_average', 'googlemaps_y_average','VolumeCreated']
+                exclusions = ['X Pos','Y Pos','Z Pos','Latitude average','Longitude average', 'googlemaps_x_average', 'googlemaps_y_average']
                 for exc in exclusions:
                     if exc in self.fVars:
                         self.fVars.remove(exc)

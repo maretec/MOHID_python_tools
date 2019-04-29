@@ -100,10 +100,10 @@ class SingleMXDMFmaker:
                 self.xdmfWriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
                 self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),corners3D)
                 for attr in attributes:
-                    self.xdmfWriter.writeAttribute(self.hdf5FileType,attr,meshDims,self.hdf5Reader.getGeoDims())
+                    self.xdmfWriter.writeAttribute(self.hdf5FileType,attr,meshDims,self.hdf5Reader.getGeoDims(),corners3D)
                 if self.hdf5Reader.getGeoDims() < 3:
                     if self.hdf5Reader.hasBathymetry():
-                        self.xdmfWriter.writeAttribute(self.hdf5FileType,['Bathymetry','/Grid/Bathymetry'],meshDims,self.hdf5Reader.getGeoDims())
+                        self.xdmfWriter.writeAttribute(self.hdf5FileType,['Bathymetry','/Grid/Bathymetry'],meshDims,self.hdf5Reader.getGeoDims(),corners3D)
                 self.xdmfWriter.closeGrid()
                 
                 self.timeStep = self.timeStep + 1
@@ -177,10 +177,10 @@ class GlueMXDMFmaker():
                         self.xdmfWriter[f].openGrid('Solution_'+str(self.timeStep).zfill(5))
                         self.xdmfWriter[f].writeGeo(self.hdf5FileType[f],self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),corners3D,subdir+'/')
                         for attr in attributes:
-                            self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],attr,meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
+                            self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],attr,meshDims,self.hdf5Reader.getGeoDims(),corners3D,subdir+'/')
                         if self.hdf5Reader.getGeoDims() < 3:
                             if self.hdf5Reader.hasBathymetry():
-                                self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],['Bathymetry','/Grid/Bathymetry'],meshDims,self.hdf5Reader.getGeoDims(),subdir+'/')
+                                self.xdmfWriter[f].writeAttribute(self.hdf5FileType[f],['Bathymetry','/Grid/Bathymetry'],meshDims,self.hdf5Reader.getGeoDims(),corners3D,subdir+'/')
                         self.xdmfWriter[f].closeGrid()
                         self.usedTimes[f].append(timeStamp)
                     
