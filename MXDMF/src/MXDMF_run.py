@@ -78,8 +78,8 @@ def run():
     firstDate = str(getattr(args,'firstDate'))
     lastDate = str(getattr(args,'lastDate'))
     
-    datadir="C:\\Users\\RBC_workhorse\\Documents\\GitHub\\MOHID_python_tools\\MXDMF\\TestFiles_op"
-    glueFiles = True
+    #datadir="..."
+    #glueFiles = True
         
     print('-> Main directory is', datadir)
     if glueFiles:
