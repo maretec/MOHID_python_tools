@@ -55,6 +55,8 @@ def run():
     argParser = argparse.ArgumentParser(description='Indexes MOHID outputs in xmdf files. Use -h for help.')
     argParser.add_argument("-i", "--input", dest="datadir",
                     help="input directory containing .hdf5 files or subdirectories with them", metavar="dir")
+    argParser.add_argument("-f", "--forcedir", dest="forceDir", default=False,
+                    help="option to force the base directory of the result files")
     argParser.add_argument("-g", "--glue", dest="glueFiles", default=False,
                     help="option to atempt to produce a master indexer, that 'glues' all of the files")
     argParser.add_argument("-fd", "--firstdate", dest="firstDate", default='',
@@ -70,6 +72,9 @@ def run():
     glueFiles = getattr(args,'glueFiles')
     if glueFiles != False:
         glueFiles = True
+    forceDir = str(getattr(args,'forceDir'))
+    if forceDir != False:
+        forceDir = True
     firstDate = str(getattr(args,'firstDate'))
     lastDate = str(getattr(args,'lastDate'))
     
@@ -87,6 +92,8 @@ def run():
     
     #files may be in sub directories
     subdirs = os_dir.get_immediate_subdirectories(datadir)
+    if forceDir:
+        subdirs = []
     #if subdirs is empty then just point to the main directory
     if subdirs == []:
         subdirs = [datadir]

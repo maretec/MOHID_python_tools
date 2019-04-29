@@ -13,6 +13,7 @@ MXDMF=${src}/MXDMF_run.py
 errcode=0
 if [ $errcode -eq 0 ]; then
   python $MXDMF -i $dataDir
+  #python $MXDMF -i $dataDir -f true
   #python $MXDMF -i $dataDir -g true
   # python $MXDMF -i $dataDir -g true -fd "2000-08-19 01:01:35"
   # python $MXDMF -i $dataDir -g true -fd "2000-08-19 01:01:35" -ld "2000-08-20 00:00:00"
