@@ -84,7 +84,8 @@ class MXDMFwriter:
                 #if coners3D are available use that
                 address = '/Grid'
                 if hasCorners3D:
-                    address = '/Grid/Corners3D'
+                    dimensionality = 3
+                    geoDimsStr = '2 '+geoDimsStr
             if dimensionality == 3:
                 topology = '3DSMesh'
                 address = '/Grid/Corners3D'
@@ -132,18 +133,24 @@ class MXDMFwriter:
 '''
         self.f.write(toWrite)
         
-    def writeAttribute(self,fileType,attr,geoDims,dimensionality, path = ''):
+    def writeAttribute(self,fileType,attr,geoDims,dimensionality, hasCorners3D, path = ''):
         attrName = attr[0]
         attrPath = attr[1]        
         if fileType != 'Lagrangian':
             meshDims = []
+            if dimensionality == 3:
+                meshDims = geoDims[0]-1, geoDims[1], geoDims[2]
             if dimensionality == 2:
                 meshDims[:] = [x - 1 for x in geoDims]
-            if dimensionality == 3:
-                meshDims = geoDims[0]-1, geoDims[1], geoDims[2]                
+                
             geoDimsStr = ' '.join(str(e) for e in meshDims)
         else:
             geoDimsStr = str(geoDims)
+            
+        if dimensionality == 2:
+            if hasCorners3D:
+                geoDimsStr = geoDimsStr +' 1'
+                
         toWrite = '''                <Attribute Name="'''+attrName+'''" AttributeType="Scalar" Center="Cell">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
                         '''+path+self.filename+'''.hdf5:'''+attrPath+'''
