@@ -14,7 +14,10 @@ programmableFilter1.OutputDataSetType = 'vtkTable'
 
 programmableFilter1.Script = '\
 import sys\n\
-sys.path.append("C:\Users\RBC_workhorse\Documents\GitHub\MOHID_python_tools\Common")\n\
+import os\n\
+basePath = os.path.dirname(os.path.realpath("__file__"))\n\
+commonPath = os.path.abspath(os.path.join(basePath,"..","Common"))\n\
+sys.path.append(commonPath)\n\
 import MDateTime as mdate\n\
 t = inputs[0].GetInformation().Get(vtk.vtkDataObject.DATA_TIME_STEP())\n\
 date_time = mdate.getDateStringFromTimeStamp(t)\n\
