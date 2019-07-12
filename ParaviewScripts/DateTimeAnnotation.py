@@ -1,5 +1,17 @@
 #### import the simple module from the paraview
 from paraview.simple import *
+
+import sys
+import os
+basePath = os.path.dirname(os.path.realpath("__file__"))
+commonPath = os.path.abspath(os.path.join(basePath,"..","Common"))
+sys.path.append(commonPath)
+try: import MDateTime as mdate
+except:
+	commonPath = raw_input("Please provide the path of the Common directory of the MOHID python tools package: ")
+	sys.path.append(commonPath)
+	import MDateTime as mdate
+	
 #### disable automatic camera reset on 'Show'
 paraview.simple._DisableFirstRenderCameraReset()
 # find source
