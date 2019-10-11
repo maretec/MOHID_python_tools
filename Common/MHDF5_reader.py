@@ -76,16 +76,16 @@ class MHDF5Reader:
         if self.validFile == 1:
             #checking for Hydrodynamic files
             if 'water level' in list(self.f['Results'].keys()):
-                self.fileType = 'Hydrodynamic'
+                self.fileType = 'Hydrodynamic'                
                 #Because 2D fiels are mixed with 3D fields
                 exclusions = ['Error','TidePotential','water column','water level','VolumeCreated']
                 if self.getGeoDims() == 2:
-                    self.fileType = 'Hydrodynamic2D'
+                    self.fileType = 'Hydrodynamic2D'  
+                    lat = self.f.get('Grid/Latitude')
+                    lat = lat-lat[0][0]
+                    self.LatLon = lat.any()
                     if 'BasinPoints' in list(self.f['Grid'].keys()):
-                        self.fileType = 'Runoff'
-                        lat = self.f.get('Grid/Latitude')
-                        lat = lat-lat[0][0]
-                        self.LatLon = lat.any()
+                        self.fileType = 'Runoff'                        
                     exclusions = ['Error','VolumeCreated']
                     if 'Corners3D' in list(self.f['Grid'].keys()):
                         self.Corners3D = 1
