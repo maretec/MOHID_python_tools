@@ -57,8 +57,9 @@ class MHDF5Reader:
         self.f = h5py.File(self.directory +'/'+ self.fileName, 'r')
         self.validFile = 0
         self.Corners3D = 0
+        self.LatLon = 1
         self.fileType = []
-        self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'WaterProperties2D', 'InterfaceSedimentWater', 'InterfaceWaterAir', 'Turbulence', 'Generic', 'Generic2D']
+        self.possibleFileTypes = ['Hydrodynamic', 'Hydrodynamic2D', 'Lagrangian', 'WaterProperties', 'Runoff', 'WaterProperties2D', 'InterfaceSedimentWater', 'InterfaceWaterAir', 'Turbulence', 'Generic', 'Generic2D']
         self.fileKeys = self.f.keys()
         self.fileTimeSteps = list(self.f['Time'].keys())        
         
@@ -75,11 +76,16 @@ class MHDF5Reader:
         if self.validFile == 1:
             #checking for Hydrodynamic files
             if 'water level' in list(self.f['Results'].keys()):
-                self.fileType = 'Hydrodynamic'
+                self.fileType = 'Hydrodynamic'                
                 #Because 2D fiels are mixed with 3D fields
                 exclusions = ['Error','TidePotential','water column','water level','VolumeCreated']
                 if self.getGeoDims() == 2:
-                    self.fileType = 'Hydrodynamic2D'
+                    self.fileType = 'Hydrodynamic2D'  
+                    lat = self.f.get('Grid/Latitude')
+                    lat = lat-lat[0][0]
+                    self.LatLon = lat.any()
+                    if 'BasinPoints' in list(self.f['Grid'].keys()):
+                        self.fileType = 'Runoff'                        
                     exclusions = ['Error','VolumeCreated']
                     if 'Corners3D' in list(self.f['Grid'].keys()):
                         self.Corners3D = 1
@@ -194,6 +200,8 @@ class MHDF5Reader:
                     else:
                         return 3
                 elif 'WaterPoints2D' in list(self.f['Grid'].keys()):
+                    return 2
+                elif 'BasinPoints' in list(self.f['Grid'].keys()):
                     return 2
                 else: 
                     self.validFile = 0

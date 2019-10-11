@@ -94,9 +94,7 @@ def run():
     subdirs = os_dir.get_immediate_subdirectories(datadir)
     if forceDir:
         subdirs = []
-    #if subdirs is empty then just point to the main directory
-    if subdirs == []:
-        subdirs = [datadir]
+    subdirs.append(datadir)
     
     foundFiles = 0
     #create mxdmf_maker class objects

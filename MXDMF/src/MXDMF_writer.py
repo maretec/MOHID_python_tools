@@ -44,7 +44,7 @@
 class MXDMFwriter:
     def __init__(self):
         self.filename = []
-        self.directory = []        
+        self.directory = []
         
     def openFile(self, filename, directory):
         self.filename = filename
@@ -75,8 +75,11 @@ class MXDMFwriter:
         self.f.write('''            </Grid>
 ''')
          
-    def writeGeo(self,fileType,timeIndex,timeStamp,dateStr,geoDims,dimensionality, hasCorners3D, path = ''):
+    def writeGeo(self,fileType,timeIndex,timeStamp,dateStr,geoDims,dimensionality, hasCorners3D, LatLon, path = ''):
         timeIndexStr = str(timeIndex).zfill(5)
+        coordName = ['Longitude', 'Latitude']
+        if not LatLon:
+            coordName = ['ConnectionX', 'ConnectionY']
         if fileType != 'Lagrangian':
             geoDimsStr = ' '.join(str(e) for e in geoDims)
             if dimensionality == 2:
@@ -93,10 +96,10 @@ class MXDMFwriter:
                 <Time Value="'''+str(timeStamp)+'''" /> <!--date: '''+dateStr+'''-->
                 <Geometry GeometryType="X_Y">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:'''+address+'''/Longitude
+                        '''+path+self.filename+'''.hdf5:'''+address+'''/'''+coordName[0]+'''
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:'''+address+'''/Latitude
+                        '''+path+self.filename+'''.hdf5:'''+address+'''/'''+coordName[1]+'''
                     </DataItem>
                 </Geometry>
 '''
@@ -105,10 +108,10 @@ class MXDMFwriter:
                 <Time Value="'''+str(timeStamp)+'''" /> <!--date: '''+dateStr+'''-->
                 <Geometry GeometryType="X_Y_Z">
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Longitude
+                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/'''+coordName[0]+'''
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
-                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Latitude
+                        '''+path+self.filename+'''.hdf5:/Grid/Corners3D/'''+coordName[1]+'''
                     </DataItem>
                     <DataItem Dimensions="'''+geoDimsStr+'''" NumberType="Float" Precision="8" Format="HDF">
                         '''+path+self.filename+'''.hdf5:/Grid/Corners3D/Vertical
