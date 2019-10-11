@@ -98,7 +98,7 @@ class SingleMXDMFmaker:
                 corners3D = self.hdf5Reader.hasCorners3D()
                 
                 self.xdmfWriter.openGrid('Solution_'+str(self.timeStep).zfill(5))
-                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),corners3D)
+                self.xdmfWriter.writeGeo(self.hdf5FileType,self.timeStep,timeStamp,dateStr,meshDims,self.hdf5Reader.getGeoDims(),corners3D,self.hdf5Reader.LatLon)
                 for attr in attributes:
                     self.xdmfWriter.writeAttribute(self.hdf5FileType,attr,meshDims,self.hdf5Reader.getGeoDims(),corners3D)
                 if self.hdf5Reader.getGeoDims() < 3:
