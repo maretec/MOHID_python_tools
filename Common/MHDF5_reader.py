@@ -271,3 +271,12 @@ class MHDF5Reader:
             print('- [MHDF5Reader::getBathymetry]: hdf file has no Bathymetry attribute')
             exit(1)
     
+    #returns the open points array
+    def getOpenPoints(self, timeIndex):
+        if 'OpenPoints' in self.f['Grid'].keys():
+            openPointsArray = self.f['Grid']['OpenPoints']['OpenPoints_'+str(timeIndex).zfill(5)][:]
+            return openPointsArray
+        else:
+            print('- [MHDF5Reader::getOpenPoints]: OpenPoints not found in hdf file')
+            exit(1)
+    
