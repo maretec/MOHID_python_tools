@@ -263,3 +263,11 @@ class MHDF5Reader:
     def getLatHorizontalGrid(self):
         return self.f['Grid']['Latitude'][:]
     
+    #returns the bathymetry 2D array
+    def getBathymetry(self):
+        if self.hasBathymetry():
+            return self.f['Grid']['Bathymetry'][:]
+        else:
+            print('- [MHDF5Reader::getBathymetry]: hdf file has no Bathymetry attribute')
+            exit(1)
+    
