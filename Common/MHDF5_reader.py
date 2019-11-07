@@ -280,3 +280,12 @@ class MHDF5Reader:
             print('- [MHDF5Reader::getOpenPoints]: OpenPoints not found in hdf file')
             exit(1)
     
+    #returns the results array of a given property
+    def getPropertyResults(self, propertyName, timeIndex):
+        if propertyName in self.f['Results'].keys():
+            propertyArray = self.f['Results'][propertyName][propertyName+'_'+str(timeIndex).zfill(5)][:]
+            return propertyArray
+        else:
+            print('- [MHDF5Reader::getPropertyResults]: {} not found in hdf file'.format(propertyName))
+            print('try:', self.f['Results'].keys())
+            exit(1)
