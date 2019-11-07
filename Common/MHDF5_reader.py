@@ -254,3 +254,12 @@ class MHDF5Reader:
                 return 0
         else:
             print('- [MHDF5Reader::hasBathymetry]: invalid file ignoring')
+    
+    #returns the longitude horizontal grid array
+    def getLonHorizontalGrid(self):
+        return self.f['Grid']['Longitude'][:]
+
+    #returns the latitude horizontal grid array
+    def getLatHorizontalGrid(self):
+        return self.f['Grid']['Latitude'][:]
+    
