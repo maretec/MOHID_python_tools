@@ -33,10 +33,8 @@ def get_new_data(par_dropdown):
         select.select_by_visible_text(par_opt)
         time.sleep(2)
         data = driver.find_element_by_id('showData')
-        print(data.text)
         aux = []
         rows = data.find_elements_by_tag_name('tr')
-        for r in rows: print(r.text)
         header = rows.pop(0)
         header = [c.text for c in header.find_elements_by_tag_name('th')]
         for row in rows:
