@@ -106,7 +106,7 @@ def main():
     select = Select(per_dropdown)
     select.select_by_visible_text('Últimas 48 horas')
     time.sleep(1)
-    print('\nDownloading buoys data:')
+    print('Downloading buoys data:')
     for boia_opt in boia_dropdown_options:
         print('- ' + boia_opt)
         boia_dropdown.click()
