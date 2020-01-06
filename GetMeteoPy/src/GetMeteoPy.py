@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# Author: Alexandre Correia / MARETEC
+# Email: alexandre.c.correia@tecnico.ulisboa.pt
+# Last update: 06-01-2020
+
 import os
 import sys
 import subprocess
