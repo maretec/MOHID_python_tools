@@ -108,7 +108,7 @@ def main():
     time.sleep(1)
     print('\nDownloading buoys data:')
     for boia_opt in boia_dropdown_options:
-        print('- ' + boia_opt + '...', end='\r')
+        print('- ' + boia_opt)
         boia_dropdown.click()
         select = Select(boia_dropdown)
         select.select_by_visible_text(boia_opt)
@@ -125,7 +125,6 @@ def main():
                 isinstance(x, str) else x).replace('', np.nan)
             df_new = df_new.dropna(how='all')
             if df_new.empty:
-                print(' '*30, end='\r')
                 continue
             try:
                 df_old = get_old_data(boia_name, now.year, now.month)
@@ -144,7 +143,6 @@ def main():
                 isinstance(x, str) else x).replace('', np.nan)
             df_new = df_new.dropna(how='all')
             if df_new.empty:
-                print(' '*30, end='\r')
                 continue
             df_new_1, df_new_2 = split_df_by_month(df_new)
             try:
@@ -165,10 +163,9 @@ def main():
                 save_data_in_csv(boia_name, df, now.year, now.month)
             except FileNotFoundError:
                 save_data_in_csv(boia_name, df_new_2, now.year, now.month)
-        print('- ' + boia_opt + '.  ')
     print('Finished downloading data')
     driver.quit()
-    print('Closed chromedriver')
+    print('Closed webdriver')
     print('Finished')
 
 
