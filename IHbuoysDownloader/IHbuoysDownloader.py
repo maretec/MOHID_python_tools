@@ -85,7 +85,7 @@ def split_df_by_month(df):
     return df1, df2
 
 
-def main():
+def scrape_and_save():
     global driver
 
     print('Starting')
@@ -167,6 +167,20 @@ def main():
     driver.quit()
     print('Closed webdriver')
     print('Finished')
+
+def main():
+    # Sometimes a random IndexError appears for unknown reasons, so this is used to try 2 additional
+    # times if an IndexError is caught. The origin of the IndexError and a better solution should
+    # be found
+    try:
+        scrape_and_save()
+    except IndexError:
+        print('Caught an IndexError, trying again')
+        try:
+            scrape_and_save()
+        except IndexError:
+            print('Caught an IndexError, trying again')
+            scrape_and_save()
 
 
 if __name__ == '__main__':
