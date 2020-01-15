@@ -4,6 +4,7 @@
 # Last update: 06-01-2020
 
 import os
+import sys
 import time
 from datetime import datetime
 from datetime import timedelta
@@ -14,6 +15,18 @@ from selenium.common.exceptions import NoSuchElementException
 import pandas as pd
 import numpy as np
 from unidecode import unidecode
+import logging
+
+def setup_logger():
+    global log
+    log = logging.getLogger(__name__)
+    log.setLevel(logging.DEBUG)
+    formatter = logging.Formatter(fmt='%(asctime)s| %(message)s', 
+                              datefmt='%Y-%m-%d %H:%M:%S')
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setLevel(logging.DEBUG)
+    ch.setFormatter(formatter)
+    log.addHandler(ch)
 
 
 def round_if_number(number, n):
@@ -87,8 +100,9 @@ def split_df_by_month(df):
 
 def scrape_and_save():
     global driver
+    global log
 
-    print('Starting')
+    log.info('Starting')
 
     url = 'https://www.hidrografico.pt/m.boias'
 
@@ -106,9 +120,9 @@ def scrape_and_save():
     select = Select(per_dropdown)
     select.select_by_visible_text('Últimas 48 horas')
     time.sleep(1)
-    print('Downloading buoys data:')
+    log.info('Downloading buoys data:')
     for boia_opt in boia_dropdown_options:
-        print('- ' + boia_opt)
+        log.info('- ' + boia_opt)
         boia_dropdown.click()
         select = Select(boia_dropdown)
         select.select_by_visible_text(boia_opt)
@@ -163,23 +177,25 @@ def scrape_and_save():
                 save_data_in_csv(boia_name, df, now.year, now.month)
             except FileNotFoundError:
                 save_data_in_csv(boia_name, df_new_2, now.year, now.month)
-    print('Finished downloading data')
+    log.info('Finished downloading data')
     driver.quit()
-    print('Closed webdriver')
-    print('Finished')
+    log.info('Closed webdriver')
+    log.info('Finished')
 
 def main():
+    global log
+    setup_logger()
     # Sometimes a random IndexError appears for unknown reasons, so this is used to try 2 additional
     # times if an IndexError is caught. The origin of the IndexError and a better solution should
     # be found
     try:
         scrape_and_save()
     except IndexError:
-        print('Caught an IndexError, trying again')
+        log.error('Caught an IndexError, trying again')
         try:
             scrape_and_save()
         except IndexError:
-            print('Caught an IndexError, trying again')
+            log.error('Caught an IndexError, trying again')
             scrape_and_save()
 
 
