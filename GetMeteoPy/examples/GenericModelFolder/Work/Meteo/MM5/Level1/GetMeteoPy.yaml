@@ -1,0 +1,34 @@
+# GetMeteoPy for WRF
+convertToHDF5exe: "../../../../ConvertToHDF5/ConvertToHDF5.exe"
+
+bathymetry: "../../../../GeneralData/Bathymetry/PortugalUp.dat"
+
+typeOfInterpolation: 3
+
+outputDirectory: "./History/"
+outputPrefix: "PortugalUp"
+
+
+meteoModels:
+  MM5_D3:
+    meteoDirectory: "//mwdata/Storage01/Meteo/MM5/MM5_D2_D3_6h/"
+    meteoFileFormat: "D3_%Y%m%d%H_%Y%m%d%H.hdf5"
+    meteoDatFile: "./MM5-MIST-D3_9km_TopoGraphy.dat"
+    level: 1
+  MM5_D2:
+    meteoDirectory: "//mwdata/Storage01/Meteo/MM5/MM5_D2_D3_6h/"
+    meteoFileFormat: "D2_%Y%m%d%H_%Y%m%d%H.hdf5"
+    meteoDatFile: "./MM5-MIST-D2_27km_TopoGraphy.dat"
+    level: 2
+
+
+propertiesToInterpolate:
+  - "air temperature"
+  - "downward long wave radiation"
+  - "mean sea level pressure"
+  - "precipitation"
+  - "relative humidity"
+  - "solar radiation"
+  - "wind velocity X"
+  - "wind velocity Y"
+  - "wind modulus"

@@ -37,7 +37,7 @@ MapasDeCampos creates figures for almost any MOHID hdf5 file format and MOHID ti
 
    - 2D plots of any variable inside MOHID hdf5 files 
    - 1D plots of MOHID time series 
-   - Plot statistical comparison between two hdf5 in mohid format, that come from ComapreHDF5 tool 
+   - Plot statistical comparison between two hdf5 in mohid format, that come from CompareHDF5 tool 
    
 ## GetPaths
 - Write a file with all the paths of a file than ends with certain extension
