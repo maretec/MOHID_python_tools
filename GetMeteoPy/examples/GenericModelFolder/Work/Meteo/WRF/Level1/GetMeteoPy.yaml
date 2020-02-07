@@ -1,5 +1,5 @@
 # GetMeteoPy for WRF
-convertToHDF5exe: "../../../../ConvertToHDF5/ConvertToHDF5.exe"
+convertToHDF5exe: "../../../ConvertToHDF5/ConvertToHDF5.exe"
 
 bathymetry: "../../../../GeneralData/Bathymetry/PortugalUp.dat"
 
