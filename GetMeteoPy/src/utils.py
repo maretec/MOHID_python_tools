@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+# Author: Alexandre Correia / MARETEC
+# Email: alexandre.c.correia@tecnico.ulisboa.pt
+# Last update: 2020-02-07
+#
+
 import h5py
 import os
 from datetime import datetime, timedelta
