@@ -31,7 +31,6 @@ def set_logger():
     log.addHandler(ch)
 
 
-
 def open_yaml_file(path):
     log.info('Reading GetMeteoPy.yaml')
     with open(path, 'r') as yml_file:
@@ -66,7 +65,7 @@ def check_existing_file(yaml, start, end):
 
 def copy_meteo_files(yaml, meteoModel, start, end):
     # copies meteo hdf5 files in the format ModelName_YYYYMMDDHH_YYYYMMDDHH.hdf5
-    log.info('Searching for files for model ' + meteoModel)
+    log.info('Searching files for model ' + meteoModel)
     if 'meteoRemoveStartupSeconds' in yaml['meteoModels'][meteoModel].keys():
         meteoRemoveStartupSeconds = yaml['meteoModels'][meteoModel]['meteoRemoveStartupSeconds']
         log.info('meteoRemoveStartupSeconds keyword active and set to ' + str(meteoRemoveStartupSeconds) + ' seconds')
@@ -304,14 +303,17 @@ def delete_copied_and_created_files(yaml, hdf5_files_to_delete):
 
 
 def main():
-    set_logger()
+    print('{:#^100}'.format(' Starting '+os.path.basename(__file__)+' ', fill='#'))
 
-    log.info('Starting')
+    set_logger()
     
-    yaml = open_yaml_file('GetMeteoPy.yaml')
+    yaml = open_yaml_file('./GetMeteoPy.yaml')
     start, end = get_start_and_end('./GetMeteoPy.dat')
-    
-    if os.path.isdir('./History') is False:
+
+    log.info('Using bathymetry file:')
+    log.info('- ' + os.path.abspath(yaml['bathymetry']))
+
+    if not os.path.isdir('./History'):
         os.mkdir('./History')
 
     hdf5_files_to_delete = []
@@ -352,7 +354,7 @@ def main():
     # cleanup
     log.info('Deleting copied files')
     delete_copied_and_created_files(yaml, hdf5_files_to_delete)
-    log.info('Finished')
+    log.info('Finished sucessfully')
 
 
 if __name__ == '__main__':
