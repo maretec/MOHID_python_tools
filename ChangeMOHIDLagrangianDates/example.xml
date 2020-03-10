@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case>
+	<execution>
+		<parameters>
+			<parameter key="Start" value="2020 01 01 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
+			<parameter key="End"   value="2020 01 02 00 00 00" comment="Date of final instant" units_comment="ISO format" />
+		</parameters>
+</case>

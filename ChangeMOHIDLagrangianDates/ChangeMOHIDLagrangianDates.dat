@@ -1,0 +1,4 @@
+START                         : 2020 01 01 0 0 0
+END                           : 2020 01 02 0 0 0
+
+MOHID_XML_FILE                : ./example.xml
