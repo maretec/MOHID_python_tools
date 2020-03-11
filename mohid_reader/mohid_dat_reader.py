@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Author: Alexandre Correia / MARETEC
 # Email: alexandre.c.correia@tecnico.ulisboa.pt
-# Last update: 2002-03-06
+# Last update: 2002-03-11
 
 from datetime import datetime
 
 
-def process_keywords(key, value):
+def process_keyword(key, value):
     # if the keyword is START or END change it to a python datetime object
     if key.upper() == 'START' or key.upper() == 'END':
         try:
@@ -17,12 +17,16 @@ def process_keywords(key, value):
             except ValueError:
                 print('Please use START and END in %Y %m %d %H %M %S or %Y %m %d format')
                 exit(1)
+        return key, value
     
-    # if the keyword value is 'true' or 'false' string converts it to python boolean variable
+    # if the keyword value is 'true' or 'false' string convert it to python boolean variable
     if value.upper() == 'TRUE':
         value = True
+        return key, value
+        
     if value.upper() == 'FALSE':
         value = False
+        return key, value
     
     return key, value
 
@@ -50,7 +54,7 @@ def get_mohid_dat(file):
             key = key.strip(' \n')
             value = value.strip(' \n')
             # runs key and value through the keyword processor
-            key, value = process_keywords(key, value)
+            key, value = process_keyword(key, value)
             # adds key and value to the dat dictionary
             dat.update({key: value})
     f.close()
