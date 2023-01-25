@@ -1,27 +1,44 @@
 # -*- coding: utf-8 -*-
 # Author: Alexandre Correia / MARETEC
 # Email: alexandre.c.correia@tecnico.ulisboa.pt
-# Last update: 06-01-2020
+# Last update: 2020-02-07
+#
 
+# python integrated packages
 import os
 import sys
 import subprocess
+import logging
 from shutil import copy2, move
 from datetime import datetime, timedelta
+# other python packages
 import yaml
+# written for GetMeteoPy
 import utils
 
-datetime_codes = ['%w','%d','%m','%y','%Y','%H','%M','%S','%%']
+
+def set_logger():
+    global log
+    log = logging.getLogger(__name__)
+    log.setLevel(logging.INFO)
+    formatter = logging.Formatter(fmt='%(asctime)s| %(message)s',
+                                                                datefmt='%Y-%m-%d %H:%M:%S')
+
+    # sends logs to stdout
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setLevel(logging.DEBUG)
+    ch.setFormatter(formatter)
+    log.addHandler(ch)
 
 
 def open_yaml_file(path):
-    print('Reading GetMeteoPy.yaml')
+    log.info('Reading GetMeteoPy.yaml')
     with open(path, 'r') as yml_file:
         return yaml.safe_load(yml_file)
 
 
 def get_start_and_end(path):
-    print('Reading GetMeteoPy.dat')
+    log.info('Reading GetMeteoPy.dat')
     with open(path, 'r') as f:
         all_lines = f.readlines()
         all_lines = list(map(lambda x: x.replace('\n',''), all_lines))
@@ -37,8 +54,8 @@ def get_start_and_end(path):
     except ValueError:
         start = datetime.strptime(start, '%Y %m %d')
         end = datetime.strptime(end, '%Y %m %d')
-    print('START set to ' + str(start))
-    print('END set to ' + str(end))
+    log.info('START set to ' + str(start))
+    log.info('END set to ' + str(end))
     return start, end
 
 
@@ -48,10 +65,10 @@ def check_existing_file(yaml, start, end):
 
 def copy_meteo_files(yaml, meteoModel, start, end):
     # copies meteo hdf5 files in the format ModelName_YYYYMMDDHH_YYYYMMDDHH.hdf5
-    print('Searching for files for model ' + meteoModel)
+    log.info('Searching files for model ' + meteoModel)
     if 'meteoRemoveStartupSeconds' in yaml['meteoModels'][meteoModel].keys():
         meteoRemoveStartupSeconds = yaml['meteoModels'][meteoModel]['meteoRemoveStartupSeconds']
-        print('meteoRemoveStartupSeconds keyword active and set to ' + str(meteoRemoveStartupSeconds) + ' seconds')
+        log.info('meteoRemoveStartupSeconds keyword active and set to ' + str(meteoRemoveStartupSeconds) + ' seconds')
     else:
         meteoRemoveStartupSeconds = 0
 
@@ -63,7 +80,7 @@ def copy_meteo_files(yaml, meteoModel, start, end):
                 try:
                     file_date_start = datetime.strptime(f, yaml['meteoModels'][meteoModel]['meteoFileFormat'])
                 except ValueError:
-                    #print('File: ' + f + ' does not fit the FileFormat specified of: ' + meteoFileFormat + ', ignoring.')
+                    log.debug('File: ' + f + ' does not fit the FileFormat specified of: ' + meteoFileFormat + ', ignoring.')
                     continue
                 file_dates = [file_date_start, file_date_start + timedelta(seconds=yaml['meteoModels'][meteoModel]['meteoFileTotalSeconds'])]
                 if file_dates[1] < start or end < file_dates[0]:
@@ -97,7 +114,7 @@ def copy_meteo_files(yaml, meteoModel, start, end):
                     try:
                         file_dates = [datetime.strptime(file_split[0], file_name[0]), datetime.strptime(file_split[1], file_name[1])]
                     except ValueError:
-                        #print('File: ' + f + ' does not fit the FileFormat specified of: ' + meteoFileFormat + ', ignoring.')
+                        log.debug('File: ' + f + ' does not fit the FileFormat specified of: ' + meteoFileFormat + ', ignoring.')
                         continue
                     if file_dates[1] < start or end < file_dates[0]:
                         continue
@@ -106,11 +123,11 @@ def copy_meteo_files(yaml, meteoModel, start, end):
     files_in_range = sorted(files_in_range)
 
     if files_in_range == []:
-        print('\n--- ERROR ---\nNo files with the specified name or date range were found in ' + yaml['meteoModels'][meteoModel]['meteoDirectory'])
+        log.info('\n--- ERROR ---\nNo files with the specified name or date range were found in ' + yaml['meteoModels'][meteoModel]['meteoDirectory'])
         exit(1)
 
-    print('Files found with data in the requested time range:')
-    for f in files_in_range: print('-', f[0])
+    log.info('Files found with data in the requested time range:')
+    for f in files_in_range: log.info('- ' + f[0])
 
     if meteoRemoveStartupSeconds > 0:
         i = 0
@@ -123,16 +140,16 @@ def copy_meteo_files(yaml, meteoModel, start, end):
         if (f[1] <= start) and (end <= f[2]):
             files_with_everything_inside.append(f)
 
-    print('Copying files:')
+    log.info('Copying files:')
     files_copied = []
     file_to_copy = ''
     if len(files_with_everything_inside) == 0:
         for f in files_in_range:
-            print('-', f[0])
+            log.info('- ' + f[0])
             copy2(f[0], os.path.basename(f[0]))
             files_copied.append(os.path.basename(f[0]))
     elif len(files_with_everything_inside) == 1:
-        print('-', files_with_everything_inside[0][0])
+        log.info('- ' + files_with_everything_inside[0][0])
         copy2(files_with_everything_inside[0][0], os.path.basename(files_with_everything_inside[0][0]))
         files_copied.append(os.path.basename(files_with_everything_inside[0][0]))
     elif len(files_with_everything_inside) > 1:
@@ -141,21 +158,21 @@ def copy_meteo_files(yaml, meteoModel, start, end):
         for f in files_with_everything_inside:
             if os.path.getmtime(f[0]) > os.path.getmtime(file_to_copy):
                 file_to_copy = f[0]
-        print('-', file_to_copy)
+        log.info('- ' + file_to_copy)
         copy2(file_to_copy, os.path.basename(file_to_copy))
         files_copied.append(os.path.basename(file_to_copy))
 
     if meteoRemoveStartupSeconds > 0:
-        print('Removing requested startup instants for files:')
+        log.info('Removing requested startup instants for files:')
         for f in files_copied:
-            print('-', f)
+            log.info('- ' + f)
             utils.remove_hdf5_startup_instants(f, meteoRemoveStartupSeconds)
 
     return files_copied
 
 
 def write_ConvertToHDF5Action_glue(yaml, meteoModel, start, end, files_to_glue):
-    print('Writing ConvertToHDF5Action.dat for GLUES HDF5 FILES action')
+    log.info('Writing ConvertToHDF5Action.dat for GLUES HDF5 FILES action')
     with open('./ConvertToHDF5Action.dat', 'w') as f:
         f.write('<begin_file>\n')
         f.write('\n')
@@ -182,7 +199,7 @@ def write_ConvertToHDF5Action_glue(yaml, meteoModel, start, end, files_to_glue):
 
 
 def write_ConvertToHDF5Action_interpolate(yaml, start, end):
-    print('Writing ConvertToHDF5Action.dat for INTERPOLATE GRIDS action')
+    log.info('Writing ConvertToHDF5Action.dat for INTERPOLATE GRIDS action')
     with open('./ConvertToHDF5Action.dat', 'w') as f:
         f.write('<begin_file>\n')
         f.write('\n')
@@ -218,7 +235,7 @@ def write_ConvertToHDF5Action_interpolate(yaml, start, end):
 
 
 def write_ConvertToHDF5Action_patch(yaml, start, end):
-    print('Writing ConvertToHDF5Action.dat for PATCH HDF5 FILES action')
+    log.info('Writing ConvertToHDF5Action.dat for PATCH HDF5 FILES action')
     with open('./ConvertToHDF5Action.dat', 'w') as f:
         f.write('<begin_file>\n')
         f.write('\n')
@@ -262,7 +279,7 @@ def check_ConvertToHDF5Action_sucess(filename):
     for l in last_lines:
         if l.find('ConvertToHDF5 successfully terminated') != -1:
             return
-    print('\n--- ERROR ---\nConvertToHDF5.exe was not sucessfull\nCheck ' + filename + ' for more information')
+    log.info('\n--- ERROR ---\nConvertToHDF5.exe was not sucessfull\nCheck ' + filename + ' for more information')
     exit(1)
 
 
@@ -285,15 +302,18 @@ def delete_copied_and_created_files(yaml, hdf5_files_to_delete):
             pass
 
 
-
-
 def main():
-    print('Starting')
+    print('{:#^100}'.format(' Starting '+os.path.basename(__file__)+' ', fill='#'))
+
+    set_logger()
     
-    yaml = open_yaml_file('GetMeteoPy.yaml')
+    yaml = open_yaml_file('./GetMeteoPy.yaml')
     start, end = get_start_and_end('./GetMeteoPy.dat')
-    
-    if os.path.isdir('./History') is False:
+
+    log.info('Using bathymetry file:')
+    log.info('- ' + os.path.abspath(yaml['bathymetry']))
+
+    if not os.path.isdir('./History'):
         os.mkdir('./History')
 
     hdf5_files_to_delete = []
@@ -306,7 +326,7 @@ def main():
         elif len(hdf5_files_copied) >1:
             write_ConvertToHDF5Action_glue(yaml, meteoModel, start, end, hdf5_files_copied)
             with open('ConvertToHDF5Action-GLUES_HDF5_FILES.log', 'w') as logfile:
-                print('Running ConvertToHDF5.exe')
+                log.info('Running ConvertToHDF5.exe')
                 p = subprocess.Popen(yaml['convertToHDF5exe'], stdout=logfile, stderr=logfile)
                 p.wait()
             check_ConvertToHDF5Action_sucess('ConvertToHDF5Action-GLUES_HDF5_FILES.log')
@@ -315,28 +335,26 @@ def main():
     if len(yaml['meteoModels'].keys()) == 1:
         write_ConvertToHDF5Action_interpolate(yaml, start, end)
         with open('ConvertToHDF5Action-INTERPOLATE_GRIDS.log', 'w') as logfile:
-            print('Running ConvertToHDF5.exe')
+            log.info('Running ConvertToHDF5.exe')
             p = subprocess.Popen(yaml['convertToHDF5exe'], stdout=logfile, stderr=logfile)
             p.wait()
         check_ConvertToHDF5Action_sucess('ConvertToHDF5Action-INTERPOLATE_GRIDS.log')
-        print('Moving file to output directory')
+        log.info('Moving file to output directory')
         move_interpolated_hdf5_to_History_folder(yaml, start, end)
     # patch
     elif len(yaml['meteoModels'].keys()) > 1:
         write_ConvertToHDF5Action_patch(yaml, start, end)
         with open('ConvertToHDF5Action-PATCH_HF5_FILES.log', 'w') as logfile:
-            print('Running ConvertToHDF5.exe')
+            log.info('Running ConvertToHDF5.exe')
             p = subprocess.Popen(yaml['convertToHDF5exe'], stdout=logfile, stderr=logfile)
             p.wait()
         check_ConvertToHDF5Action_sucess('ConvertToHDF5Action-PATCH_HF5_FILES.log')
-        print('Moving file to output directory')
+        log.info('Moving file to output directory')
         move_interpolated_hdf5_to_History_folder(yaml, start, end)
     # cleanup
-    print('Deleting copied files')
+    log.info('Deleting copied files')
     delete_copied_and_created_files(yaml, hdf5_files_to_delete)
-    print('Finished')
-    
-
+    log.info('Finished sucessfully')
 
 
 if __name__ == '__main__':

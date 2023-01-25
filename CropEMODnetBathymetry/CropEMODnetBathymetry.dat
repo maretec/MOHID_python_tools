@@ -1,0 +1,12 @@
+! Example file with the F3 square from the EMODnet DTM (https://portal.emodnet-bathymetry.eu/)
+INPUT_FILE : ./F3_2018.xyz
+OUTPUT_FILE : ./F3_2018_cut.xyz
+
+LON_MIN : -9.60
+LON_MAX : -8.58
+LAT_MIN : 37.37
+LAT_MAX : 38.38
+
+INPUT_SEPARATOR : ;
+
+WRITE_MOHID_XYZ_BLOCK : True
